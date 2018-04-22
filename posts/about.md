@@ -2,7 +2,7 @@
 layout: page
 title: About
 lang: en
-cover_url: https://thenypost.files.wordpress.com/2015/02/stony-brook-university.jpg?quality=90&strip=all&w=618&h=410&crop=1
+cover_url: http://s3.amazonaws.com/sbstatesman/wp-content/uploads/2014/08/05170114/StonyBrook_Manju.Shivacharan-1024x682.jpg
 cover_meta: >
   Stony Brook University
 position: 100

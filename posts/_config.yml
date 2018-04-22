@@ -4,7 +4,7 @@ email: abhinandandubey@live.com
 description: > # this means to ignore newlines until "baseurl:"
   Computer Vision Enthusiast
 baseurl: "/jekyll-theme-kagami"
-lang: en # site language (en/ja/zh-Hans/zh-Hant)
+lang: en # site language  (en/ja/zh-Hans/zh-Hant)
 color_scheme: vim # this specifies color scheme for syntax highlighting
 github_username: alivcor
 twitter_username: alivcor_

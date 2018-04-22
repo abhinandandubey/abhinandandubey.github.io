@@ -3,4 +3,4 @@
 set -e
 
 echo "Buidling the example site..."
-bundle exec jekyll build --source example
+bundle exec jekyll build --source posts

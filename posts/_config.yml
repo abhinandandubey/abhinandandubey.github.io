@@ -9,6 +9,8 @@ color_scheme: tango # this specifies color scheme for syntax highlighting
 github_username: alivcor
 twitter_username: alivcor_
 instagram_username: alivcor
+mathjax: true
+
 
 # Build settings
 markdown: kramdown

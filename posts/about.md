@@ -10,8 +10,6 @@ navlevel: header
 navtitle: about
 ---
 
-Kagami is a peaceful theme for Jekyll and GitHub Pages.
+Hi there, I am a Computer Vision Enthusiast. I did my Masters in Computer Science from Stony Brook University, where I worked with [Prof. Roy Shilkrot](web.media.mit.edu/~roys/) at the [Human Interaction Lab](https://hi.cs.stonybrook.edu). I love learning more about Computer Vision and making cool projects.
 
-The theme was firstly designed for <https://banana.moe> in late 2016 and have it's first release in March 2017 with a whole bunch of big changes in both design and implementation.
-
-Visit [project home](https://github.com/kamikat/jekyll-theme-kagami) for source code and installation guides.
+Visit [My Homepage](https://alivcor.github.io) for knowing more about me and projects I've done so far which I managed to document online.

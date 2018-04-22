@@ -2,9 +2,9 @@
 layout: page
 title: About
 lang: en
-cover_url: https://s2.banana.moe/unsplash_colle/amador-loureiro-779.jpg
+cover_url: https://thenypost.files.wordpress.com/2015/02/stony-brook-university.jpg?quality=90&strip=all&w=618&h=410&crop=1
 cover_meta: >
-  Photo by [Amador Loureiro](https://unsplash.com/@amadorloureiroblanco)
+  Stony Brook University
 position: 100
 navlevel: header
 navtitle: about

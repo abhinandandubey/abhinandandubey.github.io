@@ -31,4 +31,6 @@ SIFT wasn't the reason we came up with scale-space. The motivation for generatin
 
 To be precise, this is how a scale-space looks like:
 
-![Scale Space](https://github.com/alivcor/lightforest/raw/master/scale_space.png "Scale Space")
+![Scale Space](https://github.com/alivcor/lightforest/raw/master/scale_space_representation.png "Scale Space")
+
+As it looks like, you can think of scale-space as a $NUM_SCALES X NUM_OCTAVES$ array.

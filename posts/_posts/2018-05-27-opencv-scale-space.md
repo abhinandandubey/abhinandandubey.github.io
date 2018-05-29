@@ -33,4 +33,4 @@ To be precise, this is how a scale-space looks like:
 
 ![Scale Space](https://github.com/alivcor/lightforest/raw/master/scale_space_representation.png "Scale Space")
 
-As it looks like, you can think of scale-space as a $$ NUM\_SCALES X NUM\_OCTAVES $$ array.
+As it looks like, you can think of scale-space as a _NUM\_SCALES * NUM\_OCTAVES_ array.

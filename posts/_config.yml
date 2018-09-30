@@ -13,6 +13,7 @@ mathjax: true
 
 # Build settings
 markdown: kramdown
+theme: jekyll-theme-kagami
 exclude:
   - Gemfile
   - Gemfile.lock

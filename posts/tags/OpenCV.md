@@ -1,6 +1,6 @@
 ---
-title: "OpenCV"
 layout: post-list
+title: "OpenCV"
 filter:
-  - by_tag: "OpenCV"
+ - by_tag: "OpenCV"
 ---

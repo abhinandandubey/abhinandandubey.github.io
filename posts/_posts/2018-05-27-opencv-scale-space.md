@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Scale Space
-tags: OpenCV Computer-Vision Scale-Space Convolution
+tags: OpenCV ComputerVision ScaleSpace Convolution
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_2252.JPG
 cover_meta: >
   Take My Breath Away, Danh Vo. Copyright © AD Photography

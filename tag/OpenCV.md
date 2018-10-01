@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: OpenCV"
-tag: OpenCV
+title: "Tag: opencv"
+tag: opencv
 ---

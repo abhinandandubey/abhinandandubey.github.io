@@ -20,7 +20,7 @@ title: post_title
 tags: 
 cover_url: cover_meta_url
 cover_meta: 
-  cover_meta_text NASA IMAGE OF THE DAY
+  cover_meta_text | NASA IMAGE OF THE DAY
 color_scheme: tango
 mathjax: true
 mathjax: True

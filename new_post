@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+
+import datetime,os,requests
+
+post_dir = 'posts/_posts/'
+
+todays_date = datetime.datetime.today().strftime('%Y-%m-%d')
+print("\n\n")
+try:
+    title = raw_input("That's great. What's the title ? (Avoid special characters)   :   ")
+except:
+    title = input("That's great. What's the title ? (Avoid special characters)   :   ")
+print("\n\n")
+file_name = post_dir + todays_date + "-" + title.strip().replace(" ", "-") + ".md"
+os.system("touch " + file_name)
+
+write_str = """---
+layout: post
+title: post_title
+tags: 
+cover_url: cover_meta_url
+cover_meta: 
+  cover_meta_text
+color_scheme: tango
+mathjax: true
+mathjax: True
+---"""
+
+print("Fetching NASA Image of the day...\n")
+
+API_KEY = open("/Users/abhinandandubey/NASA_API_KEY.key", "r").read().strip()
+data = requests.get(url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY).json() 
+print(data["title"].encode("ascii"), data["url"].encode("ascii"))
+
+write_str = write_str.replace("cover_meta_text", data["title"].encode("ascii"))
+write_str = write_str.replace("cover_meta_url", data["url"].encode("ascii"))
+f = open(file_name, "a")
+f.write(write_str)
+
+print("\nCreated " + file_name)

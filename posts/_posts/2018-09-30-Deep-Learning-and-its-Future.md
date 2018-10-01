@@ -1,6 +1,6 @@
 ---
 layout: post
-title: post_title
+title: Deep Learning and its Future
 tags: 
 cover_url: https://apod.nasa.gov/apod/image/1809/E0102NS_HubbleChandra_960.jpg
 cover_meta: 

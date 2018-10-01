@@ -32,6 +32,7 @@ API_KEY = open("/Users/abhinandandubey/NASA_API_KEY.key", "r").read().strip()
 data = requests.get(url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY).json() 
 print(data["title"].encode("ascii"), data["url"].encode("ascii"))
 
+write_str = write_str.replace("post_title", title)
 write_str = write_str.replace("cover_meta_text", data["title"].encode("ascii"))
 write_str = write_str.replace("cover_meta_url", data["url"].encode("ascii"))
 f = open(file_name, "a")

@@ -20,13 +20,14 @@ title: post_title
 tags: 
 cover_url: cover_meta_url
 cover_meta: 
-  cover_meta_text
+  cover_meta_text | NASA IMAGE OF THE DAY
 color_scheme: tango
 mathjax: true
 mathjax: True
 ---"""
 
 print("Fetching NASA Image of the day...\n")
+
 
 API_KEY = open("/Users/abhinandandubey/NASA_API_KEY.key", "r").read().strip()
 data = requests.get(url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY).json() 

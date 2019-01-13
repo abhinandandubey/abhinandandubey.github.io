@@ -33,20 +33,20 @@ Lets try loading an image into our code. In this example, I'll be taking a photo
 
 If you notice, I also resized it to approximately 25% the image size.  
 
-##The Math
+<h2>The Math</h2>
 
-The thing that probably bites people here is _ The Discretization of Continuous Functions_ as I like to call it. Recall from high school calculus that a unary function is said to be differentiable at $x$ if _(NOT "iff")_ the following derivative exists:
+The thing that probably bites people here is _ The Discretization of Continuous Functions_ as I like to call it. Recall from high school calculus that a unary function is said to be differentiable at $$x$$ if _(NOT "iff")_ the following derivative exists:
 
 $$f'(x) = \frac{d}{dx}f = \lim _{h\to 0}{\frac {f(x+h)-f(x)}{h}}  $$
 
-On paper, sure, you can have infinitesimal "$h$" - but in the world of computers, where everything is discrete, well you need to have some sort of _"step"_ to be able to define a differential properly.
+On paper, sure, you can have infinitesimal "$$h$$" - but in the world of computers, where everything is discrete, well you need to have some sort of _"step"_ to be able to define a differential properly.
 
-Talking of images as a function of $x$ and $y$, we are further limited by pixel-level accuracy and can only set $h = 1$. But for symmetry, we could possibly divide this "step" of 1 write the above equation as
+Talking of images as a function of $x$ and $y$, we are further limited by pixel-level accuracy and can only set $$h = 1$$. But for symmetry, we could possibly divide this "step" of 1 write the above equation as
 
 $$I_x(x,y) = \frac{I(x+1, y) - I(x-1, y)}{2*1}$$
 
 
-Notice that we now divide by $2*1$ because we take a step of 2 for symmetry. The resulting matrix representation of the kernel is as follows:
+Notice that we now divide by $$2*1$$ because we take a step of 2 for symmetry. The resulting matrix representation of the kernel is as follows:
 
 $$ \begin{bmatrix}
     0 & x_{12} & 0 & 0 \\

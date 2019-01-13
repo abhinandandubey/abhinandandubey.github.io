@@ -49,9 +49,9 @@ $$I_x(x,y) = \frac{I(x+1, y) - I(x-1, y)}{2*1}$$
 Notice that we now divide by $$2*1$$ because we take a step of 2 for symmetry. The resulting matrix representation of the kernel is as follows:
 
 $$ \begin{bmatrix}
-    0 & x_{12} & 0 & 0 \\
-    -1 & x_{22} & 0 & 1 \\
-    0 & x_{d2} & 0  & 0
+    0 & 0 & 0 \\
+    -1 & 0 & 1 \\
+    0 & 0  & 0
 \end{bmatrix} $$
 
 </div>

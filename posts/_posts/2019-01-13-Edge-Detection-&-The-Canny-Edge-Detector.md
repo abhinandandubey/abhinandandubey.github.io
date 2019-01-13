@@ -57,7 +57,7 @@ The thing that probably bites people here is _ The Discretization of Continuous 
 
 $$f'(x) = \frac{d}{dx}f = \lim _{h\to 0}{\frac {f(x+h)-f(x)}{h}}  $$
 
-On paper, sure, you can have infinitesimal " $h$ " - but in the world of computers, where everything is discrete, well you need to have some sort of _"step"_ to be able to define a differential properly.
+On paper, sure, you can have infinitesimal "$h$" - but in the world of computers, where everything is discrete, well you need to have some sort of _"step"_ to be able to define a differential properly.
 
 Talking of images as a function of $x$ and $y$, we are further limited by pixel-level accuracy and can only set $h = 1$. But for symmetry, we could possibly divide this "step" of 1 write the above equation as
 

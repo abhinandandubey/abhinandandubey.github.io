@@ -12,7 +12,7 @@ mathjax: True
 
 If you were to attend a Graduate Computer Vision without any experience of Computer Vision at an undergraduate level like me, you would certainly face problems with edge detection and what it really means. They usually start with Canny Edge Detector at any Graduate Course and it makes it hard for many to comprehend how the idea came up in the first place.
 
-
+<div style="text-align: justify">
 Lets try loading an image into our code. In this example, I'll be taking a photo which I took at the Niagara Falls State Park.
 {% highlight c++ %}
     Mat orig_image;
@@ -28,3 +28,5 @@ Lets try loading an image into our code. In this example, I'll be taking a photo
 {% endhighlight %}
 
 If you notice, I also resized it to approximately 25% the image size.  
+
+</div>

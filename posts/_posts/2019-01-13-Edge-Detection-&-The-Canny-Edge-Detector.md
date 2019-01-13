@@ -33,4 +33,7 @@ Lets try loading an image into our code. In this example, I'll be taking a photo
 
 If you notice, I also resized it to approximately 25% the image size.  
 
+
 </div>
+
+_ Suggested Reading : Sec 2.3.3 Basic Edge Detectors, Reinhard Klette - Concise Computer Vision p.62-64_

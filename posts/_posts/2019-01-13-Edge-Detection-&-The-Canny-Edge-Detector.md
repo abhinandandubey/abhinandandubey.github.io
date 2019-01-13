@@ -52,7 +52,7 @@ Lets try loading an image into our code. In this example, I'll be taking a photo
 If you notice, I also resized it to approximately 25% the image size.  
 
 <h2>The Math</h2>
-The thing that probably bites people here is _ The Discretization of Continuous Functions_ as I like to call it. Recall from high school calculus that a unary function is said to be differentiable at $x$ if _(NOT "iff")_ the following derivative exists:
+The thing that probably bites people here is - as I call it - _The Discretization of Continuous Functions_. Recall from high school calculus that a unary function is said to be differentiable at $x$ if _(NOT "iff")_ the following derivative exists:
 
 $$f'(x) = \frac{d}{dx}f = \lim _{h\to 0}{\frac {f(x+h)-f(x)}{h}}  $$
 
@@ -70,6 +70,14 @@ $$ \begin{bmatrix}
     -1 & 0 & 1 \\
     0 & 0  & 0
 \end{bmatrix} $$
+
+<h3>But wait, how will differential help with the edges?</h3>
+Short answer - If your image was really a 2D function of $x$ and $y$, edges are essentially peaks 
+
+Long Answer - Stolen from Stanford CS Webpage, this is a famous "Origin of Edges" slide found in almost all Graduate Computer Vision courses. Observe how there are so many ways one could define an edge.
+<img src="https://cs.stanford.edu/people/eroberts/courses/soco/projects/1997-98/computer-vision/images/bottle.jpg"/>
+
+So what are edges, really? Probably the best way to put this is to say - edges are reduced set of pixels that define an image for you or to say - are enough for a human to make sense of it.
 
 </div>
 

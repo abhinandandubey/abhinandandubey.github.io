@@ -52,11 +52,11 @@ Lets try loading an image into our code. In this example, I'll be taking a photo
 If you notice, I also resized it to approximately 25% the image size.  
 
 <h2>The Math</h2>
-The thing that probably bites people here is - as I call it - _The Discretization of Continuous Functions_ Recall from high school calculus that a unary function is said to be differentiable at $x$ if _(NOT "iff")_ the following derivative exists:
+The thing that probably bites people here is - as I call it - <i>The Discretization of Continuous Functions</i>. Recall from high school calculus that a unary function is said to be differentiable at $x$ if <i>(NOT "iff")</i> the following derivative exists:
 
 $$f'(x) = \frac{d}{dx}f = \lim _{h\to 0}{\frac {f(x+h)-f(x)}{h}}  $$
 
-On paper, sure, you can have infinitesimal "$h$" - but in the world of computers, where everything is discrete, well you need to have some sort of _"step"_ to be able to define a differential properly.
+On paper, sure, you can have infinitesimal "$h$" - but in the world of computers, where everything is discrete, well you need to have some sort of <i>"step"</i> to be able to define a differential properly.
 
 Talking of images as a function of $x$ and $y$, we are further limited by pixel-level accuracy and can only set $h = 1$. But for symmetry, we could possibly divide this "step" of 1 write the above equation as
 

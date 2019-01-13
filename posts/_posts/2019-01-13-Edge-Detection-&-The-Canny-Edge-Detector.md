@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Edge Detection & The Canny Edge Detector
-tags: 
+tags: ComputerVision OpenCV EdgeDetection
 cover_url: https://apod.nasa.gov/apod/image/1901/TychoSNR_Chandra_960.jpg
 cover_meta: 
   Tycho's Supernova Remnant in X-ray | NASA IMAGE OF THE DAY

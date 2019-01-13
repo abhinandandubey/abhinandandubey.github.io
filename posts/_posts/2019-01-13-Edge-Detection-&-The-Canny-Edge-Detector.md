@@ -9,9 +9,11 @@ color_scheme: tango
 mathjax: true
 mathjax: True
 ---
-
+<br/>
 <div style="text-align: justify">
+<br/>
 If you were to attend a Graduate Computer Vision without any experience of Computer Vision at an undergraduate level like me, you would certainly face problems with edge detection and what it really means. They usually start with Canny Edge Detector at any Graduate Course and it makes it hard for many to comprehend how the idea came up in the first place.
+<br/>
 
 Lets try loading an image into our code. In this example, I'll be taking a photo which I took at the Niagara Falls State Park.
 {% highlight c++ %}

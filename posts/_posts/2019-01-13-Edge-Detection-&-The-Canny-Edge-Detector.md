@@ -74,7 +74,7 @@ $$ \begin{bmatrix}
 <h3>But wait, how will differential help with the edges?</h3>
 Short answer - If your image was really a 2D function of $x$ and $y$, edges are essentially peaks 
 
-Long Answer - Stolen from Stanford CS Webpage, this is a famous "Origin of Edges" slide found in almost all Graduate Computer Vision courses. Observe how there are so many ways one could define an edge.
+Long Answer - Lets start with a rather philosophical question - Stolen from Stanford CS Webpage, this is a famous "Origin of Edges" slide found in almost all Graduate Computer Vision courses. Observe how there are so many ways one could define an edge.
 <img src="https://cs.stanford.edu/people/eroberts/courses/soco/projects/1997-98/computer-vision/images/bottle.jpg"/>
 
 So what are edges, really? Probably the best way to put this is to say - edges are reduced set of pixels that define an image for you or to say - are enough for a human to make sense of it.

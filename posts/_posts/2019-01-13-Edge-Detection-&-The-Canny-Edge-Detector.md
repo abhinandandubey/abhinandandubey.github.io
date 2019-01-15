@@ -30,7 +30,7 @@ MathJax.Hub.Queue(function() {
 
 <div style="text-align: justify">
 <br/>
-If you were to attend a Graduate Computer Vision without any experience of Computer Vision at an undergraduate level like me, you would certainly face problems with edge detection and what it really means. They usually start with Canny Edge Detector at any Graduate Course and it makes it hard for many to comprehend how the idea came up in the first place.
+If you were to attend a Graduate Computer Vision course without any experience of Computer Vision at an undergraduate level like me, you would certainly face problems with edge detection and what it really means. They usually start with Canny Edge Detector at any Graduate Course and it makes it hard for many to comprehend how the idea came up in the first place.
 
 <p>
 
@@ -71,6 +71,8 @@ $$ \begin{bmatrix}
     0 & 0  & 0
 \end{bmatrix} $$
 
+We will revisit this once we answer the obvious question which is popping into our head right now,
+
 <h3>But wait, how will the differential help with the edges?</h3>
 Short answer - If your image was really a 2D function of $x$ and $y$, edges are essentially peaks 
 
@@ -79,7 +81,8 @@ Long Answer - Lets start with a rather philosophical question - Stolen from Stan
 <center>
 <img src="https://cs.stanford.edu/people/eroberts/courses/soco/projects/1997-98/computer-vision/images/bottle.jpg"/></center></p>
 
-So what are edges, really? Probably the best way to put this is to say - edges are reduced set of pixels that define an image for you or to say - are enough for a human to make sense of it.
+So what are edges, really? Probably the best way to put this is to say - edges are reduced set of pixels that define an image for you or to say - are enough for a human to make sense of it. Or, we can also say that edges occur at change of a <i>boundary</i>
+
 
 </div>
 

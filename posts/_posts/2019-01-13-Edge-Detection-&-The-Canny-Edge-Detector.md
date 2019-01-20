@@ -167,7 +167,7 @@ If you observe, the three <i>"white patches"</i> on the top left corner of the i
 
 Coming back to our discussion of the gradient, we can clearly see from the above surface plot that the gradient will have peaks at the cliffs of the plot. Steeper the cliff, larger the gradient peak. 
 
-$$\sqrt{{I_x(x,y)}^2 + {I_y(x,y)}^2} \approx \|\grad{I(x,y)}\|_2$$
+$$\sqrt{{I_x(x,y)}^2 + {I_y(x,y)}^2} \approx \|grad I(x,y)\|_2$$
 
 
 </div>

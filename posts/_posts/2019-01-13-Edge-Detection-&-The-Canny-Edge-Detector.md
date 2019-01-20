@@ -83,6 +83,82 @@ Long Answer - Lets start with a rather philosophical question - Stolen from Stan
 
 So what are edges, really? Probably the best way to put this is to say - edges are reduced set of pixels that define an image for you or to say - are enough for a human to make sense of it. Or, we can also say that edges occur at change of a <i>boundary</i>
 
+<h4>I don't believe things I can't see</h4>
+
+Lets create a small python script to visualize the image in 3D space, with z-axis representing the pixel values of the image.
+
+
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+import scipy
+import scipy.misc
+```
+
+
+```python
+IMG_LOC = "/Users/abhinandandubey/Desktop/cv/images/"
+```
+
+
+```python
+orig_image = cv2.imread(IMG_LOC + "niagara.jpg", 0)
+resized_image = cv2.resize(orig_image, (0,0), fx=0.25, fy=0.25) 
+resized_image.shape
+```
+
+
+
+
+    (756, 1008)
+
+
+
+
+```python
+plt.imshow(resized_image, cmap = 'gray', interpolation = 'bicubic')
+plt.title('Niagara Falls State Park')
+plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
+plt.show()
+```
+
+
+![png](https://github.com/alivcor/lightforest/raw/master/output_3_0.png)
+
+
+
+```python
+from mpl_toolkits.mplot3d import Axes3D
+```
+
+
+```python
+# downscaling has a "smoothing" effect
+smooth_resized_image = scipy.misc.imresize(resized_image, 0.50, interp='cubic')
+```
+
+
+```python
+# create the x and y coordinate arrays (here we just use pixel indices)
+xx, yy = np.mgrid[0:smooth_resized_image.shape[0], 0:smooth_resized_image.shape[1]]
+
+# create the figure
+fig = plt.figure(figsize=(8, 6))
+ax = fig.gca(projection='3d', elev=70, azim=10)
+ax.plot_surface(xx, yy, smooth_resized_image ,rstride=1, cstride=1, cmap=plt.cm.gray,
+        linewidth=0)
+
+
+plt.show()
+```
+
+
+![png](https://github.com/alivcor/lightforest/raw/master/output_6_0.png)
+
+
+
 
 </div>
 

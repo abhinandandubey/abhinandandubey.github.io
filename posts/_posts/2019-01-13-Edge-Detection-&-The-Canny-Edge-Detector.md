@@ -172,6 +172,26 @@ $$ \sqrt{ {I_{x}(x,y)}^2 + {I_{y}(x,y)}^2 } \approx \| \nabla I(x,y)\|_2 $$
 
 </div>
 
+## The Sobel Operator
+The Sobel operator is a 3×3 kernels which consists of two $3x3$ convolution kernels. 
+
+$$ \begin{bmatrix}
+    -1 & 0 & 1 \\
+    -2 & 0 & 2 \\
+    -1 & 0  & 1
+\end{bmatrix}  
+= 
+\begin{bmatrix}
+1 \\
+2 \\
+1
+\end{bmatrix}
+\begin{bmatrix}
+-1 & 0 & 1
+\end{bmatrix}
+$$
+
+ One kernel is simply the other rotated by 90°. This is very similar to the Roberts Cross operator.
 
 
 _Suggested Reading : Sec 2.3.3 Basic Edge Detectors, Reinhard Klette - Concise Computer Vision p.62-64_

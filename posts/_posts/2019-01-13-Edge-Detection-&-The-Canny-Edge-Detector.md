@@ -88,7 +88,7 @@ So what are edges, really? Probably the best way to put this is to say - edges a
 Lets create a small python script to visualize the image in 3D space, with z-axis representing the pixel values of the image.
 </div>
 
-<br/><br/>
+<br/>
 
 ```python
 import cv2

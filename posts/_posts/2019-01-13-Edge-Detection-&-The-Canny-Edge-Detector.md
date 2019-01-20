@@ -86,6 +86,7 @@ So what are edges, really? Probably the best way to put this is to say - edges a
 <h4>I don't believe things I can't see</h4>
 
 Lets create a small python script to visualize the image in 3D space, with z-axis representing the pixel values of the image.
+</div>
 
 
 ```python
@@ -160,6 +161,6 @@ plt.show()
 
 
 
-</div>
+
 
 _Suggested Reading : Sec 2.3.3 Basic Edge Detectors, Reinhard Klette - Concise Computer Vision p.62-64_

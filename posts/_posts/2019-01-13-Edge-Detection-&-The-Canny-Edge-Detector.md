@@ -74,7 +74,7 @@ $$ \begin{bmatrix}
 We will revisit this once we answer the obvious question which is popping into our head right now,
 
 <h3>But wait, how will the differential help with the edges?</h3>
-Short answer - If your image was really a 2D function of $x$ and $y$, edges are essentially peaks 
+Short answer - If your image was really a 2D function of $x$ and $y$, edges are essentially peaks.<br/>
 
 Long Answer - Lets start with a rather philosophical question - Stolen from Stanford CS Webpage, this is a famous "Origin of Edges" slide found in almost all Graduate Computer Vision courses. Observe how there are so many ways one could define an edge.
 <p align="center">
@@ -160,9 +160,8 @@ plt.show()
 ![png](https://github.com/alivcor/lightforest/raw/master/output_6_0.png)
 
 
-<br/>
 <div style="text-align: justify">
-If you observe, the three <i>"white patches"</i> on the top left corner of the image (the open sky with a lot of light are the same as the ones on top left of the surface plot.) These are the peaks of the surface plot, and if you were to stand at one of these peaks, you'd see the a deep fall down in the are where the trunk of the tree is, or even the area with the leaves of the trees. The image using pyplot's <pre>cmap</pre> should make this more clear.<br/>
+If you observe, the three <i>"white patches"</i> on the top left corner of the image (the open sky with a lot of light are the same as the ones on top left of the surface plot.) These are the peaks of the surface plot, and if you were to stand at one of these peaks, you'd see a steep fall down in the area where the trunk of the tree is, or even the area with the leaves of the trees. The image using pyplot's <pre style="display:inline">cmap</pre> should make this more clear.<br/>
 <p align="center">
 <center><img src="https://github.com/alivcor/lightforest/raw/master/colormap_ocean.png"></center></p>
 

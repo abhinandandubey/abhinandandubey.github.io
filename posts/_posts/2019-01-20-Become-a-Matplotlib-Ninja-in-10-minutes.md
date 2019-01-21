@@ -2,9 +2,9 @@
 layout: post
 title: Become a Matplotlib Ninja in 10 minutes
 tags: 
-cover_url: https://player.vimeo.com/video/284290238?portrait=0
+cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_2701.png
 cover_meta: 
-  A Total Lunar Eclipse Video | NASA IMAGE OF THE DAY
+  MANHATTAN SKYLINE BY THE NIGHT
 color_scheme: tango
 mathjax: true
 mathjax: True

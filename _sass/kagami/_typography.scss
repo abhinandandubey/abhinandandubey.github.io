@@ -226,12 +226,12 @@ article {
 }
 
 .post-list-item .post-item-cover {
-  opacity: 0.03;
+  opacity: 0.08;
   transition: opacity 0.5s ease-out;
 }
 
 .post-list-item:hover .post-item-cover {
-  opacity: 0.15;
+  opacity: 0.45;
   transition: opacity 0.5s ease-out;
 }
 

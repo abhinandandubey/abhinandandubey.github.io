@@ -2,9 +2,9 @@
 layout: post
 title: The Hough Space
 tags: 
-cover_url: https://apod.nasa.gov/apod/image/1901/TychoSNR_Chandra_960.jpg
+cover_url: https://github.com/alivcor/lightforest/raw/master/HudsonRiver.png
 cover_meta: 
-  Tycho's Supernova Remnant in X-ray | NASA IMAGE OF THE DAY
+  The Hudson River from Lackawanna Park, New Jersey
 color_scheme: tango
 mathjax: true
 mathjax: True

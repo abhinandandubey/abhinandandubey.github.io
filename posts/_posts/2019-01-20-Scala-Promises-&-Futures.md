@@ -2,9 +2,9 @@
 layout: post
 title: Scala Promises & Futures
 tags: 
-cover_url: https://player.vimeo.com/video/284290238?portrait=0
+cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_0411.png
 cover_meta: 
-  A Total Lunar Eclipse Video | NASA IMAGE OF THE DAY
+  A Morning At John F. Kennedy Airport, New York
 color_scheme: tango
 mathjax: true
 mathjax: True

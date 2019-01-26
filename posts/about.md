@@ -12,4 +12,4 @@ navtitle: about
 
 Hi there, I am a Computer Vision Enthusiast. I did my Masters in Computer Science from Stony Brook University, where I worked with [Prof. Roy Shilkrot](http://web.media.mit.edu/~roys/) at the [Human Interaction Lab](http://hi.cs.stonybrook.edu). I love learning more about Computer Vision and making cool projects.
 
-Visit [My Homepage](https://alivcor.github.io) for knowing more about me and projects I've done so far which I managed to document online. I created this blog with an intent of blogging about stuff I come across and things which interest me lately.
+Visit [My Homepage](http://www.abhinandandubey.com) for knowing more about me and projects I've done so far which I managed to document online. I created this blog with an intent of blogging about stuff I come across and things which interest me lately.

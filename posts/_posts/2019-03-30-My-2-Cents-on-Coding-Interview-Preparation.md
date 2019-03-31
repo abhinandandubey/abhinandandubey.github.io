@@ -150,7 +150,7 @@ It is highly probable that your interviewer might just ask you some of the very 
 
 # Money Milking is still good here
 
-All through my preparation, it saddened me to know that some people who are already employees at FAANG or one of these Big N companies have started making money out of this. Countless examples - [InterviewAccelerator](https://www.interviewaccelerator.com/), [interviewkickstart](https://www.interviewkickstart.com), [Careercup Resume](http://www.careercup.com/resume), [outco](https://www.outco.io) - _which is still a little okay as they're an independent entity_, 
+All through my preparation, it saddened me to know that some people who are already employees at FAANG or one of these Big N companies have started making money out of this. Countless examples - [InterviewAccelerator](https://www.interviewaccelerator.com/), [interviewkickstart](https://www.interviewkickstart.com), [Careercup Resume](http://www.careercup.com/resume), and a full fledged bootcamp - [outco](https://www.outco.io) - _which is still a little okay as they're an independent entity_, 
 
 This is incredibly sad for two reasons
 

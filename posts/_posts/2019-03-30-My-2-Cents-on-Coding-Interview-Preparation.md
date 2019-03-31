@@ -69,6 +69,7 @@ Once you've done close to 300 questions, you'll have a upper hand at these dread
 
 If the above three don't motivate you enough, I don't know what can. I'd say at least give it a try. After solving 30 problems or so, you'll actually start enjoying it!
 
+<hr/> 
 Now comes the question of how do I make the most out of it? This is *very important* because it's possible that you do all these questions and still fail at the interviews, it still is - and while it doesn't necessarily mean that you have low IQ, it's often a mix of reasons - the hiring process is optimised for low false positives, which means from a company's side of things, *it's fine to reject a few that were otherwise good and might in fact be better than the ones that were finally hired*. The goal is to NOT have someone who wasn't what they needed. It doesn't mean that if you are what they need, you'll get through. But more often than not, it might be that you had other reasons - and maybe one of them is that you didn't do this coding exercise just quite the way it was meant to be done. This is where I think this will help you out.
 
 # Solve easy problems first

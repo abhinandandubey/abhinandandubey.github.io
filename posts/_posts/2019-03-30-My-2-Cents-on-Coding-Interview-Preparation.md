@@ -156,7 +156,7 @@ This is incredibly sad for two reasons
 
 1. **It's unethical.** You are basically the teacher in school who also holds up evening tuition classes charging students for "an edge above others". Get the analogy? Don't? 
 
-2. **It's immoral** You went through a lot of pain doesn't mean you make it more painful. Instead, maybe write blog post to help others, or volunteer for teaching college students coming from low-income or community colleges so that they can also dream of working for one of these.
+2. **It's immoral** You went through a lot of pain doesn't mean you make it more painful. Instead, maybe write a blog post to help others, or volunteer for teaching college students coming from low-income or community colleges so that they can also dream of working for one of these. If you really wnat to make money - maybe write a book, but don't make money out of someone who is already going through it!
 
 All these programmes follow the same money making strategy - plans where they take a cut out of your first year's pay or pay thousands of dollars upfront. 
 

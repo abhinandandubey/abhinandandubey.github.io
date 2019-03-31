@@ -160,7 +160,7 @@ This is incredibly sad for two reasons
 
 All these programmes follow the same money making strategy - plans where they take a cut out of your first year's pay or pay thousands of dollars upfront. 
 
-I'd advice you to stay away from these programs - you CAN do it on your own. 
+I'd advise you to **stay FAR away from these programs - you CAN do it on your own.**
 
 # 
 

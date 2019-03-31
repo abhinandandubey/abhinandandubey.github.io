@@ -8,6 +8,25 @@ color_scheme: tango
 mathjax: true
 mathjax: True
 ---
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\(','\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
 
 Coding interviews can be hard - and with emerging hiring techniques in the bay-area companies like _bar-raising_ rounds, it might indeed sound brutal. To me personally, I had a moral blocker when I was faced with the need to solve a never ending list of Leetcode problems - most of which sounded like puzzles. I always used to think that you should be a _good_ programmer - not a robot who knows how to solve puzzles!
 
@@ -78,3 +97,4 @@ If you haven't solved them already, [LRU Cache Design](https://leetcode.com/prob
 Growing up in a pretty religious home, my father used to enchant the all 43 verses in the Hindu holy devotional hymn [Hanuman Chalisa](https://en.wikipedia.org/wiki/Hanuman_Chalisa) - every morning. He didn't miss it a single day. So that meant we all had to hear him enchant it every day - all through my childhood. And even though I never paid attention, I somehow had learned all the 43 verses which I remember to this day - word to word. 
 
 This is not to brag about me, but rather to show you how your brain functions. Follow this simple rule and you'll magically remember everything you did, because lets face it, [you can't come up with stupid mnemonics for everything Mr. Lieuw](https://www.youtube.com/watch?v=JsC9ZHi79jo) and moreover it's just plain rote-learning if you're doing mnemonics. The rule is to just look at or go through the thing after $x+4$, $x+12$, $x+24$, $x+72$.., where x updates everytime to its new values. Multiply by 3, multiply by 2, multiply by 3, multiply by 2. This makes your brain think that this piece of information is being accessed multiple times, in longer periods of time so it makes sense to retain it in your Long Term Memory. If you keep doing that, you'll be surprised to see how you're able to magically recall all of it without grinding it all at once.
+

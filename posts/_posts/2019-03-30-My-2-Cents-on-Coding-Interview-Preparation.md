@@ -65,7 +65,7 @@ But when coding, we're actually finding a deterministic solution to the problem,
 
 ## 3. It gives you a lift
 
-Once you've done close to 300 questions, you'll have an upper hand at these dreaded interviews. It'd only be a matter of time that you get through one of these. It not only takes away a lot of stress, it makaes these interviews laughably easy. You can focus on other parts of your profile like projects, system design, etc. 
+Once you've done close to 300 questions, you'll have an upper hand at these dreaded interviews. It'd only be a matter of time that you get through one of these. It not only takes away a lot of stress, it makes these interviews laughably easy. You can focus on other parts of your profile like projects, system design, etc. 
 
 If the above three don't motivate you enough, I don't know what can. I'd say at least give it a try. After solving 30 problems or so, you'll actually start enjoying it!
 

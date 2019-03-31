@@ -65,7 +65,7 @@ But when coding, we're actually finding a deterministic solution to the problem,
 
 ## 3. It gives you a lift
 
-Once you've done close to 300 questions, you'll have a upper hand at these dreaded interviews. It'd only be a matter of time that you get through one of these. It not only takes away a lot of stress, it makaes these interviews laughably easy. You can focus on other parts of your profile like projects, system design, etc. 
+Once you've done close to 300 questions, you'll have an upper hand at these dreaded interviews. It'd only be a matter of time that you get through one of these. It not only takes away a lot of stress, it makaes these interviews laughably easy. You can focus on other parts of your profile like projects, system design, etc. 
 
 If the above three don't motivate you enough, I don't know what can. I'd say at least give it a try. After solving 30 problems or so, you'll actually start enjoying it!
 
@@ -136,6 +136,8 @@ Once you think you're able to at least solve the problems, or roughly sketch an 
 # BUD, FUD, BURT, FURT 
 
 None of the methods of solving a problem are going to work if you haven't practised enough. I find these approaches incredibly stupid, and did not expect something of this sort in [Cracking The Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850), which is otherwise a good book for coding interview preparation. Like it or not, the level of these coding interview has reached its peak - or maybe not - but it's just not possible to crack these without having faced similar problems before. If you belive the contrary, you're naturally smart - no offense, but there is another 99% of population which can only make their way through by old-fashioned hard work. I am one of them.
+
+
 
 
 

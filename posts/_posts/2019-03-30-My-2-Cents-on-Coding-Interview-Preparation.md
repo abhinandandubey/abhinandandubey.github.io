@@ -31,16 +31,42 @@ In the first part, I'll help you overcome your motivation of not doing it, and t
 
 # Why should I bother doing LC
 
-## It's not about solving puzzles
+## 1. It's not about solving puzzles
 
 As I previously mentioned, I just found it stupid to be judged by a couple of coding puzzles. And to be honest, my belief has largely remained unchanged. It doesn't make you the smartest person on the earth. But it _does_ make you a little smarter, and it _does_ make you a better programmer. I learned so much more about Python - my go-to programming language than ever before. I learned so many ways of looking at problems, and gained a better perspective of what I had studied in Algorithms class. In fact I wish this was a part of the curriculum at school - not the whole thing but at least a part of it. 
 
 And not to mention, *it made some coding interviews laughably easy*. It _does_ help a lot. Once you've solved enough of these tricky problems, your mind magically develops this "algo mind". 
 
-## It's hard because it's not "natural"
+## 2. It's hard because it's not "natural"
 
 Your brain doesn't work on algorithms, instead, it works on probabilities and years of training and evolution. It's essentially a very complex neural network. So when I am looking at the Two Sum problem, or the Rotting Oranges problem, I'm not maintaining a stupid hashmap, or unconsiously running a BFS at the back of my mind without me actually knowing about it. Rather my brain is just running through a lot of permutations really really quick and running a hit-and-trial with some heuristics which activate neurons which get me an answer which might or might not be correct. 
 
 But when coding, we're actually finding a deterministic solution to the problem, a well structured and optimised list of steps which can get me the answers instead of rummaging through a bunch of hit and trials. That makes it hard. But there's a good news too - your brain is capable of learning how to come up with these steps too - just like you were never taught how to board a flight but you actually figured it out naturally, your brain will, after a while get better at figuring out solutions to compile an algorithm to these problems. It's just a matter of time.
 
-# 
+
+## 3. It gives you a lift
+
+Once you've done close to 300 questions, you'll have a upper hand at these dreaded interviews. It'd only be a matter of time that you get through one of these. It not only takes away a lot of stress, it makaes these interviews laughably easy. You can focus on other parts of your profile like projects, system design, etc. 
+
+If the above three don't motivate you enough, I don't know what can. I'd say at least give it a try. After solving 30 problems or so, you'll actually start enjoying it!
+
+Now comes the question of how do I make the most out of it? This is *very important* because it's possible that you do all these questions and still fail at the interviews, it still is - and while it doesn't necessarily mean that you have low IQ, it's often a mix of reasons - the hiring is optimised for low false positives, which means from a company's side of things, *it's fine to reject a few that were otherwise good and might in fact be better than the ones that were finally hired*. The goal is to NOT have someone who wasn't what they needed. It doesn't mean that if you are what they need, you'll get through. But more often than not, it might be that you had other reasons - and maybe one of them is that you didn't do this coding exercise just quite the way it was meant to be done. This is where I think this will help you out.
+
+# Solve easy problems first
+Patience and Persistence are the key to success. The Taj Mahal wasn't built in a day. It is very easy to get tempted to solve HARD problems and just "prove yourself" - but believe me - that doesn't help at all. Do the easy ones first, this will do two things - First, it will warm you up for the heavy lifting. Second, it will boost your confidence so that you gradually ascend and don't give up in middle. Third, it will brush up your basics that will prove to be super helpful for Medium and Hard problems.
+
+# Lists are your friends
+Yes they are - and I think this is why I gave up doing LC in past. I just aimed at starting serially from 1 towards 800. But that isn't humanly possible. It just isn't. Instead, I bought the Premium subscription for the year (it pays of many times its value so that's a no-brainer) and started with the Top 100 Amazon List. I used to solve around 4 to 8 problems a day and increased them to 10 - 15 on the weekends. Once I was done with a list, I started with Medium Top 250 and so on. It helped me maintain a to do list, and also geared up my confidence knowing that I'm already done with a certain percentage of highly probable questions already.
+
+# Do it the Feynman Way
+In the early 1960s, Richard Feynman gave a series of undergraduate lectures that were collected into a book called the Feynman Lectures on Physics. Feynman was well known for simple explanations of scientific concepts that result a in deeper understanding of the subject matter. A note at the top of his blackboard read:
+
+> What I cannot create, I do not understand.
+
+This is SUPER IMPORTANT. If you can't explain it to someone else - believe it or not - you don't understand it, and you'll most likely fail to remember it in the stressful setting of an interview. When you solve a problem, work your way through the problem yourself on a whiteboard. I used an incredibly useful app called [GoodNotes](https://www.goodnotes.com/) on my iPad - it is $7.99 on the [AppStore](https://itunes.apple.com/us/app/goodnotes-5/id1444383602?ls=1&mt=8) but worth a thousand times that.
+
+I created a notebook on the App and by the time I had completed my preparation, it had a whopping 200 pages of scribbles, pseudo-codes, drawings (and some doodles!).
+
+# Beware of Hydroplaning
+
+

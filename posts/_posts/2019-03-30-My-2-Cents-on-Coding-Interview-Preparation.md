@@ -148,6 +148,14 @@ It is highly probable that your interviewer might just ask you some of the very 
 4. Insert Sort, Binary Insertion Sort
 5. LinkedList Reversal
 
-# 
+# Money Milking is still good here
+
+All through my preparation, it saddened me to know that the people who are already employees at FAANG or one of these Big N companies have started making money out of this. This is incredibly sad for two reasons
+
+1. **It's unethical.** You are basically the teacher in school who also holds up evening tution classes at extra pay. Get the analogy? Don't? 
+
+2. **It's immoral** You went through a lot of pain doesn't mean you make it more painful. Instead, maybe write blog post to help others, or volunteer for teaching college students coming from low-income or community colleges so that they can also dream of working for one of these.
+
+
 
 

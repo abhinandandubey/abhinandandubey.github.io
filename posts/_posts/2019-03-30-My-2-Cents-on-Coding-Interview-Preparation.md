@@ -129,4 +129,14 @@ One of the things that make Leetcoding a lot fun is beating what's out there. An
 ![Raw Code](https://github.com/alivcor/lightforest/raw/master/LEETCODE1.png)
 ![Optimised](https://github.com/alivcor/lightforest/raw/master/LEETCODE2.png)
 
-# 
+# Start Timing 
+
+Once you think you're able to at least solve the problems, or roughly sketch an approach, you should start timing yourselves. A great way to do so is using an add-on on your Titlebar. I used [Be Focused](https://itunes.apple.com/au/app/be-focused-focus-timer/id973134470?mt=12) - it's Free but also has a Pro version without ads and some other features.
+
+# BUD, FUD, BURT, FURT 
+
+None of the methods of solving a problem are going to work if you haven't practised enough. I find these approaches incredibly stupid, and did not expect something of this sort in [Cracking The Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850), which is otherwise a good book for coding interview preparation. Like it or not, the level of these coding interview has reached its peak - or maybe not - but it's just not possible to crack these without having faced similar problems before.
+
+
+
+

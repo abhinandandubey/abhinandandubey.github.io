@@ -9,6 +9,8 @@ mathjax: true
 mathjax: True
 ---
 
+<div style="text-align: justify">
+<br/>
 Coding interviews can be hard - and with emerging hiring techniques in the bay-area companies like _bar-raising_ rounds, it might indeed sound brutal. To me personally, I had a moral blocker when I was faced with the need to solve a never ending list of Leetcode problems - most of which sounded like puzzles. I always used to think that you should be a _good_ programmer - not a robot who knows how to solve puzzles!
 
 My first exposure to these coding interviews was in Fall of 2016 - when I was hunting for an internship for the summer of 2017. I had no prior experience - neither work, nor coding interviews. I was lucky enough to get a few calls from companies in Silicon Valley and a few startups in NYC, thanks to the good reputation Stony Brook has amongst the top CS programs. 
@@ -27,16 +29,17 @@ It was just this sinking feeling that there were opportunities at my door, and I
 
 In the little hours I had, I managed to solve near about 200 problems, although most of them were Easy-Medium. And in doing so, I learned a lot of lessons. I couldn't find these lessons anywhere on the internet and so at the end of it, I decided to write a blog post on it. 
 
-# It's not about solving puzzles
+<h2> It's not about solving puzzles </h2>
 
 As I previously mentioned, I just found it stupid to be judged by a couple of coding puzzles. And to be honest, my belief has largely remained unchanged. It doesn't make you the smartest person on the earth. But it _does_ make you a little smarter, and it _does_ make you a better programmer. I learned so much more about Python - my go-to programming language than ever before. I learned so many ways of looking at problems, and gained a better perspective of what I had studied in Algorithms class. In fact I wish this was a part of the curriculum at school - not the whole thing but at least a part of it. 
 
 And not to mention, <b>it made some coding interviews laughably easy</b>. It _does_ help a lot. Once you've solved enough of these tricky problems, your mind magically develops this "algo mind". 
 
-# It's hard because it's not "natural"
+<h2> It's hard because it's not "natural" </h2>
 
 Your brain doesn't work on algorithms, instead, it works on probabilities and years of training and evolution. It's essentially a very complex neural network. So when I am looking at the Two Sum problem, or the Rotting Oranges problem, I'm not maintaining a stupid hashmap, or unconsiously running a BFS at the back of my mind without me actually knowing about it. Rather my brain is just running through a lot of permutations really really quick and running a hit-and-trial with some heuristics which activate neurons which get me an answer which might or might not be correct. 
 
 But when coding, we're actually finding a deterministic solution to the problem, a well structured and optimised list of steps which can get me the answers instead of rummaging through a bunch of hit and trials. That makes it hard. But there's a good news too - your brain is capable of learning how to come up with these steps too - just like you were never taught how to board a flight but you actually figured it out naturally, your brain will, after a while get better at figuring out solutions to compile an algorithm to these problems. It's just a matter of time.
 
 # 
+<br/>

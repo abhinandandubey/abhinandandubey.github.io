@@ -2,8 +2,8 @@
 layout: post
 title: My Two Cents on Coding Interview Preparation
 tags: 
-cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_2716.JPG
-cover_meta: The Majestic NYC Skyline in Summer (c) AD Photography
+cover_url: https://github.com/alivcor/lightforest/raw/master/A629F21F-176B-4247-A48E-87705E4DBC3F.jpg
+cover_meta: Okanogan-Wenatchee National Forest from above (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

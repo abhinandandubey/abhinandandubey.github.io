@@ -46,7 +46,7 @@ It was just this sinking feeling that there were opportunities at my door, and I
 
 In the little hours I had, I managed to solve near about 200 problems, although most of them were Easy-Medium. And in doing so, I learned a lot of lessons. I couldn't find these lessons anywhere on the internet and so at the end of it, I decided to write a blog post on it. 
 
-In the first part, I'll help you overcome your motivation of not doing it, and then, I'll give you some *very helpful* tips that will help you get the most out of it.
+In the first part, I'll help you overcome your motivation of not doing it, and then, I'll give you some **very helpful** tips that will help you get the most out of it.
 
 # Why should I bother doing LC
 
@@ -70,7 +70,7 @@ Once you've done close to 300 questions, you'll have a upper hand at these dread
 If the above three don't motivate you enough, I don't know what can. I'd say at least give it a try. After solving 30 problems or so, you'll actually start enjoying it!
 
 <hr/> 
-Now comes the question of how do I make the most out of it? This is *very important* because it's possible that you do all these questions and still fail at the interviews, it still is - and while it doesn't necessarily mean that you have low IQ, it's often a mix of reasons - the hiring process is optimised for low false positives, which means from a company's side of things, *it's fine to reject a few that were otherwise good and might in fact be better than the ones that were finally hired*. The goal is to NOT have someone who wasn't what they needed. It doesn't mean that if you are what they need, you'll get through. But more often than not, it might be that you had other reasons - and maybe one of them is that you didn't do this coding exercise just quite the way it was meant to be done. This is where I think this will help you out.
+Now comes the question of **how do I make the most out of it?** This is **very important** because it's possible that you do all these questions and still fail at the interviews, it still is - and while it doesn't necessarily mean that you have low IQ, it's often a mix of reasons - the hiring process is optimised for low false positives, which means from a company's side of things, *it's fine to reject a few that were otherwise good and might in fact be better than the ones that were finally hired*. The goal is to NOT have someone who wasn't what they needed. It doesn't mean that if you are what they need, you'll get through. But more often than not, it might be that you had other reasons - and maybe one of them is that you didn't do this coding exercise just quite the way it was meant to be done. This is where I think this will help you out.
 
 # Solve easy problems first
 Patience and Persistence are the key to success. The Taj Mahal wasn't built in a day. It is very easy to get tempted to solve HARD problems and just "prove yourself" - but believe me - that doesn't help at all. Do the easy ones first, this will do two things - First, it will warm you up for the heavy lifting. Second, it will boost your confidence so that you gradually ascend and don't give up in middle. Third, it will brush up your basics that will prove to be super helpful for Medium and Hard problems.
@@ -89,7 +89,7 @@ I created a notebook on the App and by the time I had completed my preparation, 
 
 # Beware of Hydroplaning
 
-Who says Hydroplaning only happens on wet streets? It can happen when you're LCing too. What I mean by hydroplaning here is that, when you're looking at the solution, or a Solution Code, it is *very easy* to skip small details which make up the solution. For example, maybe that *for loop* is actually running backwards. Maybe the loop is stopping one index before than it normally does. Things like that only come to picture when you implement it yourself. I guarantee you that Hydroplaning will happen. It's unavoidable, it's just how our brains function, they strip off the intricate details to focus on the big picture. So when you're reading a solution code, make sure to implement it yourselves, even if *you think you get it*. This might take 5 more minutes of your time now, but it will save you a whole lot of embarrasement in an interview when you're either confused why it isn't working here when you're doing just that way it was done in *that solution*!
+Who says Hydroplaning only happens on wet streets? It can happen when you're LCing too. What I mean by hydroplaning here is that, when you're looking at the solution, or a Solution Code, it is **very easy** to skip small details which make up the solution. For example, maybe that *for loop* is actually running backwards. Maybe the loop is stopping one index before than it normally does. Things like that only come to picture when you implement it yourself. I guarantee you that Hydroplaning will happen. It's unavoidable, it's just how our brains function, they strip off the intricate details to focus on the big picture. So when you're reading a solution code, make sure to implement it yourselves, even if *you think you get it*. This might take 5 more minutes of your time now, but it will save you a whole lot of embarrasement in an interview when you're either confused why it isn't working here when you're doing just that way it was done in *that solution*!
 
 # Your brain is an LRU+LFU Cache
 
@@ -109,3 +109,24 @@ Well, good for the guy who wrote it. But is it for you? *It probably isn't*. Eve
 
 There might be questions like [https://leetcode.com/problems/move-zeroes/](this) which explcitly ask you modify things in place, and while you could get away with an AC just by doing some copying, it's not good for your interview preparation. You should look at how to do things in place. Pay serious attention to this as interviewers often like to put constraints as follow-up questions - _do it in-place_, do it _iteratively_, _do it with O(1) space_ ...
 
+# Let code explain you how it's working
+
+There are certain problems which do not have detailed explanations, and you might find yourselves in a situation where all you can find online is code, or maybe the explanation is just too complex in itself - maybe it's a [brain-dump](https://whatis.techtarget.com/definition/brain-dump) - not a well-structured article. In such cases, let the code work for you. What I mean by that is [this](https://leetcode.com/problems/sliding-window-maximum/discuss/237611/simplest-on-python-solution-with-explanation/256107). This is what I used to do when I was stuck. It helped - A LOT!
+
+# Some problems are simply ANNOYING
+
+There are some problems like [this](https://leetcode.com/problems/count-and-say/), [this](https://leetcode.com/problems/read-n-characters-given-read4/) and [this](https://leetcode.com/problems/string-compression/), which are indeed annoying. You might even be unlucky to face them in an interview, so it's best to duck it up and just solve them. These questions can usually be characterized by their high like/dislike ratio, and this is a testament to the fact that you're not the only one to find them annoying!
+
+# Let it rust - but don’t let it die
+
+Earlier in this post, I gave you a trick to retain the information and strategies you use to solve problems. This it is fine to wait before you look back and revisit a problem, but don't let that wait be so long that you actually forget what approach you took. When I was solving all of these problems, in the last week of my interview, I had to revise a whole lot of problems, and I did have some trouble recalling the solution even after looking at it. It's best to at least give a cursory look at the problems you have done every weekend or so.
+
+# Details make all the difference
+
+One of the things that make Leetcoding a lot fun is beating what's out there. And just a small tip here. If you are new to competitive programming, it makes a huge difference whether or not your code is writing to `stdout` or you are initializing or using variables that are not really required. See for yourselves:
+
+
+![Raw Code](https://github.com/alivcor/lightforest/raw/master/LEETCODE1.png)
+![Optimised](https://github.com/alivcor/lightforest/raw/master/LEETCODE2.png)
+
+# 

@@ -98,3 +98,13 @@ Growing up in a pretty religious home, my father enchants the all 43 verses in t
 
 This is not to brag about myself, but rather to show you how your brain functions. Follow this simple rule and you'll magically remember everything you did, because lets face it, [you can't come up with stupid mnemonics for everything Mr. Lieuw](https://www.youtube.com/watch?v=JsC9ZHi79jo) and moreover it's just plain rote-learning if you're doing mnemonics. The rule is to just look at or go through the thing after $x+4$, $x+12$, $x+24$, $x+72$.., where x updates everytime to its new values. Multiply by 3, multiply by 2, multiply by 3, multiply by 2. This makes your brain think that this piece of information is being accessed multiple times, in longer periods of time so it makes sense to retain it in your Long Term Memory. If you keep doing that, you'll be surprised to see how you're able to magically recall all of it without grinding it all at once.
 
+# Intuitive Solutions Last
+
+> Wow that one line solution is so cool. It does 4 bitwise operations and uses list comprehensions on multiple lists and zips them together all in one line
+
+Well, good for the guy who wrote it. But is it for you? *It probably isn't*. Even if you somehow embrace it's beauty right now, you'll regret about forgetting it later. When you're searching for an elegant solution in the "Discuss" tab or somehwere online, try to go with the solution that's elegant but not trimmed short or does some super smart operations. Because even if you learn it, you'll have to explain how you came up with it in the short duration of the interview. Else, it will become pretty obvious that you had seen the question before - which I don't know is good or bad.
+
+# This is easy - but is it In Place?
+
+There might be questions like [https://leetcode.com/problems/move-zeroes/](this) which explcitly ask you modify things in place, and while you could get away with an AC just by doing some copying, it's not good for your interview preparation. You should look at how to do things in place. Pay serious attention to this as interviewers often like to put constraints as follow-up questions - _do it in-place_, do it _iteratively_, _do it with O(1) space_ ...
+

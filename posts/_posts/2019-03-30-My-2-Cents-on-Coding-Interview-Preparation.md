@@ -31,7 +31,7 @@ In the little hours I had, I managed to solve near about 200 problems, although 
 
 As I previously mentioned, I just found it stupid to be judged by a couple of coding puzzles. And to be honest, my belief has largely remained unchanged. It doesn't make you the smartest person on the earth. But it _does_ make you a little smarter, and it _does_ make you a better programmer. I learned so much more about Python - my go-to programming language than ever before. I learned so many ways of looking at problems, and gained a better perspective of what I had studied in Algorithms class. In fact I wish this was a part of the curriculum at school - not the whole thing but at least a part of it. 
 
-And not to mention, *it made some coding interviews laughably easy*. It _does_ help a lot. Once you've solved enough of these tricky problems, your mind magically develops this "algo mind". 
+And not to mention, <b>it made some coding interviews laughably easy</b>. It _does_ help a lot. Once you've solved enough of these tricky problems, your mind magically develops this "algo mind". 
 
 # It's hard because it's not "natural"
 

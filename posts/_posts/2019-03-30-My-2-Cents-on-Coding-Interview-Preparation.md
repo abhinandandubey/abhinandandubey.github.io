@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 
-Coding interviews can be hard - and with emerging hiring techniques in the bay-area companies like _bar-raising_ rounds, it might indeed sound brutal. To me personally, I had a moral blocker when I was faced with the need to solve a never ending list of Leetcode problems - most of which sounded like puzzles. I always used to think that you should be a _good_ programmer - not a robot who knows how to solve puzzles!
+Coding interviews can be hard - and with emerging hiring techniques in the bay-area companies like _bar-raising_ rounds, it might indeed sound brutal. To me personally, I had a morale blocker when I was faced with the need to solve a never ending list of Leetcode problems - most of which sounded like puzzles. I always used to think that you should be a _good_ programmer - not a robot who knows how to solve puzzles!
 
 My first exposure to these coding interviews was in Fall of 2016 - when I was hunting for an internship for the summer of 2017. I had no prior experience - neither work, nor coding interviews. I was lucky enough to get a few calls from companies in Silicon Valley and a few startups in NYC, thanks to the good reputation Stony Brook has amongst the top CS programs. 
 

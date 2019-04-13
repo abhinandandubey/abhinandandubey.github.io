@@ -170,4 +170,4 @@ I was really happy to see that there are some services which actually do so much
 
 Also watch [this amazing TED Talk](https://www.youtube.com/watch?v=Acl6owhFMHQ) by Austin Corso - really helpful for interviews.
 
-k.
+k

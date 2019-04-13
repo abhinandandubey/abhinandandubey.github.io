@@ -17,3 +17,9 @@ theme: jekyll-theme-kagami
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+---
+layout: default
+comments: true
+# other options
+---

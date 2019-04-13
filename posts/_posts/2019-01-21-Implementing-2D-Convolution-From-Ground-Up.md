@@ -33,3 +33,5 @@ MathJax.Hub.Queue(function() {
 
 The first thing that should be clear in your mind when you're even thinking of working with OpenCV or any other image processing library for that matter is the directions
 
+
+#TODO

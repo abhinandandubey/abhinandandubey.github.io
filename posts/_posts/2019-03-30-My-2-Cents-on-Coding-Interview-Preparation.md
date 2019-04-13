@@ -7,6 +7,7 @@ cover_meta: Okanogan-Wenatchee National Forest from above (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True
+comments: true
 ---
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}

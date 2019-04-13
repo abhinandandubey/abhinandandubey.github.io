@@ -28,3 +28,6 @@ shortname: abhinandandubey
 disqus_shortname: abhinandandubey
 disqus:
     shortname: abhinandandubey
+
+jekyll:
+  environment: production

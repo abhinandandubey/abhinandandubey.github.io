@@ -31,3 +31,5 @@ disqus:
 
 jekyll:
   environment: production
+page:
+  comments: true

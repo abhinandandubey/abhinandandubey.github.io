@@ -6,9 +6,6 @@ cover_url: https://github.com/alivcor/lightforest/raw/master/A629F21F-176B-4247-
 cover_meta: Okanogan-Wenatchee National Forest from above (c) AD Photography
 color_scheme: tango
 mathjax: true
-mathjax: True
-comments: true
-comments: True
 ---
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}

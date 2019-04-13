@@ -166,5 +166,3 @@ I'd advise you to **stay FAR away from these programs - you CAN do it on your ow
 I was really happy to see that there are some services which actually do so much more for free and are community driven - one of these is [PRAMP](https://www.pramp.com). You can schedule online coding interviews where you get matched to a random person who will ask you an interview problem - there's live video stream - so both of you can see each other - and you take turns interviewing each other. I didn't do it many times, but did it once, and found it very helpful.
 
 Also watch [this amazing TED Talk](https://www.youtube.com/watch?v=Acl6owhFMHQ) by Austin Corso - really helpful for interviews.
-
-k..

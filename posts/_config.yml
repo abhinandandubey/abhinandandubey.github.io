@@ -23,8 +23,8 @@ layout: default
 comments: true
 # other options
 ---
-EXAMPLE: abhinandan_dubey
-shortname: abhinandan_dubey
-disqus_shortname: abhinandan_dubey
+EXAMPLE: abhinandandubey
+shortname: abhinandandubey
+disqus_shortname: abhinandandubey
 disqus:
-    shortname: abhinandan_dubey
+    shortname: abhinandandubey

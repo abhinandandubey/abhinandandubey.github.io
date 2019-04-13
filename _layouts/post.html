@@ -25,8 +25,7 @@ layout: default
     {% endif %}
   </footer>
 
-  {% if page.comments != false %}
-  <p>Add comments if you'd like</p>
+  {% if jekyll.environment == 'production' and site.disqus_shortname and page.comments != false %}
   {% include disqus.html %}
   {% endif %}
 </article>

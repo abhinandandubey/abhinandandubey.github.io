@@ -25,3 +25,5 @@ comments: true
 ---
 EXAMPLE: abhinandan_dubey
 shortname: abhinandan_dubey
+disqus:
+    shortname: abhinandan_dubey

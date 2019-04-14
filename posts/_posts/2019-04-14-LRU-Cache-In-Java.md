@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LRU Cache in Java
-tags: Coding, Java, Interviews, Programming, System Design
+tags: Coding Java Interview Programming System-Design Career
 cover_url: https://github.com/alivcor/lightforest/raw/master/ED33A877-F939-4D7D-9753-3784DB3AB227.jpg
 cover_meta: A Mocha at Espresso Vivace (c) AD Photography
 color_scheme: tango

@@ -38,6 +38,8 @@ I'm going to initiate a data structure for this problem. It's just *bad code* to
 
 For the sake of explanation, I'm going to put a story (also helps you to retain the logic in your mind if you're preparing for interviews). So, imagine you have to visit all cities of the world. You have a journal. Every city is represented by the data structure `Node` in our code. Lets read through the intuition
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Route_of_the_1966_Tour_de_France.png/599px-Route_of_the_1966_Tour_de_France.png"/>
+
 ## Intuition
 
 1. We use BFS to make sure we visited the shortest path first because DFS doesn't guarantee the path to be the shortest. It can make you wander off on some other path.

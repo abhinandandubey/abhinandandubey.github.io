@@ -2,8 +2,8 @@
 layout: post
 title: LRU Cache in Java
 tags: 
-cover_url: https://github.com/alivcor/lightforest/raw/master/A629F21F-176B-4247-A48E-87705E4DBC3F.jpg
-cover_meta: Okanogan-Wenatchee National Forest from above (c) AD Photography
+cover_url: https://github.com/alivcor/lightforest/raw/master/ED33A877-F939-4D7D-9753-3784DB3AB227.jpg
+cover_meta: A Mocha at Espresso Vivace (c) AD Photography
 color_scheme: tango
 mathjax: true
 ---

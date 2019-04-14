@@ -3,7 +3,7 @@ layout: post
 title: Shortest Path Visting All Nodes in a Graph
 tags: Coding Python Interview Programming System-Design Career HashMap Graph
 cover_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2011_Tour_de_France_map.png/1012px-2011_Tour_de_France_map.png
-cover_meta: A Mocha at Espresso Vivace (c) AD Photography
+cover_meta: Tour De France Map, Wikimedia
 color_scheme: tango
 mathjax: true
 ---

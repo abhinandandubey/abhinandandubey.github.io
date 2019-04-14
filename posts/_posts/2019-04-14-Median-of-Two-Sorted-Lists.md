@@ -2,7 +2,7 @@
 layout: post
 title: Median of Two Sorted Lists
 tags: Coding Python Interview Programming System-Design Career Binary-Search Arrays
-cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_3725.jpg
+cover_url: https://github.com/alivcor/lightforest/raw/master/spo.jpg
 cover_meta: The Observation Deck at The Space Needle (c) AD Photography
 color_scheme: tango
 mathjax: true

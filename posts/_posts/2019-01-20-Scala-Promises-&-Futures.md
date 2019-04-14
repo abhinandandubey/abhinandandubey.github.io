@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scala Promises & Futures
-tags: 
+tags: Scala Concurrent-Programming
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_0411.png
 cover_meta: 
   A Morning At John F. Kennedy Airport, New York

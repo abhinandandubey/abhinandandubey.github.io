@@ -27,11 +27,10 @@ MathJax.Hub.Queue(function() {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 ## The Problem
-An undirected, connected graph of N nodes (labeled 0, 1, 2, ..., N-1) is given as graph.
+We're given an undirected, but connected graph of $N$ nodes which are labeled $0, 1, 2, ..., N-1$. The length of the graph is also $N$, and $j != i$ is in the list $graph[i]$ exactly once, if and only if nodes i and j are connected.
 
-graph.length = N, and j != i is in the list graph[i] exactly once, if and only if nodes i and j are connected.
+Task is to find out the length of the shortest path that visits every node. We're free to choose our own start and stop locations and are allowed to revisit nodes multiple times and reuse edges as we may like.
 
-Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
 
 ## Discussion
 
@@ -42,7 +41,7 @@ For the sake of explanation, I'm going to put a story (also helps you to retain 
 ## Intuition
 
 1. We use BFS to make sure we visited the shortest path first because DFS doesn't guarantee the path to be the shortest. It can make you wander off on some other path.
-2. We maintain the distance to each node in a HashMap. Now since we have a custom data structure, we have to provide a `__hash__` method to python so that it doesn't complain about keys being unhashable.
+2. We maintain the distance to each node in a HashMap. 
 
 **What the duck are bits doing here?**
 As it turns out, life would have been really simple if we could just keep all the visited nodes in a set called `visited`. Well, *Ce La Vie!* - the judge gives you a TLE.
@@ -61,7 +60,11 @@ implies you have visited cities with id 0, 1, 2 and 5 and 6 - basically wherever
 Well, you can just perform an bitwise `OR` to cross off the city that you just visited. *(Think!)*
 
 
+## Implementation
 
+### Defining a `Node`
+
+Note that since we have a custom data structure, it is important that we provide a `__hash__` method to python so that it doesn't complain about keys being unhashable.
 
 ```python
 class Node(object):
@@ -79,6 +82,11 @@ class Node(object):
         return hash((self.id, self.journal))
     
 ```
+
+### `shortestPathLength` Method
+
+The actual implementation now looks surprisingly simple now that we have took the pain of defining what a `Node` is.
+
 
 ```python
 def shortestPathLength(self, graph):

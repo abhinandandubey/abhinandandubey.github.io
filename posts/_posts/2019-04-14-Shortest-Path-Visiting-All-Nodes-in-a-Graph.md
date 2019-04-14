@@ -2,7 +2,7 @@
 layout: post
 title: Shortest Path Visting All Nodes in a Graph
 tags: Coding Python Interview Programming System-Design Career HashMap Graph
-cover_url: https://github.com/alivcor/lightforest/raw/master/ED33A877-F939-4D7D-9753-3784DB3AB227.jpg
+cover_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2011_Tour_de_France_map.png/1012px-2011_Tour_de_France_map.png
 cover_meta: A Mocha at Espresso Vivace (c) AD Photography
 color_scheme: tango
 mathjax: true
@@ -38,7 +38,7 @@ I'm going to initiate a data structure for this problem. It's just *bad code* to
 
 For the sake of explanation, I'm going to put a story (also helps you to retain the logic in your mind if you're preparing for interviews). So, imagine you have to visit all cities of the world. You have a journal. Every city is represented by the data structure `Node` in our code. Lets read through the intuition
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Route_of_the_1966_Tour_de_France.png/599px-Route_of_the_1966_Tour_de_France.png"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2011_Tour_de_France_map.png/593px-2011_Tour_de_France_map.png"/>
 
 ## Intuition
 

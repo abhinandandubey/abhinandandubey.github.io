@@ -13,7 +13,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['$','$'], ['\(','\)']],
+        inlineMath: [['$','$']],
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
     }
 });
@@ -228,3 +228,4 @@ A simple helper function for debugging.
 ## The `HashMap` vs `HashTable` Debate
 
 If you're designing an actual Cache which uses multi-threading, it might be better to use a `HashTable` because it's synchronised. It also does not allow null keys or values. However, in high-grade production systems, you wouldn't just be able to get by thread safety just by using a HashTable. Read (this)[https://stackoverflow.com/a/41454], or use Scala. :)
+

@@ -39,12 +39,12 @@ Design and implement an [LRU Cache](https://en.wikipedia.org/wiki/Cache_replacem
 
 ## The Constraints
 
-Both of your operations should be $O(1)$.
+Both of your operations should be $\mathcal{O}(1)$.
 
 
 ## Intuition
 
-$O(1)$ almost always implies a hashmap. Since order here is important, one can immediately think of something on the lines of `OrderedDict` in python, or the Java `LinkedHashMap`. The `LinkedHashMap` stores the ordering implicitly and provides `removeEldestEntry()` method which makes the implementation _very_ simple.
+$\mathcal{O}(1)$ almost always implies a hashmap. Since order here is important, one can immediately think of something on the lines of `OrderedDict` in python, or the Java `LinkedHashMap`. The `LinkedHashMap` stores the ordering implicitly and provides `removeEldestEntry()` method which makes the implementation _very_ simple.
 
 A more subtle approach is using a Doubly Linked List glued to a HashMap.
 
@@ -187,7 +187,7 @@ To make things more clear, if say you cache is full on Step $i$, you should evic
 ```
 
 
-It is also important to note here that the `get` method also needs to use `removeNode` and `addFirst`. Since these methods are both $O(1)$, instead of moving the node to the first position, you'd rather remove and re-insert.
+It is also important to note here that the `get` method also needs to use `removeNode` and `addFirst`. Since these methods are both $\mathcal{O}(1)$, instead of moving the node to the first position, you'd rather remove and re-insert.
 
 ```java
     public int get(int key) {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Two Cents on Coding Interview Preparation
-tags: Coding Interview Preparation Programming Amazon Apple
+tags: Coding Interview Preparation Programming Amazon Apple Career
 cover_url: https://github.com/alivcor/lightforest/raw/master/A629F21F-176B-4247-A48E-87705E4DBC3F.jpg
 cover_meta: Okanogan-Wenatchee National Forest from above (c) AD Photography
 color_scheme: tango

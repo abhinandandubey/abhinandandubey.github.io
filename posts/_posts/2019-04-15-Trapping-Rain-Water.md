@@ -42,7 +42,7 @@ But in the empty block in the same gap, we have trapped 2 blocks of water. It's 
 
 Also notice that the maximum water trapped in any of the blocks in this gap is less than or equal to $2$. Now, what if I were to increase the height of the block on left side of the gap from $2$ to $4$.
 
-<img src="https://github.com/alivcor/lightforest/raw/master/TrappingWater1.png"/>
+<img src="https://github.com/alivcor/lightforest/raw/master/TrappingWater2.png"/>
 
 We can now see that we have an extra block of water above three blocks in the gap. Only that now, the maximum has increased to $3$. This implies that **the amount of water trapped in a block depends on the heights of the minimum block sizes on either sides of it**. 
 

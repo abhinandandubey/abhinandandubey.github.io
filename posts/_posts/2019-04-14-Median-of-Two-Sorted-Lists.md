@@ -67,3 +67,27 @@ What does that leave for second array? $3$ on the left side, so that total on le
 
 <img src="https://github.com/alivcor/lightforest/raw/master/mergesorted5.png"/>
 
+Before we jump onto comparing the border elements, lets name them for sake of clarity. Also, just notice for now how we move the window, it becomes more clear int the next step.
+
+
+<img src="https://github.com/alivcor/lightforest/raw/master/mergesorted6.png"/>
+
+We need to make sure 2 things here:
+
+1. `maxLeftX <= minRightY`
+2. `maxLeftY <= minRightX`
+
+If not, we need to check whether our partition on $X$ - (the first array _aka_ `nums1`) needs to move left, or right. To do so, we just need to check how we're doing on point (1) above. If `maxLeftX > minRightY` then we're basically having too large elements in the first array, and we should shift our partition point to the left, otherise, to the right.
+
+As shown in the above, we ask ourselves whether $16 <= 9$ **and** $7 <= 20$. False. Since $16$ (`maxLeftY`)is too big of a number than $9$, we need to move our partition to the **right** so that `minRightX` becomes larger or equal to that.
+
+<img src="https://github.com/alivcor/lightforest/raw/master/mergesorted7.png"/>
+
+We perform a similar check on new partitions to know that we've finally satisfied all our constraints. Thus median is `max(maxLeftX, maxLeftY)` since the total $m+n$ is odd, and we have a single middle number (we do not need to average). Thus,
+
+
+<img src="https://github.com/alivcor/lightforest/raw/master/mergesorted8.png"/>
+
+It is also helpful to see it visually, how it'd have looked - had we opted for the linear time approach:
+
+<img src="https://github.com/alivcor/lightforest/raw/master/mergesorted9.png"/>

@@ -91,3 +91,51 @@ We perform a similar check on new partitions to know that we've finally satisfie
 It is also helpful to see it visually, how it'd have looked - had we opted for the linear time approach:
 
 <img src="https://github.com/alivcor/lightforest/raw/master/mergesorted9.png"/>
+
+
+## Implementation
+
+```java
+ public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+        if(nums2.length < nums1.length){
+            // To ensure that we always run search on the lesser devil
+            return findMedianSortedArrays(nums2, nums1);
+        }
+
+        int x = nums1.length;
+        int y = nums2.length;
+
+        int low = 0;
+        int high = x;
+
+        while(low <= high){
+            int partitionX = (low + high)/2;
+            int partitionY = (x + y + 1)/2 - partitionX;
+            
+            // INF is added to cover edge cases when either of the 4 parts become empty.
+            int maxLeftX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX-1];
+            int minRightX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX];
+
+            int maxLeftY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY-1];
+            int minRightY = (partitionY == y) ? Integer.MAX_VALUE : nums2[partitionY];
+
+            if(maxLeftX <= minRightY && maxLeftY <= minRightX){
+                if((x+y)%2 == 0){
+                    return (double) (Math.max(maxLeftX, maxLeftY) + Math.min(minRightX, minRightY))/2;
+                } else {
+                    return (double) (Math.max(maxLeftX, maxLeftY));
+                }
+
+            } else if (maxLeftX > minRightY) {
+                high = partitionX - 1;
+            } else {
+                low = partitionX + 1;
+            }
+
+        }
+        throw new IllegalArgumentException();
+
+    }
+```
+_This post is partly based on a video by Tushar Roy [here](https://www.youtube.com/watch?v=LPFhl65R7ww). The aim was to provide a concise, visual representation of the same._

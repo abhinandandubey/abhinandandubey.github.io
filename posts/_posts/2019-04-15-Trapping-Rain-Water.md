@@ -49,3 +49,43 @@ We can now see that we have an extra block of water above three blocks in the ga
 A simple lookaround these two facts should be able to get us to the following equation:
 
 $$ water_i = min(left\_max_i, right\_max_i) - height_i$$
+
+## Implementation
+
+The intuition seems easy, right? The implementation isn't - the reason being it has two _"gotchas"_.
+
+### 1. What's first value in `left_max` and last value in `right_max`?
+It should be clear that the length of the arrays `left_max` and `right_max` should be same as length of `height`. It is also clear that `left_max[i] = max(left_max[i-1], height[i])`. For the first element, we can't use this same expression though. In this case, we need to ask ourselves what is this expression really calculating - it's the maximum of all heights seen on the left **including the current one**. Since the ones on the left are none or 0, thus for the first index, the maximum height is the height of the block itself. A similar analogy can be applied to find last value of `right_max` which is basically `height[height.length]`
+
+
+### 2. How's final array calculated on edges?
+Since water cannot be trapped on the edge buildings _aka_ blocks, we need to consider only the middle ones.
+
+With the above two _gotchas_ clear to us, the following solution should now seem simple;
+
+```java
+public int trap(int[] height) {
+
+        if(height.length == 0){
+            return 0;
+        }
+
+        int[] left_max = new int[height.length];
+        left_max[0] = height[0];
+        for(int i = 1; i < height.length; i++){
+            left_max[i] = Math.max(left_max[i - 1], height[i]);
+        }
+        
+        int[] right_max = new int[height.length];
+        right_max[right_max.length - 1] = height[height.length - 1];
+        for(int i = height.length-2; i > 0; i--){
+            right_max[i] = Math.max(right_max[i + 1], height[i]);
+        }
+        
+        int ans = 0;
+        for(int i = 1; i < height.length - 1; i++){
+            ans += Math.min(left_max[i], right_max[i]) - height[i];
+        }
+        return ans;
+    }
+```

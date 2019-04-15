@@ -54,7 +54,7 @@ $$ water_i = min(left\_max_i, right\_max_i) - height_i$$
 
 The intuition seems easy, right? The implementation isn't - the reason being it has two _"gotchas"_.
 
-### 1. What's the first value in `left_max` and last value in `right_max`?
+### 1. What's the first value in `left_max` and the last value in `right_max`?
 It should be clear that the length of the arrays `left_max` and `right_max` should be same as length of `height`. It is also clear that `left_max[i] = max(left_max[i-1], height[i])`. For the first element, we can't use this same expression though. In this case, we need to ask ourselves what is this expression really calculating - it's the maximum of all heights seen on the left **including the current one**. Since the ones on the left are none or 0, thus for the first index, the maximum height is the height of the block itself. A similar analogy can be applied to find last value of `right_max` which is basically `height[height.length]`
 
 

@@ -26,7 +26,7 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-How much fortunate do you think you are that you're reading this post on a modern device and not instead, say, savings yourselves from being shot by the rebellion in the Middle East? Or rather scavenging for food in a forest with your tribe?
+How much fortunate do you think you are that you're reading this post on a modern device and not instead, say, saving yourselves from being shot by the rebellion in the Middle East? Or rather scavenging for food in a forest with your tribe?
 
 Life is much more than the things you can control. Hard work can only offer you so much. In the end, it's your fortune that has to shine. You have to be at the right place at the right time. This struck me seeing an average person, getting through into a lesser school than mine, and just as luck would have it - _sitting pretty_ out of pure circumstance Yann LeCun happens to be a the same school, and showers his glory upon him, and he achieves what not? 
 

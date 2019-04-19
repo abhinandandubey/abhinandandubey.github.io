@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 
 How much fortunate do you think you are that you're reading this post on a modern device and not instead, say, savings yourselves from being shot by the rebellion in the Middle East? Or rather scavenging for food in a forest with your tribe?
 
-Life is much more than the things you can control. Hard work can only offer you so much. In the end, it's your fortune that has to shine. You have to be at the right place at the right time. This struck me seeing an average person, getting through into a lesser school than mine, and just as luck would have it - _sitting pretty_ out of pure circumstance Yan Le Cunn showers his glory upon him, and he achieves what not? 
+Life is much more than the things you can control. Hard work can only offer you so much. In the end, it's your fortune that has to shine. You have to be at the right place at the right time. This struck me seeing an average person, getting through into a lesser school than mine, and just as luck would have it - _sitting pretty_ out of pure circumstance Yann LeCun happens to be a the same school, and showers his glory upon him, and he achieves what not? 
 
 Am I to self-deprecate myself for refusing an admission offer from a lesser college? What odds would have to befall upon me to be _sitting pretty_ ?
 

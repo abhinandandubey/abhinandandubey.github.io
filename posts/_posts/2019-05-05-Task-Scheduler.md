@@ -38,7 +38,7 @@ The problem with most of the solutions is that they forget to focus on this. The
 
 ## Intuition
 
-The first thing you should be worried about is that no two same tasks can be within $n$ distance of each other. So what do we have to ensure? **In cycles of $n$, we can have at most $n$ different kind of tasks, but if we run out of unique tasks, that means we just have to keep the processor `IDLE`.** To me at least, this is the most important statement a solution has to make in order for it to make sense, which unfortunately no other soltuion does.
+The first thing you should be worried about is that no two same tasks can be within $n$ distance of each other. So what do we have to ensure? **In cycles of $n$, we can have at most $n$ different kind of tasks, but if we run out of unique tasks, that means we just have to keep the processor `IDLE`.** To me at least, this is the most important statement a solution has to make in order for it to make sense, which unfortunately no other solution does.
 
 The second thing is the ordering of these tasks. Naturally, if I have lesser unique tasks, I'll be worried about processor staying `IDLE`, which is bad. In other words **I have to be concerned about tasks with higher frequencies**. This makes it a perfect candidate for a Priority Queue, or a Max-Heap.
 
@@ -53,15 +53,15 @@ for task in tasksMap:
     heapq.heappush(q, (-1*tasksMap[task], task))
 ```
 
-The outer loop below is on the q, *and then again on the q?* - That's another particularly bizarre thing about this solution. To understand this, read the first bold point in our intuition. What we're really looking at is **number of unique tasks which is `len(q)` and the cycle of $k$ itself**. We either run out of cycles, or unique tasks. If we run out of $k$ first, that means we exhausted all of cycles, and no intervals were `IDLE`. But if we ran out of $len(q)$ first, this means we still have some $k$ left, which is the count of number of intervals processor has to be `IDLE`.
+The outer loop below is on the q, *and then again on the q?* - That's another particularly bizarre thing about this solution. To understand this, read the first bold point in our intuition. What we're really looking at is **number of unique tasks which is `len(q)` and the cycle of $k$ itself**. We either run out of cycles, or unique tasks. If we run out of cycles (or $k = n+1$) first, that means we exhausted all of cycles, and no intervals were `IDLE`. But if we run out of $len(q)$ first, this means we still have some $k$ left, which is the count of number of intervals processor has to be `IDLE`.
 
 
 ```python
 count = 0
 while q:
-    k = n
+    k = n+1
     temp = []
-    while(k >= 0 and len(q)>0):
+    while(k > 0 and len(q)>0):
         # len(q) actually represents the number of unique tasks 
         # so we are checking either we run out of k, or num of unique tasks
         task = heapq.heappop(q)

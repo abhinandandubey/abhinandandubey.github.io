@@ -53,7 +53,7 @@ for task in tasksMap:
     heapq.heappush(q, (-1*tasksMap[task], task))
 ```
 
-The outer loop below is on the q, *and then again on the q?* - That's another particularly bizarre thing about this solution. To understand this, read the first bold point in our intuition. What we're really looking at is **number of unique tasks which is `len(q)` and the cycle of $k$ itself**. We eitehr run out of cycles, or unique tasks. If we run out of $k$ first, that means we exhausted all of cycles, and no intervals were `IDLE`. But if we ran out of $len(q)$ first, this means we still have some $k$ left, which is the count of number of intervals processor has to be `IDLE`.
+The outer loop below is on the q, *and then again on the q?* - That's another particularly bizarre thing about this solution. To understand this, read the first bold point in our intuition. What we're really looking at is **number of unique tasks which is `len(q)` and the cycle of $k$ itself**. We either run out of cycles, or unique tasks. If we run out of $k$ first, that means we exhausted all of cycles, and no intervals were `IDLE`. But if we ran out of $len(q)$ first, this means we still have some $k$ left, which is the count of number of intervals processor has to be `IDLE`.
 
 
 ```python

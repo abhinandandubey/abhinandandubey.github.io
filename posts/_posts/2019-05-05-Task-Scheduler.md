@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 
 This problem was of my particular attention for three reasons - it doesn't have a very obvious solution, it's one of the popular problems tossed around in coding interviews, and none of the posts on Leetcode do justice to the wonderful solution this problem has. It's like people have derived their own random meanings from reading someone else's code. And don't be mistaken - I've done that too, but at least I managed to put it in a way it was probably meant to be presented.
 
-# The Problem 
+## The Problem 
 
 The problem gives us a Character array representing a certain number of CPU Tasks, labeled by alphabets, Tasks could be taken up in any order. In any given interval, CPU can finish a task or just stay `IDLE`.
 
@@ -38,7 +38,7 @@ The problem with most of the solutions is that they forget to focus on this. The
 
 ## Intuition
 
-The first thing you should be worried about is that no two same tasks can be within $n$ distance of each other. So what do we have to ensure? **In cycles of $n$, we can have at most $n$ different kind of tasks, but if we have ran out of unique tasks, that means we just have to keep the processor `IDLE`.** To me at least, this is the most important statement a solution has to make in order for it to make sense, which unfortunately no other soltuion does.
+The first thing you should be worried about is that no two same tasks can be within $n$ distance of each other. So what do we have to ensure? **In cycles of $n$, we can have at most $n$ different kind of tasks, but if we run out of unique tasks, that means we just have to keep the processor `IDLE`.** To me at least, this is the most important statement a solution has to make in order for it to make sense, which unfortunately no other soltuion does.
 
 The second thing is the ordering of these tasks. Naturally, if I have lesser unique tasks, I'll be worried about processor staying `IDLE`, which is bad. In other words **I have to be concerned about tasks with higher frequencies**. This makes it a perfect candidate for a Priority Queue, or a Max-Heap.
 

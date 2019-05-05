@@ -26,7 +26,7 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-This problem was of my particular attention for three reasons - it doesn't have a very obvious solution, it's one of the popular problems being tossed around coding interviews, and none of the posts on Leetcode do justice to the wonderful solution this problem has. It's like people have derived their own random meanings from reading someone else's code. And don't be mistaken - I've done that too, but at least I managed to put it in a way it was probably meant to be presented.
+This problem was of my particular attention for three reasons - it doesn't have a very obvious solution, it's one of the popular problems tossed around in coding interviews, and none of the posts on Leetcode do justice to the wonderful solution this problem has. It's like people have derived their own random meanings from reading someone else's code. And don't be mistaken - I've done that too, but at least I managed to put it in a way it was probably meant to be presented.
 
 # The Problem 
 

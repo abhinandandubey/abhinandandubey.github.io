@@ -38,7 +38,7 @@ Here were the goals I set in the beginning of the year, I am going to modify and
 - [ ] Read: Guns, Germs and Steel
 - [ ] Be better at European History - No progress here, I am going to formalize it so that it's more trackable - I should know the basic timeline of events.
 - [ ] Solve at least 400 Leetcode Problems - I am mostly doing good on this, I have solved over 230 problems !
-- [ ] ~~Complete a Graduate Course at an Ivy~~ - I am going to cross this off now, because of time and financial constraints.
+- [ ] ~~Complete a Graduate Course at an Ivy~~ - I am going to cross this off now, because of time and financial constraints. Instead, I'm adding a Coursera Specialisation - "Parallel, Concurrent, and Distributed Programming in Java" - Rice University - It's cheap and polishes on some Java concepts which I really need, coming from Scala and Java world. I'll also try to fit in Data Systems from ASU.
 - [x] Family Trip on East Coast - Highlight of the year ! :)
 - [ ] Read: The Road from the Past - Read a few pages !
 - [ ] Write at least 40 Blog Posts - It's slightly short of 15. Will try to improve here
@@ -50,5 +50,6 @@ I'm going to add these goals:
 - [ ] Learn to Swim - Starting soon at the British Swim School !
 - [ ] Volunteer at NYC Pride 2019 🌈 - Confirmed !
 - [ ] Have at least 2000 Mindfulness Minutes 🧘
+- [ ] Complete 2 Coursera Specializations
 
 Good luck to me !

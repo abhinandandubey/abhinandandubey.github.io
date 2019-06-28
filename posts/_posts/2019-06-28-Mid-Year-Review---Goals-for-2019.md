@@ -39,7 +39,6 @@ Here were the goals I set in the beginning of the year, I am going to modify and
 - [ ] Be better at European History - No progress here, I am going to formalize it so that it's more trackable - I should know the basic timeline of events.
 - [ ] Solve at least 400 Leetcode Problems - I am mostly doing good on this, I have solved over 230 problems !
 - [ ] ~~Complete a Graduate Course at an Ivy~~ - I am going to cross this off now, because of time and financial constraints.
-- [ ]
 - [x] Family Trip on East Coast - Highlight of the year ! :)
 - [ ] Read: The Road from the Past - Read a few pages !
 - [ ] Read: Pride and Prejudice, Jane Austen

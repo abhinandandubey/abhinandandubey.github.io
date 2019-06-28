@@ -41,7 +41,6 @@ Here were the goals I set in the beginning of the year, I am going to modify and
 - [ ] ~~Complete a Graduate Course at an Ivy~~ - I am going to cross this off now, because of time and financial constraints.
 - [x] Family Trip on East Coast - Highlight of the year ! :)
 - [ ] Read: The Road from the Past - Read a few pages !
-- [ ] Read: Pride and Prejudice, Jane Austen
 - [ ] Write at least 40 Blog Posts - It's slightly short of 15. Will try to improve here
 - [ ] Weigh no more than 130 pounds. - I'm down from 165 to 155 - I'm keeping up with my eat healthy, stay fit goal
 

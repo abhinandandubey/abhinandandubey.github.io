@@ -49,3 +49,8 @@ I think although I am not as depressed as I probably was last few weeks, I am in
 I am hoping to cope up with this time and get through this crisis. I will read. I will write, and I will code. I will try hard not to look back. 
 
 Abhi
+
+UPDATE (Dec 8, 2019):
+
+I went to a meditation class at Yoga Shunya, by Jared Kushner, based on the teachings and in the tradition of Zen master Thich Nhat Hanh. It has definitely helped put my mind at ease, and I definitely am felling better than I was before I went to the class. It's donation driven, and I think I am going to continue attending the class for a while. I am also going to start therapy. Happiness is a butterfly and life doesn't always give you what you want. And it's all about making your peace with it, and moving on. I am trying to do the same, and I will continue to do it until my mind is at ease.
+

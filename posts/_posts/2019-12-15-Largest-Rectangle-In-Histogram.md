@@ -84,9 +84,9 @@ This bar started at position `-1`, and ended at position `1`, thus giving a widt
 
 We now append `1` to the stack and move onto position `2` with the bar of height `5`. We don't need to pop out any elements from the stack, because the bar with height `5` can form a rectangle of height `1` (which is on top of the stack), but the bar with height `1` cannot form a rectangle of height `5` - thus it is still a good candidate (in case `5` get spopped out later). We append `5` to the stack, and move forward without any eliminations.
 
-We observe the same thing when we arrive at `6` (at position `3`). We don't need to pop out any elements from the stack, because the bar with height `6` can form a rectangle of height `5` (which is on top of the stack), but the bar with height `5` cannot form a rectangle of height `6` - thus it is still a good candidate (in case `6` get spopped out later). We append `6` to the stack, and move forward without any eliminations.
+We observe the same thing when we arrive at `6` (at position `3`). We don't need to pop out any elements from the stack, because the bar with height `6` can form a rectangle of height `5` (which is on top of the stack), but the bar with height `5` cannot form a rectangle of height `6` - thus it is still a good candidate (in case `6` gets popped out later). We append `6` to the stack, and move forward without any eliminations.
 
-<b>At this point it should be clear that we only pop from the stack when height of the current bar is lower than the height of the bar at the top of the stack.</b>
+**At this point it should be clear that we only pop from the stack when height of the current bar is lower than the height of the bar at the top of the stack.**
 
 <img src="https://github.com/alivcor/lightforest/raw/master/largest4.png"/>
 

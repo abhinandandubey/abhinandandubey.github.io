@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Thoughts on Life
-tags: SelfReflection
+title: Largest Rectangle In Histogram
+tags: Coding Interview Programming Career Stack
 cover_url: https://github.com/alivcor/lightforest/raw/master/logan_sunset.jpg
-cover_meta: Shadows (c) AD Photography
+cover_meta: Sunset (c) AD Photography
 color_scheme: tango
 mathjax: true
 ---

@@ -66,7 +66,7 @@ I will try my best to answer this question -
     3. There's a rectangle forming using width and height of recent tall bars which has an area larger than the current maxArea.
     4. There's no rectangle with larger area at this step.
 
-3. In either of these cases, at each step we need the information of previously seen "candidate" bars - bars which give us hope. These are the bars of increasing heights. And since they'll need to be put in the order of their occurence, stack sould come to your mind. 
+3. In either of these cases, at each step we need the information of previously seen "candidate" bars - bars which give us hope. These are the bars of increasing heights. And since they'll need to be put in the order of their occurence, stack should come to your mind. 
 
 If it's not clear now, just put a pin to all your questions, and it should become more clear as we walk through the example.
 

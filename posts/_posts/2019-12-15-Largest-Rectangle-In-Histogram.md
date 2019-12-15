@@ -38,13 +38,13 @@ Lets take the example `[2, 1, 5, 6, 2, 3]`
 <img src="https://github.com/alivcor/lightforest/raw/master/largest1.png"/>
 
 
-Lets start by thinking of a brute force, naive solution. Pick two bars and find the maxArea between them and compare that to your global maxArea. To do that, you'll need to find the bar that "restricts" the height of the forming rectangle to its own height - i.e; the bar with the minimu height between two bars.
+Lets start by thinking of a brute force, naive solution. Pick two bars and find the `maxArea` between them and compare that to your global `maxArea`. To do that, you'll need to find the bar that "restricts" the height of the forming rectangle to its own height - i.e; the bar with the minimum height between two bars.
 
 For instance, between bars at positions `2` and `5`, the bar at position `4` decides the height of the largest possible rectangle, which is of height `2`.
 
 <img src="https://github.com/alivcor/lightforest/raw/master/largest1_1.png"/>
 
-The brute-force will thus require two pointers, or two loops, and another loop to find the bar with the minimum height. This gives us a complexity of $O(n^3)$
+The brute-force solution thus requires two pointers, or two loops, and another loop to find the bar with the minimum height. This gives us a complexity of $O(n^3)$
 
 But we could do better. When we move our right pointer from position `4` to `5`, we already know that the bar with minimum height is `2`. So when we move the right pointer to `5`, all we have to do is compare `2` with `3`. This reduces our complexity to $O(n^2)$
 
@@ -59,7 +59,7 @@ I will try my best to answer this question -
 1. Why could there be a better solution than $O(n^2) ? How would we know that ? 
 
     Because if the length of the array is $n$, the largest possible rectangle has to have a height one of the elements of the array, that is to say, there are only $n$ "possible largest rectangles". So we don't really need to go through every pair of bars, but should rather search by the height of the bar.
-    
+
 2. Our aim is to iterate through the array and find out the rectangle with maximum area. At each step, there are 4 possibilities:
     1. There's a rectangle forming just using the height of the current bar which has an area larger than the maxArea previously recorded.
     2. There's a rectangle forming using the width or entire spread of the area starting from a bar seen long back which has an area larger than the current maxArea

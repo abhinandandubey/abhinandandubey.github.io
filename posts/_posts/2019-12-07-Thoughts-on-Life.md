@@ -52,5 +52,5 @@ Abhi
 
 UPDATE (Dec 8, 2019):
 
-I went to a meditation class at Yoga Shunya, by Jared Kushner, based on the teachings and in the tradition of Zen master Thich Nhat Hanh. It has definitely helped put my mind at ease, and I definitely am feeling better than I was before I went to the class. It's donation driven, and I think I am going to continue attending the class for a while. I am also going to start therapy. Happiness is a butterfly and life doesn't always give you what you want. And it's all about making your peace with it, and moving on. I am trying to do the same, and I will continue to do it until my mind is at ease.
+I went to a meditation class at Yoga Shunya, by Robb Kushner, based on the teachings and in the tradition of Zen master Thich Nhat Hanh. It has definitely helped put my mind at ease, and I definitely am feeling better than I was before I went to the class. It's donation driven, and I think I am going to continue attending the class for a while. I am also going to start therapy. Happiness is a butterfly and life doesn't always give you what you want. And it's all about making your peace with it, and moving on. I am trying to do the same, and I will continue to do it until my mind is at ease.
 

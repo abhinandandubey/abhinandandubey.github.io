@@ -80,16 +80,56 @@ The next one we see is the bar at position `1` with height `1`. At this point, w
 
 <img src="https://github.com/alivcor/lightforest/raw/master/largest3.png"/>
 
-This bar started at position `-1`, and ended at position `1`, thus giving a width of $1-(-1)-1 = 1$, and height of $2$ hence we update our `maxArea` to $2$, and now check the next element on top of the stack (to see if that could be popped out as well) - and since it is `0 < 1`, it can't be popped out.
+This bar started at position `-1` **(which is now at the top of the stack)**, and ended at position `1`, thus giving a width of $1-(-1)-1 = 1$, and height of $2$ hence we update our `maxArea` to $2$, and now check the next element on top of the stack (to see if that could be popped out as well) - and since it is `0 < 1`, it can't be popped out. Thus,
 
-We now append `1` to the stack and move onto position `2` with the bar of height `5`. We don't need to pop out any elements from the stack, because the bar with height `5` can form a rectangle of height `1` (which is on top of the stack), but the bar with height `1` cannot form a rectangle of height `5` - thus it is still a good candidate (in case `5` get spopped out later). We append `5` to the stack, and move forward without any eliminations.
+```python
+height = stack.pop()
+width = i - stack[-1] - 1
+maxArea = max(maxArea, width*height)
+```
 
-We observe the same thing when we arrive at `6` (at position `3`). We don't need to pop out any elements from the stack, because the bar with height `6` can form a rectangle of height `5` (which is on top of the stack), but the bar with height `5` cannot form a rectangle of height `6` - thus it is still a good candidate (in case `6` gets popped out later). We append `6` to the stack, and move forward without any eliminations.
+We now append `1` to the stack and move onto position `2` with the bar of height `5`. We don't need to pop out any elements from the stack, because the bar with height `5` can form a rectangle of height `1` (which is on top of the stack), but the bar with height `1` cannot form a rectangle of height `5` - thus it is still a good candidate (in case `5` gets popped out later). We append `5` to the stack, and move forward without any eliminations.
+
+We observe the same thing when we arrive at `6` (at position `3`). 
 
 **At this point it should be clear that we only pop from the stack when height of the current bar is lower than the height of the bar at the top of the stack.**
 
 <img src="https://github.com/alivcor/lightforest/raw/master/largest4.png"/>
 
-When we reach the bar at position `4`, we realize we can't do a bar of height `6` anymore, so lets see what it can give us and pop it out. The height of this rectangle is `6`, and the 
+When we reach the bar at position `4`, we realize we can't do a bar of height `6` anymore, so lets see what it can give us and pop it out. The height of this rectangle is `6`, and the width is $i - stack[-1] - 1 = 4 - 2 - 1 = 1$. 
+
+We now look at the top of the stack, and see another rectangle forming. 
+
+<img src="https://github.com/alivcor/lightforest/raw/master/largest5.png"/>
+
+**It is important to notice here how the elimination of `6` from stack has no effect on it being used to form the rectangle of height `5`**
+
+<img src="https://github.com/alivcor/lightforest/raw/master/largest6.png"/>
+
+We now have our $maxArea = 10$ and we have three elements in the stack, and we move onto position `5` with the bar of height `3`. Since `3 > 2`, we append it to the stack. 
+
+We now move onto next element which is at position `6` (or `-1`) with height `0` - our dummy element which also ensures that everything gets popped out of the stack! We check all possible rectangles while we pop out elements from the stack. Element with $(height, width)$ being $(3, 1)$, $(2, 2)$, $(1, 5)$, none of which have area larger than $10$.
+
+## Implementation
+
+```python
+class Solution(object):
+    def largestRectangleArea(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        stack = [-1]
+        heights.append(0)
+        ans = 0
+        for i, height in enumerate(heights):
+            while heights[stack[-1]] > height:
+                h = heights[stack.pop()] 
+                w = i - stack[-1] - 1
+                ans = max(ans, h*w)
+            stack.append(i)
+        heights.pop()
+        return ans
+```  
 
 

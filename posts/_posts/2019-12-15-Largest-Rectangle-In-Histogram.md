@@ -2,7 +2,7 @@
 layout: post
 title: Thoughts on Life
 tags: SelfReflection
-cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_2390.jpg
+cover_url: https://github.com/alivcor/lightforest/raw/master/logan_sunset.jpg
 cover_meta: Shadows (c) AD Photography
 color_scheme: tango
 mathjax: true

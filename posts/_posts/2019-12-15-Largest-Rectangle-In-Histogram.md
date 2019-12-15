@@ -56,7 +56,7 @@ I have to be honest and accept that despite numerous attempts at this problem, I
 
 I will try my best to answer this question - 
 
-1. Why could there be a better solution than $O(n^2) ? How would we know that ? 
+1. Why could there be a better solution than $O(n^2)$ ? How would we know that ? 
 
     Because if the length of the array is $n$, the largest possible rectangle has to have a height one of the elements of the array, that is to say, there are only $n$ "possible largest rectangles". So we don't really need to go through every pair of bars, but should rather search by the height of the bar.
 

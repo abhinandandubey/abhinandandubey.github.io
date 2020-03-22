@@ -141,14 +141,14 @@ Now lets have a one mile overview of the code above, because right now - it look
 
 Alright, so what did we just achieve with making our code look scarier?
 
-*1. All Cars built will require a manufacturer and a model name*
+#### All Cars built will require a manufacturer and a model name
 
 Observer how IDE shows a red mark below `Car.builder`
 
 ![IDE Code Check](https://github.com/alivcor/lightforest/raw/master/error_builder.png)
 
 
-*2. You can play with rest of the permutations cleanly, while keeping the immutability (and thus thread safety)*
+#### You can play with rest of the permutations cleanly, while keeping the immutability (and thus thread safety)
 
 
 ![Car Demo](https://github.com/alivcor/lightforest/raw/master/car_demo.png)

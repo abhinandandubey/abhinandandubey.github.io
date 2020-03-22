@@ -15,7 +15,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['$','$'], ['\(','\)']],
+        inlineMath: [['$','$']],
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
     }
 });
@@ -87,7 +87,7 @@ If you ever used the `StringBuilder` in Java - that's an example of the Builder 
 
 Rules for a class to qualify as a "Java Bean" :
 
-1. The class must have a public default constructor \(with no arguments\). 
+1. The class must have a public default constructor (with no arguments). 
 2. Must have a shit ton of getters and setters
 3. The class should be serializable. (implements `java.io.Serializable`)
 
@@ -128,7 +128,7 @@ There are two obvious problems here:
 1. Lack of Immutability - Thread safety is a problem
 2. _We The People_ worth of setters and getters and yet it's hard to enfore combination rules (eg; A `Car` must have a `manufacturer` and a `modelName`!
 
-To get around that, we could resort to having multiple Telescoped Constructors \(and miss out on having all permutations, and get an even uglier looking code\), or, we could just learn the Builder Pattern (finally!)
+To get around that, we could resort to having multiple Telescoped Constructors (and miss out on having all permutations, and get an even uglier looking code), or, we could just learn the Builder Pattern (finally! )
 
 ### Builder Pattern
 

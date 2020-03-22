@@ -261,5 +261,5 @@ public class Car {
 
 Now lets have a one mile overview of the code above, because right now - it looks pretty daunting.
 
-[One Mile View](https://github.com/alivcor/lightforest/raw/master/allcode.PNG)
+![One Mile View](https://github.com/alivcor/lightforest/raw/master/allcode.png)
 

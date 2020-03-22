@@ -94,33 +94,33 @@ Rules for a class to qualify as a "Java Bean" :
 So to make our `Car` class a Java Bean, we just have to change it to look like this:
 
 ```java
-public class Car {
-  private int modelYear;
-  private String modelName;
-  private String color;
-  private String manufacturer;
-  private double sellingPrice;
-  private String carType;
-  private Boolean isLuxury;
-  private Boolean isImported;
-  private String countryOfManufacture;
+    public class Car {
+        private int modelYear;
+        private String modelName;
+        private String color;
+        private String manufacturer;
+        private double sellingPrice;
+        private String carType;
+        private Boolean isLuxury;
+        private Boolean isImported;
+        private String countryOfManufacture;
 
-  /** No-arg constructor (takes no arguments). */
-  public Car() { }
+        /** No-arg constructor (takes no arguments). */
+        public Car() { }
 
-  public getModelYear(){
-      return modelYear;
-  }
+        public getModelYear(){
+            return modelYear;
+        }
 
-  public setModelYear(int year){
-      modelYear = year;
-  }
+        public setModelYear(int year){
+            modelYear = year;
+        }
 
-  ...
-  ...
-  
+        ...
+        ...
 
-}
+
+    }
 ```
 
 There are two obvious problems here:
@@ -133,21 +133,10 @@ To get around that, we could resort to having multiple Telescoped Constructors (
 ### Builder Pattern
 
 <details>
- <summary>Click to expand!</summary>
-  
-```java
-public class Car {
-    private int modelYear;
-    private String modelName;
-    private String color;
-    private String manufacturer;
-    private double sellingPrice;
-    private String carType;
-    private Boolean isLuxury;
-    private Boolean isImported;
-    private String countryOfManufacture;
+<summary>Click to expand!</summary>
 
-    public static class Builder {
+    ```java
+    public class Car {
         private int modelYear;
         private String modelName;
         private String color;
@@ -158,108 +147,118 @@ public class Car {
         private Boolean isImported;
         private String countryOfManufacture;
 
-        public Builder modelYear(int modelYear) {
-            this.modelYear = modelYear;
-            return this;
-        }
-        public Builder modelName(String modelName) {
-            this.modelName = modelName;
-            return this;
-        }
-        public Builder color(String color) {
-            this.color = color;
-            return this;
-        }
-        public Builder manufacturer(String manufacturer) {
-            this.manufacturer = manufacturer;
-            return this;
-        }
-        public Builder sellingPrice(double sellingPrice) {
-            this.sellingPrice = sellingPrice;
-            return this;
-        }
-        public Builder carType(String carType) {
-            this.carType = carType;
-            return this;
-        }
-        public Builder isLuxury(Boolean isLuxury) {
-            this.isLuxury = isLuxury;
-            return this;
-        }
-        public Builder isImported(Boolean isImported) {
-            this.isImported = isImported;
-            return this;
-        }
-        public Builder countryOfManufacture(String countryOfManufacture) {
-            this.countryOfManufacture = countryOfManufacture;
-            return this;
-        }
+        public static class Builder {
+            private int modelYear;
+            private String modelName;
+            private String color;
+            private String manufacturer;
+            private double sellingPrice;
+            private String carType;
+            private Boolean isLuxury;
+            private Boolean isImported;
+            private String countryOfManufacture;
 
-        public Builder(String modelName, String manufacturer){
-            if (modelName == null || manufacturer == null) {
-                throw new NullPointerException("modelName or manufacturer cannot be null");
+            public Builder modelYear(int modelYear) {
+                this.modelYear = modelYear;
+                return this;
             }
-            this.modelName = modelName;
-            this.manufacturer = manufacturer;
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+            public Builder manufacturer(String manufacturer) {
+                this.manufacturer = manufacturer;
+                return this;
+            }
+            public Builder sellingPrice(double sellingPrice) {
+                this.sellingPrice = sellingPrice;
+                return this;
+            }
+            public Builder carType(String carType) {
+                this.carType = carType;
+                return this;
+            }
+            public Builder isLuxury(Boolean isLuxury) {
+                this.isLuxury = isLuxury;
+                return this;
+            }
+            public Builder isImported(Boolean isImported) {
+                this.isImported = isImported;
+                return this;
+            }
+            public Builder countryOfManufacture(String countryOfManufacture) {
+                this.countryOfManufacture = countryOfManufacture;
+                return this;
+            }
+
+            public Builder(String modelName, String manufacturer){
+                if (modelName == null || manufacturer == null) {
+                    throw new NullPointerException("modelName or manufacturer cannot be null");
+                }
+                this.modelName = modelName;
+                this.manufacturer = manufacturer;
+            }
+
+            public Car build() {
+                return new Car(this);
+            }
+
         }
 
-        public Car build() {
-            return new Car(this);
+        private Car(Builder builder) {
+            this.modelYear = builder.modelYear;
+            this.modelName = builder.modelName;
+            this.color = builder.color;
+            this.manufacturer = builder.manufacturer;
+            this.sellingPrice = builder.sellingPrice;
+            this.carType = builder.carType;
+            this.isLuxury = builder.isLuxury;
+            this.isImported = builder.isImported;
+            this.countryOfManufacture = builder.countryOfManufacture;
+        }
+
+        public int getModelYear(){
+            return modelYear;
+        }
+
+        public String getModelName(){
+            return modelName;
+        }
+
+        public String getColor(){
+            return color;
+        }
+
+        public String getManufacturer(){
+            return manufacturer;
+        }
+
+        public double getSellingPrice(){
+            return sellingPrice;
+        }
+
+        public String getCarType(){
+            return carType;
+        }
+
+        public Boolean getIsLuxury(){
+            return isLuxury;
+        }
+
+        public Boolean getIsImported(){
+            return isImported;
+        }
+
+        public String getCountryOfManufacture(){
+            return countryOfManufacture;
         }
 
     }
-
-    private Car(Builder builder) {
-        this.modelYear = builder.modelYear;
-        this.modelName = builder.modelName;
-        this.color = builder.color;
-        this.manufacturer = builder.manufacturer;
-        this.sellingPrice = builder.sellingPrice;
-        this.carType = builder.carType;
-        this.isLuxury = builder.isLuxury;
-        this.isImported = builder.isImported;
-        this.countryOfManufacture = builder.countryOfManufacture;
-    }
-
-    public int getModelYear(){
-        return modelYear;
-    }
-
-    public String getModelName(){
-        return modelName;
-    }
-
-    public String getColor(){
-        return color;
-    }
-
-    public String getManufacturer(){
-        return manufacturer;
-    }
-
-    public double getSellingPrice(){
-        return sellingPrice;
-    }
-
-    public String getCarType(){
-        return carType;
-    }
-
-    public Boolean getIsLuxury(){
-        return isLuxury;
-    }
-
-    public Boolean getIsImported(){
-        return isImported;
-    }
-
-    public String getCountryOfManufacture(){
-        return countryOfManufacture;
-    }
-
-}
-
-```
+    ```
 
 </details>
 

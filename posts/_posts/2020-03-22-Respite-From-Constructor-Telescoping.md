@@ -133,7 +133,8 @@ To get around that, we could resort to having multiple Telescoped Constructors \
 ### Builder Pattern
 
 <details>
-
+ <summary>Click to expand!</summary>
+  
 ```java
 public class Car {
     private int modelYear;
@@ -257,6 +258,7 @@ public class Car {
     }
 
 }
+
 ```
 
 </details>

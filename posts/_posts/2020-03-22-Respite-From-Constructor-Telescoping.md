@@ -133,18 +133,9 @@ To get around that, we could resort to having multiple Telescoped Constructors (
 
 
 ```java
-public class Car {
-  private final int modelYear;
-  private final String modelName;
-  private final String color;
-  private final String manufacturer;
-  private final double sellingPrice;
-  private final String carType;
-  private final Boolean isLuxury;
-  private final Boolean isImported;
-  private final String countryOfManufacture;
 
-  public static class Builder() {
+
+public class Car {
     private int modelYear;
     private String modelName;
     private String color;
@@ -155,104 +146,120 @@ public class Car {
     private Boolean isImported;
     private String countryOfManufacture;
 
-    public Builder modelYear(int modelYear) {
-        this.modelYear = modelYear;
-        return this;
-    }
-    public Builder modelName(String modelName) {
-        this.modelName = modelName;
-        return this;
-    }
-    public Builder color(String color) {
-        this.color = color;
-        return this;
-    }
-    public Builder manufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-        return this;
-    }
-    public Builder sellingPrice(double sellingPrice) {
-        this.sellingPrice = sellingPrice;
-        return this;
-    }
-    public Builder carType(String carType) {
-        this.carType = carType;
-        return this;
-    }
-    public Builder isLuxury(Boolean isLuxury) {
-        this.isLuxury = isLuxury;
-        return this;
-    }
-    public Builder isImported(Boolean isImported) {
-        this.isImported = isImported;
-        return this;
-    }
-    public Builder countryOfManufacture(String countryOfManufacture) {
-        this.countryOfManufacture = countryOfManufacture;
-        return this;
-    }
+    public static class Builder {
+        private int modelYear;
+        private String modelName;
+        private String color;
+        private String manufacturer;
+        private double sellingPrice;
+        private String carType;
+        private Boolean isLuxury;
+        private Boolean isImported;
+        private String countryOfManufacture;
 
-    public Builder(String modelName, String manufacturer){
-        if (modelName == null || manufacturer == null) {
-            throw new NullPointerException("modelName or manufacturer cannot be null");
+        public Builder modelYear(int modelYear) {
+            this.modelYear = modelYear;
+            return this;
         }
-        this.modelName = modelName;
-        this.manufacturer = manufacturer;
+        public Builder modelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public Builder color(String color) {
+            this.color = color;
+            return this;
+        }
+        public Builder manufacturer(String manufacturer) {
+            this.manufacturer = manufacturer;
+            return this;
+        }
+        public Builder sellingPrice(double sellingPrice) {
+            this.sellingPrice = sellingPrice;
+            return this;
+        }
+        public Builder carType(String carType) {
+            this.carType = carType;
+            return this;
+        }
+        public Builder isLuxury(Boolean isLuxury) {
+            this.isLuxury = isLuxury;
+            return this;
+        }
+        public Builder isImported(Boolean isImported) {
+            this.isImported = isImported;
+            return this;
+        }
+        public Builder countryOfManufacture(String countryOfManufacture) {
+            this.countryOfManufacture = countryOfManufacture;
+            return this;
+        }
+
+        public Builder(String modelName, String manufacturer){
+            if (modelName == null || manufacturer == null) {
+                throw new NullPointerException("modelName or manufacturer cannot be null");
+            }
+            this.modelName = modelName;
+            this.manufacturer = manufacturer;
+        }
+
+        public Car build() {
+            return new Car(this);
+        }
+
     }
 
-    public Car build() {
-        return new Car(this);
+    private Car(Builder builder) {
+        this.modelYear = builder.modelYear;
+        this.modelName = builder.modelName;
+        this.color = builder.color;
+        this.manufacturer = builder.manufacturer;
+        this.sellingPrice = builder.sellingPrice;
+        this.carType = builder.carType;
+        this.isLuxury = builder.isLuxury;
+        this.isImported = builder.isImported;
+        this.countryOfManufacture = builder.countryOfManufacture;
     }
 
-  }
+    public int getModelYear(){
+        return modelYear;
+    }
 
-  private Car(Builder builder) { 
-      this.modelYear;
-      this.modelName;
-      this.color;
-      this.manufacturer;
-      this.sellingPrice;
-      this.carType;
-      this.isLuxury;
-      this.isImported;
-      this.countryOfManufacture;
-  }
+    public String getModelName(){
+        return modelName;
+    }
 
-  public getModelYear(){
-      return modelYear;
-  }
+    public String getColor(){
+        return color;
+    }
 
-  public getModelName(){
-      return modelName;
-  }
+    public String getManufacturer(){
+        return manufacturer;
+    }
 
-  public getColor(){
-      return color;
-  }
+    public double getSellingPrice(){
+        return sellingPrice;
+    }
 
-  public getManufacturer(){
-      return manufacturer;
-  }
+    public String getCarType(){
+        return carType;
+    }
 
-  public getSellingPrice(){
-      return sellingPrice;
-  }
+    public Boolean getIsLuxury(){
+        return isLuxury;
+    }
 
-  public getCarType(){
-      return carType;
-  }
+    public Boolean getIsImported(){
+        return isImported;
+    }
 
-  public getIsLuxury(){
-      return isLuxury;
-  }
-  
-  public getIsImported(){
-      return isImported;
-  }
-
-  public getCountryOfManufacture(){
-      return countryOfManufacture;
-  }
+    public String getCountryOfManufacture(){
+        return countryOfManufacture;
+    }
 
 }
 ```
+
+Now lets have a one mile overview of the code above, because right now - it looks pretty daunting.
+
+[One Mile View](https://github.com/alivcor/lightforest/raw/master/allcode.PNG)
+

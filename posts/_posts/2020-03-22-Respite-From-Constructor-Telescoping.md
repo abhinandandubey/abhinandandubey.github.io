@@ -128,7 +128,7 @@ There are two obvious problems here:
 1. Lack of Immutability - Thread safety is a problem
 2. _We The People_ worth of setters and getters and yet it's hard to enfore combination rules (eg; A `Car` must have a `manufacturer` and a `modelName`!
 
-To get around that, we could resort to having multiple Telescoped Constructors (and miss out on having all permutations, and get an even uglier looking code), or, we could just learn the Builder Pattern (finally!)
+To get around that, we could resort to having multiple Telescoped Constructors \(and miss out on having all permutations, and get an even uglier looking code\), or, we could just learn the Builder Pattern (finally!)
 
 ### Builder Pattern
 

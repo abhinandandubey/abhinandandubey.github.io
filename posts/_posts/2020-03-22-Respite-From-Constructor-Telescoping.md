@@ -145,7 +145,7 @@ Alright, so what did we just achieve with making our code look scarier?
 
 Observer how IDE shows a red mark below `Car.builder`
 
-![IDE Code Check](https://github.com/alivcor/lightforest/raw/master/error_model.png)
+![IDE Code Check](https://github.com/alivcor/lightforest/raw/master/error_builder.png)
 
 
 *2. You can play with rest of the permutations cleanly, while keeping the immutability (and thus thread safety)*

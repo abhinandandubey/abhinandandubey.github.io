@@ -87,7 +87,7 @@ If you ever used the `StringBuilder` in Java - that's an example of the Builder 
 
 Rules for a class to qualify as a "Java Bean" :
 
-1. The class must have a public default constructor (with no arguments). 
+1. The class must have a public default constructor \(with no arguments\). 
 2. Must have a shit ton of getters and setters
 3. The class should be serializable. (implements `java.io.Serializable`)
 

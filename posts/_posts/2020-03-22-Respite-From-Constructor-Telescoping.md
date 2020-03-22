@@ -33,6 +33,7 @@ MathJax.Hub.Queue(function() {
 
 Lets have a look at the constructor below
 
+
 ```java
 public class Car {
   int modelYear;
@@ -131,10 +132,8 @@ To get around that, we could resort to having multiple Telescoped Constructors (
 
 ### Builder Pattern
 
-
+<details>
 ```java
-
-
 public class Car {
     private int modelYear;
     private String modelName;
@@ -258,6 +257,7 @@ public class Car {
 
 }
 ```
+</details>
 
 Now lets have a one mile overview of the code above, because right now - it looks pretty daunting.
 

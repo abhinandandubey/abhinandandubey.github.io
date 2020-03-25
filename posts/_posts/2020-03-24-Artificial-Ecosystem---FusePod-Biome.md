@@ -38,17 +38,17 @@ I started my research with ideas of modelling my problem, and that started with 
 
 I started labelling how exactly the world would look like - maybe there will be some cells, and then how do they become organisms? Hence the hierarchy.
 
-![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_1.jpg")
+![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_1.png")
 
 Lets assume we start with a very basic lake with just cells, but how do these cells differ - what are they composed of? So I spent hours trying to learn how cells came up in the first place. 
 
-![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_2.jpg")
+![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_2.png")
 
-![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_3.jpg")
+![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_3.png")
 
 It's actually quite interesting to read about the RNA World Theory - and that everything evolved from a huge bowl of soup - containing a variety of elements and the RNA chains. RNA themselves are comprised of Nucleotides - the bonding particles which form the RNA.
 
 
-![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_4.jpg")
+![LifeLake]("https://github.com/alivcor/lightforest/raw/master/lifelake_4.png")
 
 

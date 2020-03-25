@@ -51,4 +51,20 @@ It's actually quite interesting to read about the RNA World Theory - and that ev
 
 ![LifeLake](https://github.com/alivcor/lightforest/raw/master/lifelake_4.png)
 
+The Nucleotides (`A`, `T`, `C`, `G`) themselves have two parts - the "bonding part" which bonds with every other nucleotide, and a "pairing part" - which only pairs or bonds with a specific nucleotide. For instance, `A` bonds only with `U` whereas `G` bonds only with `C`.
+
+This way, nucleotides together form chains of different lengths and permutations, which can again pair up with different individual nucleotides. This process is known as _base-pairing_
+
+![LifeLake](https://github.com/alivcor/lightforest/raw/master/lifelake_5.png)
+
+Oh, by the way, these chains are called the RNA, a short for Ribonucleic Acid. The RNA pairs up with nucleotides and generates a complimentary RNA. This complimentary RNA binds with another compliment, making a copy of the original RNA. 
+
+![LifeLake](https://github.com/alivcor/lightforest/raw/master/lifelake_6.png)
+
+But just as nature intended, these copies are not always exact - sometimes mutations occur, thus giving rise to different RNAs.
+
+Moreover, some RNAs self-pair, and they effectively become a machine, which could glue or break two different chains or RNAs. Looking at this whole process from a soup level, the RNAs which can pair up more easily are more likely to generate more copies, and thus survive more. This is where the line between chemistry, and life (or biology) blurs. If an RNA is "trying to survive" should we consider it a life-form?
+
+
+
 

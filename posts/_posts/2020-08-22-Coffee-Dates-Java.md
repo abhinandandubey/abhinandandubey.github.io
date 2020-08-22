@@ -4,7 +4,7 @@ title: My Coffee Dates With Java
 tags: DevRant, Java, Python
 cover_url: https://source.unsplash.com/random
 cover_meta: 
-  Traveler (c) AD Photography
+    (c) UNSPLASH
 color_scheme: tango
 mathjax: true
 mathjax: True

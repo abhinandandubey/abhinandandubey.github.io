@@ -38,7 +38,7 @@ Just about now, I was trying to sort an array of strings and Java literally gave
 
 ```java
 Arrays.sort(words, (String w1, String w2) -> Integer.compare(
-    `w1.length(), w2.length()
+    w1.length(), w2.length()
     )); 
 ```
 

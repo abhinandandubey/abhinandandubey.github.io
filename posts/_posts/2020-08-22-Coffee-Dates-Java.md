@@ -80,9 +80,12 @@ System.out.println(store);
 // prints : {1=[a, b], 2=[ba], 3=[bca, bda], 4=[bdca]} 
 ```        
 
-Regardless, I do appreciate the beauty of OOPS and how vividly Java presents OOP concepts. I think I need a couple of more dates before I can actually enjoy dating Java.
-
 Whatever happened to `Maps.toString(store)`. Uniformity probably was on vacation when Java was being developed.
+
+
+> Regardless, I do appreciate the beauty of OOPS and how vividly Java presents OOP concepts. I think I need a couple of more dates before I can actually enjoy dating Java.
+
+
 
 
 

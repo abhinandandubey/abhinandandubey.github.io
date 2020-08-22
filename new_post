@@ -47,18 +47,18 @@ MathJax.Hub.Queue(function() {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 """
 
-print("Fetching NASA Image of the day...\n")
+# print("Fetching NASA Image of the day...\n")
 
 
-API_KEY = open("/Users/abhinandandubey/NASA_API_KEY.key", "r").read().strip()
-data = requests.get(url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY).json() 
-print(data["title"].encode("ascii"), data["url"].encode("ascii"))
-try:
-    write_str = write_str.replace("post_title", title)
-    write_str = write_str.replace("cover_meta_text", data["title"].encode("ascii"))
-    write_str = write_str.replace("cover_meta_url", data["url"].encode("ascii"))
-except:
-    pass
+# API_KEY = open("/Users/abhinandandubey/NASA_API_KEY.key", "r").read().strip()
+# data = requests.get(url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY).json() 
+# print(data["title"].encode("ascii"), data["url"].encode("ascii"))
+# try:
+#     write_str = write_str.replace("post_title", title)
+#     write_str = write_str.replace("cover_meta_text", data["title"].encode("ascii"))
+#     write_str = write_str.replace("cover_meta_url", data["url"].encode("ascii"))
+# except:
+#     pass
 
 f = open(file_name, "a")
 f.write(write_str)

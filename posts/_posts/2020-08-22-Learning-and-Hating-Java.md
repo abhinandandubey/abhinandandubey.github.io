@@ -57,7 +57,7 @@ System.out.println(words);
 
 I literally have to convert it. I do understand it's not a list, and arrays are old and they don't have those toString methods defined or whatever.
 
-If I had to create a `Map` with word length as key and a list of words as values.
+If I had to create a `Map` with word length as key and a list of words as values. Python is such a pleasant breeze:
 
 ```python
 c = collections.defaultdict(list)
@@ -65,6 +65,7 @@ for word in words:
     c[len(word)].append(word)
 print(c)
 ```
+Java is probably a thunderstorm:
 
 ```java
 Map<Integer, List<String>> store = new TreeMap();

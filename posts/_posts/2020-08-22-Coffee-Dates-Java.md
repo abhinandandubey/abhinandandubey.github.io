@@ -2,7 +2,7 @@
 layout: post
 title: My Coffee Dates With Java
 tags: DevRant, Java, Python
-cover_url: https://source.unsplash.com/random?coffee
+cover_url: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9
 cover_meta: 
     (c) UNSPLASH
 color_scheme: tango

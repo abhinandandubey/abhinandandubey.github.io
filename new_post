@@ -14,7 +14,15 @@ print("\n\n")
 file_name = post_dir + todays_date + "-" + title.strip().replace(" ", "-") + ".md"
 os.system("touch " + file_name)
 
-cover_term = sorted(title.split(" "), key = lambda k: len(k))[-1].lower()
+
+try:
+    cover_term = raw_input("Cover Image Term : ")
+except:
+    try:
+        cover_term = input("Cover Image Term : ")
+    except:
+        cover_term = "nature"
+
 
 write_str = """---
 layout: post

@@ -30,7 +30,7 @@ MathJax.Hub.Queue(function() {
 
 I am trying to keep an open mind and become a good Java Developer, appreciating OOP Concepts, SOLID Design Patterns and all the popular frameworks.
 
-I do have to say Design Patterns are something really good and every good developer should try to learn them. Spring? Not a big fan so far. 
+I do have to say Design Patterns are something really cool and every developer should try to learn them. Spring? Not a big fan so far. 
 
 I consider myself a good Python developer and facing harsh realities like there's no alternative to `defaultdict` in Java is definitely not very conducive to my learning experience.
 

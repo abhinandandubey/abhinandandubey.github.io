@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Coffee Dates With Java
-tags: 
+tags: DevRant, Java, Python
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_3949.jpg
 cover_meta: 
   Traveler (c) AD Photography
@@ -79,6 +79,8 @@ for (String word : words) {
 System.out.println(store);
 // prints : {1=[a, b], 2=[ba], 3=[bca, bda], 4=[bdca]} 
 ```        
+
+Regardless, I do appreciate the beauty of OOPS and how vividly Java presents OOP concepts. I think I need a couple of more dates before I can actually enjoy dating Java.
 
 Whatever happened to `Maps.toString(store)`. Uniformity probably was on vacation when Java was being developed.
 

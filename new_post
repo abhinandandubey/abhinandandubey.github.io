@@ -60,7 +60,7 @@ MathJax.Hub.Queue(function() {
 # except:
 #     pass
 try:
-    write_str = write_str.replace("post_title", "Unsplash - " + cover_term)
+    write_str = write_str.replace("post_title", title)
     write_str = write_str.replace("cover_meta_text", cover_term)
     write_str = write_str.replace("cover_meta_url", cover_term)
     write_str = write_str.replace("cover_term", cover_term)

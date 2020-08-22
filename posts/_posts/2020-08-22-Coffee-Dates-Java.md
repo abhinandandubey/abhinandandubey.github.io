@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning and Hating Java
+title: My Coffee Dates With Java
 tags: 
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_3949.jpg
 cover_meta: 

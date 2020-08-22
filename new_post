@@ -14,11 +14,13 @@ print("\n\n")
 file_name = post_dir + todays_date + "-" + title.strip().replace(" ", "-") + ".md"
 os.system("touch " + file_name)
 
+cover_term = sorted(title, key = lambda k: len(k))[-1].lower()
+
 write_str = """---
 layout: post
 title: post_title
 tags: 
-cover_url: https://source.unsplash.com/random
+cover_url: https://source.unsplash.com/random?cover_term
 cover_meta: 
   (c) UNSPLASH
 color_scheme: tango

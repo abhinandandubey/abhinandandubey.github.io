@@ -31,8 +31,8 @@ layout: default
   {% for post in posts %}
   <li class="post-list-item" data-tags="{{ post.tags | join: " " }}">
     {% if post.cover_url %}
-    <div class="post-item-cover" style="background-image: url('{{ post.cover_url }}')"></div>
-    <!-- <div class="post-item-cover"></div> -->
+    <!-- <div class="post-item-cover" style="background-image: url('{{ post.cover_url }}')"></div> -->
+    <div class="post-item-cover"></div>
     {% endif %}
     <div class="post-item-label">
       <a class="post-item-link baseline-fix" href="{{ post.url | relative_url }}" data-date="{{ post.date | date: "%m-%d"  }}">

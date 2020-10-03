@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fenwick Trees
-tags: 
+tags: Coding Interview Programming
 cover_url: https://source.unsplash.com/random?tree
 cover_meta: 
   (c) UNSPLASH

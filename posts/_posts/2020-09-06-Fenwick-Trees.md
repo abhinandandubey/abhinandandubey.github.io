@@ -96,31 +96,10 @@ We initialize `sums` with `n+1` indexes. The indexes which are having their firs
 The indexes with their second rightmost bit as 1 get `sums[i] = sums[i] + sums[i-1]`. And we repeat this process like below:
 
 
-```python
-class FenwickTree(object):
-    def __init__(self, length):
-        self.sums = [0] * length
-        self.n = length
+<iframe height="400px" width="100%" src="https://repl.it/repls/MountainousRotatingAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
 
-    @staticmethod
-    def _last_bit(x):
-        return x ^ (x & (x - 1))
 
-    def update(self, x, d):
-        if x == 0:
-            return
-        t = x
-        while t < self.n:
-            self.sums[t] += d
-            t += self._last_bit(t)
 
-    def get(self, x):
-        t, r = x, 0
-        a = self.a
-        while t > 0:
-            r += a[t]
-            t -= self._last_bit(t)
-        return r
-```
 
 

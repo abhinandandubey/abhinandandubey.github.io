@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mid Year Review - Goals for 2019
-tags: SelfReflection
+tags: Thoughts
 cover_url: https://github.com/alivcor/lightforest/raw/master/lackawanna.jpg
 cover_meta: Lackawanna Terminal (c) AD Photography
 color_scheme: tango

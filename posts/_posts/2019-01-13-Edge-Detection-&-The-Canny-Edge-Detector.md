@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Edge Detection & The Canny Edge Detector
-tags: ComputerVision OpenCV EdgeDetection
+tags: Computer Vision
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_0401.png
 cover_meta: 
   Travelling Boat being Rowed | The Met

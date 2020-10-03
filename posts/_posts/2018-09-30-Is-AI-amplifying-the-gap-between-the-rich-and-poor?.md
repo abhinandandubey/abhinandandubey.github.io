@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Is AI amplifying the gap between the rich and poor?
-tags: Technology AI Capitalism Society DevelopingCountries
+tags: Thoughts
 cover_url: https://apod.nasa.gov/apod/image/1809/E0102NS_HubbleChandra_960.jpg
 cover_meta: 
   The Lonely Neutron Star in Supernova Remnant E0102-72.3 | NASA IMAGE OF THE DAY

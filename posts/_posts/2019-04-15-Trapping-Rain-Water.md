@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trapping Rain Water
-tags: Coding Python Interview Programming Career Arrays
+tags: Interview, Programming
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_1898_1.jpg
 cover_meta: The NYC Skyline (c) AD Photography
 color_scheme: tango

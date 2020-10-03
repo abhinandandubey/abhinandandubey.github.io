@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breaking Singleton In Java Using Reflection API
-tags: Coding Interview Programming Career Java DesignPatternSeries
+tags: Programming, Java, Design Patterns
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_3949.jpg
 cover_meta: Traveler (c) AD Photography
 color_scheme: tango

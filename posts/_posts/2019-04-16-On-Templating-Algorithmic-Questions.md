@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Templating Algorithmic Questions
-tags: Coding Python Interview Programming Career Arrays
+tags: Interview, Programming
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_3516.jpg
 cover_meta: The NYC Skyline (c) AD Photography
 color_scheme: tango

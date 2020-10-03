@@ -2,7 +2,7 @@
 layout: post
 title: Fenwick Trees
 tags: 
-cover_url: https://source.unsplash.com/random?chip
+cover_url: https://source.unsplash.com/random?tree
 cover_meta: 
   (c) UNSPLASH
 color_scheme: tango

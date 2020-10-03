@@ -13,12 +13,11 @@ for filename in filenames:
     f = open(filename, 'r')
     crawl = False
     for line in f:
-        if crawl:
-            current_tags = line.strip().split()
-            if current_tags[0] == 'tags:':
-                total_tags.extend(current_tags[1:])
-                crawl = False
-                break
+        if crawl and line[:5] == "tags:":
+            current_tags = line[5:].strip().split(", ")
+            total_tags.extend(current_tags)
+            crawl = False
+            break
         if line.strip() == '---':
             if not crawl:
                 crawl = True

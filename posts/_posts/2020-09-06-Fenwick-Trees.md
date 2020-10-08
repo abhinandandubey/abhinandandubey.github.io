@@ -96,7 +96,7 @@ We initialize `sums` with `n+1` indexes. The indexes which are having their firs
 The indexes with their second rightmost bit as 1 get `sums[i] = sums[i] + sums[i-1]`. And we repeat this process like below:
 
 
-<iframe height="400px" width="100%" src="https://repl.it/repls/MountainousRotatingAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+<iframe height="800px" width="100%" src="https://repl.it/repls/MountainousRotatingAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
 </iframe>
 
 

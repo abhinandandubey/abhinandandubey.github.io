@@ -30,6 +30,6 @@ MathJax.Hub.Queue(function() {
 
 > A certain function only calls those functions in the code which aren't recursive. Is the function recursive?
 
-If you hapen to know the answer, comment below :)
+If you happen to know the answer, comment below :)
 
 <br/>

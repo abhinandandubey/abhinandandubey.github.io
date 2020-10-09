@@ -133,3 +133,4 @@ class Solution(object):
 ```  
 
 
+Thanks for reading through ! Here's an interesting function - can you solve the <a href="https://abhinandandubey.github.io/posts/2020/10/07/A-Confusing-Confused-Function.html" target="_blank">riddle of this confusing function</a> ?

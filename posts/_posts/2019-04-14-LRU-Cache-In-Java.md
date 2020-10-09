@@ -231,3 +231,8 @@ A simple helper function for debugging.
 
 If you're designing an actual Cache which uses multi-threading, it might be better to use a `HashTable` because it's synchronised. It also does not allow null keys or values. However, in high-grade production systems, you wouldn't just be able to get by thread safety just by using a HashTable. Read [this](https://stackoverflow.com/a/41454), or use Scala. :)
 
+
+
+Feeling generous ? Help me write more blogs like this :)  
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>

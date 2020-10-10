@@ -45,6 +45,13 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
+The Java Concurrency API contains the following interfaces:
+
+- `Executor` – a simple interface for executing tasks, which we will cover in this tutorial.
+- `ExecutorService` – this is a much more complex interface which manages the executor itself.
+- `ScheduledExecutorService` – This interface extends ExecutorService with methods for scheduling the execution of a task.
+
+
 # Executors
 
 As we saw in the <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">previous post</a>, it's tedious and dangerous to create and manage threads manually. The Concurrency API defined in `java.util.concurrent` package, introudces `ExecutorService` for this very purpose.
@@ -102,8 +109,168 @@ finally {
 ```
 
 
-# 
+# Callables
 
+The API also provides another type of task, which allows you to return values from the task. 
+
+```java
+Callable<Integer> task = () -> {
+    try {
+        TimeUnit.SECONDS.sleep(1);
+        return Math.sqrt(172);
+    }
+    catch (InterruptedException e) {
+        throw new IllegalStateException("task interrupted", e);
+    }
+};
+```
+
+The syntax looks pretty similar to Runnable, but how about getting the return value? Enter `Future`.
+
+## Future
+
+The `submit()` method doesn't wait until the task finishes execution. To remedy that, Executor returns a special type called Future which can be used to retrieve the actual result at a later point in time.
+
+```java
+
+Callable<Double> getSquareRoot = () -> {
+    try {
+        TimeUnit.SECONDS.sleep(1);
+        System.out.println("Hello from " + Thread.currentThread().getName());
+        return Math.sqrt(172);
+    } catch (InterruptedException e) {
+        throw new IllegalStateException("task interrupted", e);
+    }
+};
+
+ExecutorService executor = Executors.newSingleThreadExecutor();
+Future<Double> future = executor.submit(getSquareRoot);
+try {
+    System.out.println(future.get());
+} catch(InterruptedException e) {
+    e.printStackTrace();
+}
+```
+
+One thing to observe here is that `get()` blocks the thread. It will wait until it can fetch the result from the future.
+
+### Example 
+
+Lets create a program which computes a square root, and square on different threads at the same time.
+
+We  the `getSquare()` method
+
+```java
+Callable<Double> getSquare = () -> {
+    try {
+        TimeUnit.SECONDS.sleep(1);
+        System.out.println("Hello from " + Thread.currentThread().getName());
+        return Math.pow(172, 2);
+    } catch (InterruptedException e) {
+        throw new IllegalStateException("task interrupted", e);
+    }
+};
+```
+
+And we now use `newFixedThreadPool` to initialize a thread pool of size 2. I encourage you to go through or at least have a look at the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html" target="_blank">variety of thread pools available in Java</a>
+
+
+Generally, a Java thread pool is composed of:
+
+the pool of worker threads, responsible for managing the threads
+a thread factory that is responsible for creating new threads
+a queue of tasks waiting to be executed
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(2);
+Future<Double> squareRoot = executor.submit(getSquareRoot);
+Future<Double> square = executor.submit(getSquare);
+
+try {
+    System.out.println(squareRoot.get()*square.get());
+} catch(InterruptedException e) {
+    e.printStackTrace();
+}
+```
+
+If you run the code multiple times, you should expect to see something like this:
+
+```bash
+Finished in 0 ms
+Hello from pool-1-thread-2
+Hello from pool-1-thread-1
+387990.52260590077
+
+Finished in 0 ms
+Hello from pool-1-thread-1
+Hello from pool-1-thread-2
+387990.52260590077
+
+Finished in 0 ms
+Hello from pool-1-thread-1
+Hello from pool-1-thread-2
+387990.52260590077
+```
+
+### Timeouts
+
+We almost never want to block our application code. Since `get()` is a blocking operation, we definitely want to have some sort of control so as not to render our application unresponsive.
+
+Turns out, this is rather simple using 
+
+```java
+future.get(5, TimeUnit.SECONDS); 
+```
+
+### Invoking Multiple Callables
+
+Executors also have an added support for supplying multiple callables and invoke them via `invokeAll()`. You supply a collection of callables and it will return you a list of futures.
+
+```java
+ExecutorService executor = Executors.newWorkStealingPool();
+
+List<Callable<String>> callables = Arrays.asList(
+        () -> "task1",
+        () -> "task2",
+        () -> "task3");
+
+executor.invokeAll(callables)
+    .stream()
+    .map(future -> {
+        try {
+            return future.get();
+        }
+        catch (Exception e) {
+            throw new IllegalStateException(e);
+        }
+    })
+    .forEach(System.out.println);
+```
+
+I didn't want to stuff this post with too much detail on `invokeAll`, but please feel free to go through the documentation. 
+
+# ScheduledExecutorService
+
+This interface provides you method which allow you to schedule tasks at your leisure. Want to schedule something 3 minutes from now? Want something to run every 2 minutes? You got it.
+
+```java
+ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+Runnable task = () -> {
+    System.out.println("Hello from " + Thread.currentThread().getName());
+}
+ScheduledFuture<?> future = executor.schedule(task, 3, TimeUnit.SECONDS);
+```
+
+You can also schedule tasks to be executed periodically, using `scheduleAtFixedRate()` and `scheduleWithFixedDelay()`.
+
+```java
+executor.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.SECONDS);
+```
+
+#### What's the difference?
+`scheduleAtFixedRate()` doesn't consider the actual duration of the task. So if you specify a period of 5 minutes but the task needs 10 minutes to finish execution, then expect your thread pool to get overloaded pretty soon.
+
+If you don't know how long your task is going to take, you'd rather use `scheduleWithFixedDelay()`. Using scheduleWithFixedDelay, the wait time period applies **between** the two tasks. 
 
 
 

@@ -74,7 +74,6 @@ Java solves this problem using _Happens Before_ Relationship.
 Consider the program below:
 
 ```java
-
 public class Unstoppable {
 
     private static boolean killSwitch;

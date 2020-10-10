@@ -68,10 +68,6 @@ public class FieldVisibility {
 
 Java solves this problem using _Happens Before_ Relationship. Whatever happened before “write of x” should be visible after “read of x”. Hence, all the changes which are visible to thread `T1` before a `volatile` write or a `synchronized` unlock will be visible to thread `T2` after a `volatile` read of the same variable or locking on the same monitor.
 
-
-Read more: https://javarevisited.blogspot.com/2020/01/what-is-happens-before-in-java-concurrency.html#ixzz6aQxwIP1N
-
-
 Consider the program below:
 
 ```java

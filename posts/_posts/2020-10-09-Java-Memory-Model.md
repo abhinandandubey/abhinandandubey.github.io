@@ -12,6 +12,8 @@ mathjax: True
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@duckdoc/termynal@1.0.0/termynal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duckdoc/termynal@1.0.0/termynal.min.css">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -38,13 +40,9 @@ It's important to understand the memory model, this is specially true for Java b
 
 The above diagram shows how it looks like. As you go down from Registers to RAM, size increases, latency increases, and things get further from the processor.
 
-## Order of Execution
-
- - Performance driven changes by Compiler, JVM or CPU-
 ## Field Visibility 
 
-Whenever we talk about “visibility” - it's in reference to vsisbility to among threads.
-
+Whenever we talk about “visibility” - it's in reference to visibility to among threads.
 
 ### Concurrency 
 
@@ -65,6 +63,106 @@ public class FieldVisibility {
     }
 }
 ```
+
+### Happens Before Relationship
+
+Java solves this problem using _Happens Before_ Relationship.
+
+<emph>Whatever happened before “write of `x`” should be visible after “read of `x`”.</emph>
+
+
+Consider the program below:
+
+```java
+
+public class Unstoppable {
+
+    private static boolean killSwitch;
+
+    public static void main(String[] args) 
+        throws InterruptedException {
+
+            Thread backgroundThread = new Thread(new Runnable() {
+                public void run() {
+                    int i = 0;
+                    while (!killSwitch)
+                        i+=1
+                        System.out.println("Value of i is" + i.toString());
+                }
+            });
+
+            backgroundThread.start();
+            TimeUnit.SECONDS.sleep(1);
+            killSwitch = true;
+
+    }
+}
+```
+
+
+It never stops because the updated value of `stopRequested` never becomes visible to `backgroundThread`
+
+<div id="termynal" data-termynal>
+    <span data-ty="input">java -jar Unstoppable.jar com.alivcor.Unstoppable</span>
+    <span data-ty>Value of i is 1</span>
+    <span data-ty>Value of i is 2</span>
+    <span data-ty>Value of i is 3</span>
+    <span data-ty>Value of i is 4</span>
+    <span data-ty>Value of i is 5</span>
+    <span data-ty>Value of i is 6</span>
+    <span data-ty>Value of i is 7</span>
+    <span data-ty>Value of i is 8</span>
+    <span data-ty>......87212 more lines</span>
+</div>
+
+
+## Order of Execution
+
+ - Performance driven changes by Compiler, JVM or CPU.
+
+1. Static initialization blocks will run whenever the class is loaded first time in JVM
+2. Initialization blocks run in the same order in which they appear in the program.
+3. Instance Initialization blocks are executed whenever the class is initialized and before constructors are invoked. They are typically placed above the constructors within braces.
+
+```java
+class FileReader { 
+  
+    FileReader(String filePath) 
+    { 
+        System.out.println("Reading file with file path"); 
+    } 
+  
+    FileReader() 
+    { 
+        System.out.println("Read file with no path"); 
+    } 
+  
+    static
+    { 
+        System.out.println("This gets called 1st"); 
+    } 
+  
+    { 
+        System.out.println("This gets called 3rd"); 
+    } 
+  
+    { 
+        System.out.println("This gets called 4th"); 
+    } 
+  
+    static
+    { 
+        System.out.println("This gets called 2nd"); 
+    } 
+  
+    public static void main(String[] args) 
+    { 
+        new FileReader(); 
+        new FileReader(8); 
+    } 
+} 
+```
+
 
 
 Feeling generous ? Help me write more blogs like this :)  

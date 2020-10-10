@@ -29,8 +29,10 @@ MathJax.Hub.Queue(function() {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 
+<blockquote class="yellownote">
+This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/The-Concurrency-API.html" target="_blank">here with the Concurrency API.</a> 
+</blockquote>
 
-<br/>
 Feeling generous ? Help me write more blogs like this :)  
 
 <center>
@@ -38,4 +40,3 @@ Feeling generous ? Help me write more blogs like this :)
 </center>
 <br/>
 <br/>
-

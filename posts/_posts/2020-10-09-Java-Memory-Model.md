@@ -158,6 +158,10 @@ class FileReader {
 ```
 
 
+<blockquote class="yellownote">
+This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">here learning Process & Threads.</a> 
+</blockquote>
+
 Feeling generous ? Help me write more blogs like this :)  
 
 <center>

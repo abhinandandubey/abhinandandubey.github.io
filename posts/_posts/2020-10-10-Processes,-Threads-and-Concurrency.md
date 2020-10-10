@@ -186,9 +186,8 @@ If you run this code over and over, you'll see really weird results. Since there
 
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
-
 <blockquote class="yellownote">
-This blog post is part of the Advanced Java Series. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">here with the Concurrency API.</a> 
+This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/The-Concurrency-API.html" target="_blank">here with the Concurrency API.</a> 
 </blockquote>
 
 Feeling generous ? Help me write more blogs like this :)  

@@ -5,7 +5,7 @@ tags: Java Series, Java, Programming
 cover_url: https://images.unsplash.com/photo-1580711508185-2ddd1d9d2e1b
 cover_meta: 
   (c) UNSPLASH
-color_scheme: tango
+color_scheme: zenburn
 mathjax: true
 mathjax: True
 ---
@@ -169,4 +169,5 @@ Feeling generous ? Help me write more blogs like this :)
 
 <center>
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
+{:.side-note}
 </center>

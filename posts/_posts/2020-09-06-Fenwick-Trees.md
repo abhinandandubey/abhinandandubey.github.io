@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-I was recently trying to solve the <a href="https://en.wikipedia.org/wiki/Range_query_(data_structures)" target="_blank">Prefix Sum Porblem</a> and came across two wonderful ways to approach this problem optimally.
+I was recently trying to solve the <a href="https://en.wikipedia.org/wiki/Range_query_(data_structures)" target="_blank">Prefix Sum Problem</a> and came across two wonderful ways to approach this problem optimally.
 
 One of them is Fenwick Trees (or <i>Binary Indexed Trees</i> - if you support the author here on this article published here on <a href="http://nautil.us/issue/89/the-dark-side/why-mathematicians-should-stop-naming-things-after-each-other">Nautilus</a>)
 

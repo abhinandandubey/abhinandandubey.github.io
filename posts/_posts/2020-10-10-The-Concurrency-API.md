@@ -28,6 +28,13 @@ blockquote.sidenote {
     margin-left: -48px;
     padding-left: 48px;
 }
+blockquote.palenote {
+    border-left: 12px solid #3d0c02;
+    background-color: #ffe4c4;
+    padding: 12px 12px 12px 0;
+    margin-left: -48px;
+    padding-left: 48px;
+}
 </style>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -84,7 +91,7 @@ Suppose you can wait only for 5 minutes after calling `shutdown()` , post 5 minu
 
 `awaitTermination()` doesn't actually shut down your executor. So unless another thread shuts down the executor, `awaitTermination()` will just sit there until the timeout runs out.
 
-<blockquote>
+<blockquote class="palenote">
 To summarize, I see awaitTermination() as a blocking mechanism, and shutdown() as a way to signal the executor service that a closure is imminent. 
 </blockquote>
 
@@ -175,11 +182,13 @@ Callable<Double> getSquare = () -> {
 And we now use `newFixedThreadPool` to initialize a thread pool of size 2. I encourage you to go through or at least have a look at the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html" target="_blank">variety of thread pools available in Java</a>
 
 
+<blockquote class="palenote">
 Generally, a Java thread pool is composed of:
 
-the pool of worker threads, responsible for managing the threads
-a thread factory that is responsible for creating new threads
-a queue of tasks waiting to be executed
+- the pool of worker threads, responsible for managing the threads
+- a thread factory that is responsible for creating new threads
+- a queue of tasks waiting to be executed
+</blockquote>
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(2);

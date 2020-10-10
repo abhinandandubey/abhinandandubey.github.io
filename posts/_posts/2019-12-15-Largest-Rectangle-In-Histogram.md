@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Largest Rectangle In Histogram
-tags: Interview, Programming
+tags: Interview Programming
 cover_url: https://github.com/alivcor/lightforest/raw/master/logan_sunset.jpg
 cover_meta: Sunset (c) AD Photography
 color_scheme: tango

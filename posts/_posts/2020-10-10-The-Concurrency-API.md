@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Concurrency API
-tags: Advanced Java Series, Java, Programming
+tags: Advanced-Java-Series, Java, Programming
 cover_url: https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80
 cover_meta: 
   (c) UNSPLASH

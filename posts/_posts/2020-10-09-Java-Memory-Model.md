@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java Memory Model
-tags: Advanced Java Series, Java, Programming
+tags: Advanced-Java-Series Java Programming
 cover_url: https://images.unsplash.com/photo-1580711508185-2ddd1d9d2e1b
 cover_meta: 
   (c) UNSPLASH

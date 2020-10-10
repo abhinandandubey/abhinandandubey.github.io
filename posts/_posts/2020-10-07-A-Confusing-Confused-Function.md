@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Confusing Confused Function
-tags: 
+tags: Puzzle
 cover_url: https://source.unsplash.com/random?abstract
 cover_meta: 
   (c) UNSPLASH

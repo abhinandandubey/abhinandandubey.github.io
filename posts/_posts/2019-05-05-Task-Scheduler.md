@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Scheduler
-tags: Programming, Interview 
+tags: Programming Interview 
 cover_url: https://github.com/alivcor/lightforest/raw/master/IMG_0338.jpg
 cover_meta: The North Reading Room at Stony Brook University (c) AD Photography
 color_scheme: tango

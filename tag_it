@@ -14,7 +14,7 @@ for filename in filenames:
     crawl = False
     for line in f:
         if crawl and line[:5] == "tags:":
-            current_tags = line[5:].strip().split(", ")
+            current_tags = line[5:].strip().split(" ")
             total_tags.extend(current_tags)
             crawl = False
             break

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Respite From Constructor Telescoping
-tags: Programming, Java, Design Patterns
+tags: Advanced Java Series, Java, Programming, Design Patterns
 cover_url: https://github.com/alivcor/lightforest/raw/master/arch.jpg
 cover_meta: 
   Wall Art (c) AD Photography

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Processes, Threads and Concurrency
-tags: 
+tags: Advanced Java Series, Java, Programming
 cover_url: https://images.unsplash.com/photo-1547581849-38ba650ad0de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
 cover_meta: 
   (c) UNSPLASH
@@ -167,11 +167,11 @@ Dough is Ready!
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-08-00.png)
 
 If you run this code over and over, you'll see really weird results. Since there's no way of knowing which statement would be executed first, it was a pain to build programs which used concurrency. Java introduced
-Concurrency API with Java 5 back in 2004. Here's an interesting fact - this was about the same time Mark Zuckerberg launched Facebook from his Harvard Dorm Room.
+![Concurrency API](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html) with Java 5 back in 2004, about the same time when this lad launched Facebook from his Harvard Dorm Room.
 
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
-Continue (here)[] with the Concurrency API.
+Continue !(here)[https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html] with the Concurrency API.
 
 Feeling generous ? Help me write more blogs like this :)  
 

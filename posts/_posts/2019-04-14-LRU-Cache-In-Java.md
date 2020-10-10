@@ -232,7 +232,17 @@ A simple helper function for debugging.
 If you're designing an actual Cache which uses multi-threading, it might be better to use a `HashTable` because it's synchronised. It also does not allow null keys or values. However, in high-grade production systems, you wouldn't just be able to get by thread safety just by using a HashTable. Read [this](https://stackoverflow.com/a/41454), or use Scala. :)
 
 
-
 Feeling generous ? Help me write more blogs like this :)  
 
+<center>
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
+</center>
+<br/>
+Feeling even more generous ? 
+
+<a href="https://foodforeducation.org/" target="_blank"><b>$20 can feed a poor child for a whole year</b></a>. Akshaya Patra *(Aak-sh-ayah pa-tra)* is the world’s largest NGO school meal program, providing hot, nutritious school lunches to over 1.8 million children in 19,257 schools, across India every day. Your 20$ makes all the difference.
+
+<a href="https://foodforeducation.org/" target="_blank"><img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-16-55-08.png"/></a>
+
+<br/>
+<br/>

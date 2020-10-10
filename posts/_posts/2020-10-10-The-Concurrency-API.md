@@ -182,13 +182,13 @@ Callable<Double> getSquare = () -> {
 And we now use `newFixedThreadPool` to initialize a thread pool of size 2. I encourage you to go through or at least have a look at the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html" target="_blank">variety of thread pools available in Java</a>
 
 
-<blockquote class="palenote">
+
 Generally, a Java thread pool is composed of:
 
 - the pool of worker threads, responsible for managing the threads
 - a thread factory that is responsible for creating new threads
 - a queue of tasks waiting to be executed
-</blockquote>
+
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(2);

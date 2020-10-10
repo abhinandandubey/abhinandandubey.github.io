@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java Memory Model
-tags: 
+tags: Java Series, Java, Programming
 cover_url: https://images.unsplash.com/photo-1580711508185-2ddd1d9d2e1b
 cover_meta: 
   (c) UNSPLASH
@@ -50,7 +50,7 @@ The visibility of writing operations on shared variables can cause problems duri
 
 **Field Visibility Problem** is solved using `volatile`. In below example, if writer and reader functions are getting called simultaneously in different threads, `x` might be `1` in local cache of core `1` but might not have updated value in shared cache. Hence when reader loads value of `x`, it might load it as `0`.
 
-```Java
+```java
 public class FieldVisibility {
     int x = 0;
 
@@ -68,7 +68,7 @@ public class FieldVisibility {
 
 Java solves this problem using _Happens Before_ Relationship.
 
-<emph>Whatever happened before “write of `x`” should be visible after “read of `x`”.</emph>
+<emph>Whatever happened before “write of x” should be visible after “read of x”.</emph>
 
 
 Consider the program below:
@@ -116,7 +116,7 @@ It never stops because the updated value of `stopRequested` never becomes visibl
 </div>
 
 
-## Order of Execution
+## Java - Order of Execution
 
  - Performance driven changes by Compiler, JVM or CPU.
 

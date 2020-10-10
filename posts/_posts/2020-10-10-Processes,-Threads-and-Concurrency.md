@@ -170,6 +170,7 @@ If you run this code over and over, you'll see really weird results. Since there
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
 Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">here with the Concurrency API.</a> 
+{:.side-note}
 
 Feeling generous ? Help me write more blogs like this :)  
 

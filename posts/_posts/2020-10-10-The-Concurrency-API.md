@@ -58,15 +58,15 @@ ExecutorService executor = Executors.newSingleThreadExecutor();
 executor.submit(greetingTask);
 ```
 
-If you run the code above, you'd see something like this, but you'd see this program never exits!
+If you run the code above, you'd see something like this, but you'd also observe this program never exits!
 
 ```bash
 Hello from pool-1-thread-1
 ```
 
-The `ExecutorService` defines two methods for graceful exits
+The `ExecutorService` defines a few methods for graceful exits
 
-- `shutdown()` waits for currently running tasks to finish, and stops `ExecutorService` from accepting any new tasks. It DOES NOT BLOCK the thread it was called from, 
+- `shutdown()` waits for currently running tasks to finish, and stops ExecutorService from accepting any new tasks. It DOES NOT BLOCK the thread it was called from, 
 - `shutdownNow()` interrupts all running tasks and shuts the executor down immediately, returning all tasks which were awaiting execution.
 - `awaitTermination()` doesn't actually shut down your executor. It DOES BLOCK the calling thread. (just like the `join()` method)
 - `invokeAll()` waits for all tasks to complete. 
@@ -75,10 +75,10 @@ The `ExecutorService` defines two methods for graceful exits
 
 Suppose you can wait only for 5 minutes after calling `shutdown()` , post 5 minutes, you want to forcibly kill the ExecutorService, by issuing a `shutdownNow()`. `awaitTermination()` blocks until all tasks have completed execution after you call a `shutdown()`.
 
-`awaitTermination()` doesn't actually shut down your executor first. So unless another thread shuts down the executor, `awaitTermination()` will just sit there until the timeout runs out.
+`awaitTermination()` doesn't actually shut down your executor. So unless another thread shuts down the executor, `awaitTermination()` will just sit there until the timeout runs out.
 
 <blockquote>
-To summarize, I see `awaitTermination()` as a blocking mechanism, and `shutdown()` as a way to signal the executor service that a closure is imminent. 
+To summarize, I see awaitTermination() as a blocking mechanism, and shutdown() as a way to signal the executor service that a closure is imminent. 
 </blockquote>
 
 Recommended way to use `shutdown()` and `awaitTermination()`:

@@ -167,11 +167,11 @@ Dough is Ready!
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-08-00.png)
 
 If you run this code over and over, you'll see really weird results. Since there's no way of knowing which statement would be executed first, it was a pain to build programs which used concurrency. Java introduced
-![Concurrency API](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html) with Java 5 back in 2004, about the same time when this lad launched Facebook from his Harvard Dorm Room.
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html" target="_blank">Concurrency API</a> with Java 5 back in 2004, about the same time when this lad launched Facebook from his Harvard Dorm Room.
 
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
-Continue !(here)[https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html] with the Concurrency API.
+Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">here with the Concurrency API.</a> 
 
 Feeling generous ? Help me write more blogs like this :)  
 

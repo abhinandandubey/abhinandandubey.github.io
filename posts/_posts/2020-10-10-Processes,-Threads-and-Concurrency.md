@@ -5,7 +5,7 @@ tags:
 cover_url: https://images.unsplash.com/photo-1547581849-38ba650ad0de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
 cover_meta: 
   (c) UNSPLASH
-color_scheme: native
+color_scheme: zenburn
 mathjax: true
 mathjax: True
 ---

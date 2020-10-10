@@ -21,6 +21,13 @@ blockquote.yellownote {
     margin-left: -48px;
     padding-left: 48px;
 }
+blockquote.sidenote {
+    border-left: 12px solid #dc0;
+    background-color: #ffa;
+    padding: 12px 12px 12px 0;
+    margin-left: -48px;
+    padding-left: 48px;
+}
 </style>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({

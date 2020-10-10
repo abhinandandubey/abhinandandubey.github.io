@@ -12,6 +12,23 @@ mathjax: True
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
 </style>
+
+<style>
+blockquote.yellownote {
+    border-left: 12px solid #dc0;
+    background-color: #ffa;
+    padding: 12px 12px 12px 0;
+    margin-left: -48px;
+    padding-left: 48px;
+}
+blockquote.sidenote {
+    border-left: 12px solid #dc0;
+    background-color: #ffa;
+    padding: 12px 12px 12px 0;
+    margin-left: -48px;
+    padding-left: 48px;
+}
+</style>
 <script src="https://cdn.jsdelivr.net/npm/@duckdoc/termynal@1.0.0/termynal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duckdoc/termynal@1.0.0/termynal.min.css">
 <script type="text/x-mathjax-config">

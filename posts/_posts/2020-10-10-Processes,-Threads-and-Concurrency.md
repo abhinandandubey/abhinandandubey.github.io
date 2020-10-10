@@ -52,7 +52,7 @@ Most operating systems support concurrent executions and programming languages a
 
 **Processes** are programs which typically run *independent* to each other. Within these processes, we have **Threads**, which usually work within the same leaps and bounds of a process accessing variables colocated, that is to say written in the same code.
 
-Java supports threads since JDK 1. To define a *thread*, you also define what it has to do, often referred as a *task*. This can either be a task which returns something, called a **Runnable**, or something which does some processing, and just returns an exit code, a **Callable**.
+Java supports threads since JDK 1. To define a *thread*, you also define what it has to do, often referred as a *task*. This can either be a task which does not return anything, called a **Runnable**, or something which does some processing, and returns something, a **Callable**.
 
 ## Define a Task
 

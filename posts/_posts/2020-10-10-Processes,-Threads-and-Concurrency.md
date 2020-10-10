@@ -2,10 +2,10 @@
 layout: post
 title: Processes, Threads and Concurrency
 tags: 
-cover_url: https://source.unsplash.com/random?horses
+cover_url: https://images.unsplash.com/photo-1547581849-38ba650ad0de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
 cover_meta: 
   (c) UNSPLASH
-color_scheme: tango
+color_scheme: native
 mathjax: true
 mathjax: True
 ---
@@ -57,7 +57,7 @@ Hello from main
 
 ## Create a Thread
 
-Lets run this task which we created on a thread.
+Lets create a separate thread to run this task on. Observe the thread creation syntax below:
 
 
 ```java
@@ -69,14 +69,17 @@ Thread thread = new Thread(greetingTask);
 thread.start();
 ```
 
+And you should see something like:
 
 ```bash
 Hello from thread-0
 ```
 
-## So that's all we need for Concurrency, right?
 
-Well consider doing a real task. See **that's why I hate Dog extends Animal examples**. You are trying to make a pizza, and you assign different threads different tasks.
+
+### So that's all we need for Concurrency, right?
+
+Well consider doing a real task. (See *that's why I hate Dog extends Animal examples*). Either way, lets say you were trying to make a pizza, and you assign different threads different tasks - `makeDough`, `sprinkleCheese`, `bakePizza`, and finally you expect to `eatPizza`.
 
 You rely on order of execution and expect things to be executed sequentially.
 
@@ -161,12 +164,12 @@ Yummy Yummy In My Tummy
 Dough is Ready!
 ```
 
-![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/assets/images/2020-10-10-13-08-00.png)
+![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-08-00.png)
 
 If you run this code over and over, you'll see really weird results. Since there's no way of knowing which statement would be executed first, it was a pain to build programs which used concurrency. Java introduced
 Concurrency API with Java 5 back in 2004. Here's an interesting fact - this was about the same time Mark Zuckerberg launched Facebook from his Harvard Dorm Room.
 
-![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/assets/images/2020-10-10-13-15-02.png)
+![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
 Continue (here)[] with the Concurrency API.
 

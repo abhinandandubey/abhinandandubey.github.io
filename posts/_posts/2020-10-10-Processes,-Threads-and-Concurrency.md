@@ -14,7 +14,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
 </style>
 
 <style>
-blockquote.sidenote {
+blockquote.yellownote {
     border-left: 12px solid #dc0;
     background-color: #ffa;
     padding: 12px 12px 12px 0;
@@ -180,7 +180,7 @@ If you run this code over and over, you'll see really weird results. Since there
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-13-15-02.png)
 
 
-<blockquote class="sidenote">
+<blockquote class="yellownote">
 This blog post is part of the Advanced Java Series. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/Processes,-Threads-and-Concurrency.html" target="_blank">here with the Concurrency API.</a> 
 </blockquote>
 

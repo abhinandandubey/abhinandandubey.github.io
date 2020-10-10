@@ -2,7 +2,7 @@
 layout: post
 title: The Concurrency API
 tags: Advanced-Java-Series Java Programming
-cover_url: https://source.unsplash.com/random?india
+cover_url: https://images.unsplash.com/photo-1518949142393-f1d68174c92a?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80
 cover_meta: 
   (c) UNSPLASH
 color_scheme: zenburn
@@ -291,6 +291,11 @@ Feeling generous ? Help me write more blogs like this :)
 
 <center>
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
+
+Feeling even more generous ? [$20 can feed a poor child for a whole year](https://foodforeducation.org/). Akshaya Patra *(Aak-sh-ayah pa-tra)* is the world’s largest NGO school meal program, providing hot, nutritious school lunches to over 1.8 million children in 19,257 schools, across India every day.
+
+<a href="https://foodforeducation.org/" target="_blank"><img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-10-16-57-46.png"/></a>
+
 </center>
 <br/>
 <br/>

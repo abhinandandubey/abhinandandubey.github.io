@@ -75,6 +75,12 @@
   font-family: Courier, Monaco, $font-family-fallback;
 }
 
+
+
+@mixin font-monaco($font-family-fallback: monospace) {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
 @function font-size($factor: 1.0) {
   @return $font-size * $factor;
 }

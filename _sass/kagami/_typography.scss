@@ -85,8 +85,8 @@ article {
     display: inline-block;
     padding: 0 0.3em;
     margin: 0 -0.05em;
-    font-size: 0.875em;
-    @include font-monospace;
+    font-size: 0.75em;
+    @include font-monaco;
     color: $inline-code-color;
     background: $inline-code-background;
     border-radius: 3px;
@@ -100,7 +100,7 @@ article {
       padding: 0;
       color: inherit;
       background: none;
-      line-height: 1.6;
+      line-height: 1.2;
     }
   }
 

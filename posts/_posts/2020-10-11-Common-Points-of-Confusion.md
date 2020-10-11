@@ -87,11 +87,11 @@ Use `int`. However, if the value can be `null` or is to be used as an Object or 
 This is taken from <a href="https://stackoverflow.com/a/40878/5102599" target="_blank">this answer by Josh Brown here</a>
 
 
-### Access Modifiers
+### `public` vs unspecified vs `protected`
 
 <a href="https://raw.githubusercontent.com/abhinandandubey/abhinandandubey.github.io/master/assets/images/2020-10-11-12-00-00.png" target="_blank"><img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-11-12-00-00.png"/></a>
 
-I made an effort to show access modifiers with some actual code.
+I made an effort to show access modifiers with some actual code. Click on the image above to open it in a new tab.
 
 ### `StringBuilder` vs `StringBuffer`
 

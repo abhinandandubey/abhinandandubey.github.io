@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common Points of Confusion
+title: Java - Common Points of Confusion
 tags: Java Programming Advanced-Java-Series
 cover_url: https://images.unsplash.com/photo-1515859005217-8a1f08870f59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1398&q=80
 cover_meta: 
@@ -48,7 +48,7 @@ MathJax.Hub.Queue(function() {
 
 I thought of making thi spost when I found myself confused by some very common methods we use in Java. 
 
-# `length` vs `length()` vs `size()`
+### `length` vs `length()` vs `size()`
 
 - `size()` is a method defined in `java.util.Collection`, so it is available for any collection in Java, and returns to the number of elements in the collection. You cannot use this with strings.
 - `length` is a field on an array object. If you initialize the array with `int[] a = new int[4]`, `a.length` always returns 4 (the *capacity* of the array). However, the number of actual elements in the array is 0, so `size()` would return 0.
@@ -58,7 +58,7 @@ To summarize, use `length` only on arrays (`int[]`, `double[]`, `String[]`) to k
 
 `String` is not a vanilla array, so you can't use `length` and it's not even a Collection (so you can't use `size()`. This is the only case where you'd use `length()`.
 
-# `int` vs `Integer`
+### `int` vs `Integer`
 
 A lot of content online focuses on what these are. (`int` is a primitive type. `Integer` is a class) - but I think that's sort of not very helpful when it comes to application. The way I understood is `Integer` is a wrapper around `int` which makes your life much easier with predefined methods. You might also find people using some jargon on the lines of *boxing* and *autoboxing*. It's just a fancy way of saying:
 
@@ -73,12 +73,12 @@ Integer n = new Integer(8);
 Integer n = Integer.valueOf(8);
 ```
 
-### Verdict
+#### Verdict
 Use `int`. However, if the value can be `null` or is to be used as an Object or Collections -  use `Integer`. Using `int` also gives you performance benefits that come with primitive types.
 
 
 
-# `HashMap` vs `Hashtable`
+### `HashMap` vs `Hashtable`
 
 `Hashtable` is usually considered legacy ("old") code. There's virtually nothing about Hashtable that can't be done using HashMap or derivations of HashMap. However, there are some differences:
 
@@ -87,18 +87,17 @@ Use `int`. However, if the value can be `null` or is to be used as an Object or 
 This is taken from <a href="https://stackoverflow.com/a/40878/5102599" target="_blank">this answer by Josh Brown here</a>
 
 
-# Access Modifiers
+### Access Modifiers
 
-![Access Modifier](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-11-12-00-00.png)
-*Access Modifiers*
+<a href="https://raw.githubusercontent.com/abhinandandubey/abhinandandubey.github.io/master/assets/images/2020-10-11-12-00-00.png" target="_blank"><img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-10-11-12-00-00.png"/></a>
 
 I made an effort to show access modifiers with some actual code.
 
-# `StringBuilder` vs `StringBuffer`
+### `StringBuilder` vs `StringBuffer`
 
 `StringBuffer` is synchronized, `StringBuilder` is not.
 
-# `implements Runnable` vs `extends Thread`
+### `implements Runnable` vs `extends Thread`
 
 Use `implements Runnable`. Period.
 

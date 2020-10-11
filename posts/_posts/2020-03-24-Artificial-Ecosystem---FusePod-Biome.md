@@ -30,13 +30,13 @@ MathJax.Hub.Queue(function() {
 
 ### Thought of an Artificial Ecosystem
 
-Lately, maybe because of the Coronavirus scare, and me binge-watching Westworld on HBO, I've been thinking of making my own Artificial Ecosystem - where life starts at the begining, and there are maps or rather nodes spread across a space. All of it is hazy and unclear.
+Lately, maybe because of the Coronavirus scare, and me binge-watching Westworld on HBO, I've been thinking of making my own Artificial Ecosystem - where life starts at the begining, and there are maps or rather nodes spread across a space. There's a lot of ambiguity on how it would look like, and it definitely makes sense to do some modeling.
 
-I started my research with ideas of modelling my problem, and that started with the idea of a "CELL". But where does it end, and how does Cell differ - are human cells same as bacterial cells? Are viruses a type of cell?
+I started my research with ideas of modelling my problem, and that started with the idea of a "CELL". But where does it end (how _atomic_ can the model be, or how much _sophistication_ can be expected of it?), and how do cells differ - are human cells same as bacterial cells? Are viruses a type of cell? 
 
 #### Time to research
 
-I started labelling how exactly the world would look like - maybe there will be some cells, and then how do they become organisms? Hence the hierarchy.
+I started labelling how exactly the world would look like - maybe there will be some cells, the process which makes them evolve into organisms? It does make sense to outline a hierarchy out here.
 
 ![LifeLake](https://github.com/alivcor/lightforest/raw/master/lifelake_1.png)
 

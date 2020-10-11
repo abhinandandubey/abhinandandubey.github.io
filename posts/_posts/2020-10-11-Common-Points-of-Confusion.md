@@ -46,7 +46,7 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-I thought of making thi spost when I found myself confused by some very common methods we use in Java. 
+I thought of making this post when I found myself confused by some very common methods we use in Java. 
 
 ### `length` vs `length()` vs `size()`
 

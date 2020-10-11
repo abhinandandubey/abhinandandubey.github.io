@@ -50,9 +50,9 @@ I thought of making thi spost when I found myself confused by some very common m
 
 ### `length` vs `length()` vs `size()`
 
-- `size()` is a method defined in `java.util.Collection`, so it is available for any collection in Java, and returns to the number of elements in the collection. You cannot use this with strings.
-- `length` is a field on an array object. If you initialize the array with `int[] a = new int[4]`, `a.length` always returns 4 (the *capacity* of the array). However, the number of actual elements in the array is 0, so `size()` would return 0.
-- `length()` is exclusively for strings. String, StringBuilder etc - to know the length of the String.
+- **`size()`** is a method defined in `java.util.Collection`, so it is available for any collection in Java, and returns to the number of elements in the collection. You cannot use this with strings.
+- **`length`** is a field on an array object. If you initialize the array with `int[] a = new int[4]`, `a.length` always returns 4 (the *capacity* of the array). However, the number of actual elements in the array is 0, so `size()` would return 0.
+- **`length()`** is exclusively for strings. String, StringBuilder etc - to know the length of the String.
 
 To summarize, use `length` only on arrays (`int[]`, `double[]`, `String[]`) to know the length of the arrays. 
 

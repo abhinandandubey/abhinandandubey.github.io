@@ -101,6 +101,52 @@ I made an effort to show access modifiers with some actual code. Click on the im
 
 Use `implements Runnable`. Period.
 
+### Pass-By-Value / Pass-By-Reference
+
+There are a ton of upvoted answers on this question on StackOverflow. And they are heavily upvoted. However, from a beginner standpoint, I find them **highly misleading**.
+
+Give yourself 2 minutes of your time to understand the code below, and I assure you you'll understand how Java really handles variable passing.
+
+```java
+public class Main {
+    
+    public static void method1(List<List<Integer>> a, List<Integer> b, int c){
+        a.add(Arrays.asList(1,2,3));
+        b.add(7);
+        c = 5;
+        return;
+    }
+    
+    public static void main(String[] args) {
+        List<List<Integer>> x = new ArrayList<>();
+        List<Integer> y = new ArrayList<>();
+        y.add(4);
+        y.add(5);
+        y.add(6);
+        int z = 1;
+        method1(x, y, z);
+        System.out.println(x + " " + y + " " + z); // prints [[1, 2, 3]] [4, 5, 6, 7] 1
+    }
+}
+```
+
+In short, collections/objects seem to be pass by reference, primitive types are pass by value.
+
+### `add()` vs `offer()` in PriorityQueue
+
+The two functions come from two different interfaces that PriorityQueue implements:
+
+`add()` comes from Collection.
+`offer()` comes from Queue.
+
+- For PriorityQueue, the two functions are synonymous. 
+- For a capacity-constrained queue, the difference is that add() always returns true and throws an exception if it can't add the element, whereas `offer() `is allowed to return false if it can't add the element.
+
+### `LinkedList` vs `Stack`
+
+Stack class is mostly a leftover that has become more or less redundant with the newer Java Collections Framework.
+
+
 <blockquote class="yellownote">
 This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/09/Java-Memory-Model.html" target="_blank">here with the Java Memory Model</a> 
 </blockquote>

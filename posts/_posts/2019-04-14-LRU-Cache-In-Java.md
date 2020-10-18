@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LRU Cache in Java
+title: Building an LRU Cache 
 tags: Interview Programming System-Design
 cover_url: https://github.com/alivcor/lightforest/raw/master/ED33A877-F939-4D7D-9753-3784DB3AB227.jpg
 cover_meta: A Mocha at Espresso Vivace (c) AD Photography
@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 
 # LRU Cache
 
-It's probably one of the most _classic_ problems that have been holding the forts of Coding Interviews. This makes it a perfect candidate for a detailed blog post!
+Caching has held a special place in my heart. My very first projects in my professional career involved implemented a huge, scalable, distributed cache. _(which was probably inifinitely much more complex than this)_ - LRU Cache is probably the most basic caching scheme, and I thought it'd be a good idea implementing it.
 
 ## The Problem
 

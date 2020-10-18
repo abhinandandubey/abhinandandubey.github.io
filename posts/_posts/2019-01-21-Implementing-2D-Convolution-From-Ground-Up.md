@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementing 2D Convolution From Ground Up
-tags: Computer-Vision
+tags: Computer-Vision todo
 cover_url: https://apod.nasa.gov/apod/image/1901/Selfie_InSight_1080.jpg
 cover_meta: 
   InSight Lander Takes Selfie on Mars | NASA IMAGE OF THE DAY

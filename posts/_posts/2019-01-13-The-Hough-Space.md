@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Hough Space
-tags: Computer-Vision
+tags: Computer-Vision todo
 cover_url: https://github.com/alivcor/lightforest/raw/master/HudsonRiver.png
 cover_meta: 
   The Hudson River from Lackawanna Park, New Jersey

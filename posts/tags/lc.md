@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: "Java,"
+title: "lc"
 filter:
- - by_tag: "Java,"
+ - by_tag: "lc"
 ---

@@ -153,6 +153,54 @@ Observer how IDE shows a red mark below `Car.builder`
 
 ![Car Demo](https://github.com/alivcor/lightforest/raw/master/car_demo.png)
 
+## Build A Space Shuttle
+
+```java
+// "static void main" must be defined in a public class.
+class SpaceShuttle {
+    public String engine;
+    public String cockpit;
+    
+    static class Builder {
+        private String engine;
+        private String cockpit;
+        
+        Builder(String engine){
+            this.engine = engine;
+        }
+        
+        Builder engine(String engine){
+            this.engine = engine;
+            return this;
+        }
+        Builder cockpit(String cockpit){
+            this.cockpit = cockpit;
+            return this;
+        }
+        
+        SpaceShuttle build(){
+            return new SpaceShuttle(this);
+        }
+    }
+    
+    private SpaceShuttle(Builder b){
+        this.engine = b.engine;
+        this.cockpit = b.cockpit;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SpaceShuttle.Builder sb = new SpaceShuttle.Builder("RS-25");
+        sb.engine("RS-25").cockpit("C101");
+        SpaceShuttle Titan = sb.build();
+        System.out.println(Titan); // SpaceShuttle@c818063
+        System.out.println(Titan.engine); // RS-25
+        System.out.println(Titan.cockpit); // C101
+    }
+}
+```
+
 
 Feeling generous ? Help me write more blogs like this :)  
 

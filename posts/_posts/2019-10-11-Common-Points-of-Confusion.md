@@ -148,11 +148,15 @@ Stack class is mostly a leftover that has become more or less redundant with the
 
 ### String `.equals()` vs `==`
 
+Consider the below example:
+
+```java
 String s = "abcd"; 
 System.out.println(s.substring(1,2)); //prints b
 System.out.println(s == "abcd"); //prints false
 System.out.println(s.substring(1,2) == "b"); //prints false
 System.out.println(s.substring(1,2).equals("b")); //prints true
+```
 
 The above code should tell you why people are advised to use `.equals()` instead of `==`. Because `.substring()` is invoked at runtime, hence it generates distinct objects.
 

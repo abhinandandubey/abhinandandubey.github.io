@@ -146,6 +146,17 @@ The two functions come from two different interfaces that PriorityQueue implemen
 
 Stack class is mostly a leftover that has become more or less redundant with the newer Java Collections Framework.
 
+### String `.equals()` vs `==`
+
+String s = "abcd"; 
+System.out.println(s.substring(1,2)); //prints b
+System.out.println(s == "abcd"); //prints false
+System.out.println(s.substring(1,2) == "b"); //prints false
+System.out.println(s.substring(1,2).equals("b")); //prints true
+
+The above code should tell you why people are advised to use `.equals()` instead of `==`. Because `.substring()` is invoked at runtime, hence it generates distinct objects.
+
+
 
 <blockquote class="yellownote">
 This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/09/Java-Memory-Model.html" target="_blank">here with the Java Memory Model</a> 

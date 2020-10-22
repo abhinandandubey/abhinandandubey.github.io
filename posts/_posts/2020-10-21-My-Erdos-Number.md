@@ -2,7 +2,7 @@
 layout: post
 title: My Erdős Number
 tags: Math
-cover_url: https://source.unsplash.com/random?math
+cover_url: https://images.unsplash.com/photo-1603050814729-a56889cde9b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
 cover_meta: 
   (c) UNSPLASH
 color_scheme: tango

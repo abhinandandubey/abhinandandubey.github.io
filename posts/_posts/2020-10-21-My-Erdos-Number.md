@@ -48,7 +48,7 @@ MathJax.Hub.Queue(function() {
 
 # I have an Erdős Number !
 
-I was just browsing the internet and saw people bragging about their <a href="" target="_blank">Erdős Numbers</a> - well turns out I have one too !
+I was just browsing the internet and saw people bragging about their <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number" target="_blank">Erdős Numbers</a> - well turns out I have one too !
 
 ## My Erdős Number is 7
 

@@ -331,6 +331,92 @@ public void run(){
 5 consumed by Thread-2
 ```
 
+
+## Final Words
+
+It's important to understand how threads work behind the scenes, and how the keyword synchronised works is fundamental towards it. So is understanding `wait()` and `notify()`.
+
+```java
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Producer implements Runnable {
+
+    Queue<Integer> sharedMessages;
+    Integer i = 0;
+    Producer(Queue<Integer> sharedMessages) {
+        this.sharedMessages = sharedMessages;
+    }
+
+    public void produce(Integer i) {
+        synchronized (sharedMessages){
+            System.out.println("Producing message " + i);
+            this.sharedMessages.add(i);
+            try {
+                sharedMessages.wait(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void run(){
+        synchronized (sharedMessages) {
+            while (i < 100) {
+                produce(i++);
+            }
+        }
+    }
+}
+
+class Consumer implements Runnable{
+
+    Queue<Integer> sharedMessages;
+    Consumer(Queue<Integer> sharedMessages) {
+        this.sharedMessages = sharedMessages;
+    }
+
+    public void consume() {
+        synchronized (sharedMessages) {
+            if (sharedMessages.size() > 0) {
+                System.out.println(sharedMessages.remove() + " consumed by " + Thread.currentThread().getName().toString());
+            }
+        }
+    }
+
+    @Override
+    public void run(){
+        synchronized (sharedMessages){
+            while(true){
+                try {
+                    consume();
+                    sharedMessages.wait(1);
+                } catch (InterruptedException e) {
+                    System.out.println(Thread.currentThread().getName() + ": I was interrupted from my sleep!");
+                }
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<Integer> sharedMessages = new LinkedList<>();
+
+        new Thread(new Producer(sharedMessages)).start();
+
+        new Thread(new Consumer(sharedMessages)).start();
+        new Thread(new Consumer(sharedMessages)).start();
+        new Thread(new Consumer(sharedMessages)).start();
+        new Thread(new Consumer(sharedMessages)).start();
+        new Thread(new Consumer(sharedMessages)).start();
+        new Thread(new Consumer(sharedMessages)).start();
+    }
+
+}
+```
+
 I highly suggest you to take a look at the <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html" target="_blank">Intrinsic Locks and Synchronization</a>
 
 <br/>

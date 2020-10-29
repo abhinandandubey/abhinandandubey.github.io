@@ -315,6 +315,7 @@ public void run(){
             } catch (InterruptedException e) {
                 System.out.println(Thread.currentThread().getName() + ": I was interrupted from my sleep!");
             }
+            sharedMessages.notifyAll();
         }
     }
 }

@@ -10,6 +10,7 @@ mathjax: true
 mathjax: True
 ---
 <style TYPE="text/css">
+wrapper { max-width: 800px; }
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
 </style>
 
@@ -62,14 +63,14 @@ We could either make a prediction by looking at the community in general and fig
 
 There's many cases when we can infer from the user's behavior how much they likely like a particular product. If I'm watching Netflix and I start watching a movie and five minutes into it, I stop watching it, and I never come back, Netflix would probably know I didn't like that movie. If I'm listening to a song on Spotify on the special playlist spotify curates for me weekly - "Discover Weekly" - and I skip within first few seconds of the song, Spotify would learn from this behavior and recommend less songs like the one I skipped.
 
-![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-11-09-19-06-56.png)
+<img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-11-09-19-06-56.png" style="width: 250px"/>
 
 
 ## User Interaction & Ratings
 
 What's a rating really? I like to see it as an *expression of preference*. Different websites use different rating mechanisms. The e-Commerce giant uses a 5-star rating system, and further feature-specific item ratings. To calculate the overall star rating and percentage breakdown by star, Amazon doesn’t use a simple average. Instead, their system considers things like how recent a review is and if the reviewer bought the item on Amazon. It also analyzes reviews to verify trustworthiness.
 
-![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-11-09-19-10-20.png)
+<img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-11-09-19-10-20.png" style="width: 250px"/>
 
 Spotify opts for simpler rating system where a song can either be "loved" or be given a "thumbs down". This fits the purpose, because I definitely wouldn't like a music player which asks me to rate on a scale of 1-5 how much I liked a song, every single time I listen to a new song.
 

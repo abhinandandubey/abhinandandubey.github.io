@@ -60,7 +60,7 @@ Recommenders are heavily about analysis and this evaluation starts with this big
 
 We could either make a prediction by looking at the community in general and figuring out patterns, or we could give a prediction using the content itself and how it has been liked by the user himself/herself in the past. The prediction is the estimate of how much we think they're going to like items - usually items that they haven't seen in the past.
 
-There's many cases when we can infer from the user's behavior how much they likely like a particular product. If I'm watching Netflix and I start watching a movie and five minutes into it, I stop watching it, and I never come back, Netflix would probably know I didn't like that movie. If I'm listening to a song on Spotify on the special playlist spotify curates for me weekly - "Discover Weekly" - and within first few seconds of the song I skip, Spotify would learn from this behavior and recommend less songs like the one I skipped.
+There's many cases when we can infer from the user's behavior how much they likely like a particular product. If I'm watching Netflix and I start watching a movie and five minutes into it, I stop watching it, and I never come back, Netflix would probably know I didn't like that movie. If I'm listening to a song on Spotify on the special playlist spotify curates for me weekly - "Discover Weekly" - and I skip within first few seconds of the song, Spotify would learn from this behavior and recommend less songs like the one I skipped.
 
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2020-11-09-19-06-56.png)
 

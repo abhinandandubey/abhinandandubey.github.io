@@ -56,7 +56,9 @@ Simply put, they're systems that help people find things when the process of fin
 
 Recommenders are heavily about analysis and this evaluation starts with this big dataset of product opinions and perhaps product data, maybe even user demographics and other pieces of information like user ratings or reviews we can pull together for users. We could begin by asking ourselves if user _X_ likes Item _1_ and _2_ and user _X_ likes most of the items liked by user _Y_ - then there's a high chance _Y_ would like Item _1_ - if we have this - those kinds of questions are collaborative questions because they look at what the community of users together do or don't do and the patterns in their behavior that emerge in that context.
 
-So we could either make a prediction by looking at the community in general and figuring out patterns, or we could give a prediction using the content itself and how it has been liked by the user himself/herself in the past. The prediction is the estimate of how much we think they're going to like items - usually items that they haven't seen in the past.
+## Making Predictions 
+
+We could either make a prediction by looking at the community in general and figuring out patterns, or we could give a prediction using the content itself and how it has been liked by the user himself/herself in the past. The prediction is the estimate of how much we think they're going to like items - usually items that they haven't seen in the past.
 
 There's many cases when we can infer from the user's behavior how much they likely like a particular product. If I'm watching Netflix and I start watching a movie and five minutes into it, I stop watching it, and I never come back, Netflix would probably know I didn't like that movie. If I'm listening to a song on Spotify on the special playlist spotify curates for me weekly - "Discover Weekly" - and within first few seconds of the song I skip, Spotify would learn from this behavior and recommend less songs like the one I skipped.
 

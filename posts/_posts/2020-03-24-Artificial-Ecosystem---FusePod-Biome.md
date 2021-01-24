@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Artificial Ecosystem - FusePod Biome
-tags: Project Biology
+tags: Project Biology sc
 cover_url: https://github.com/alivcor/lightforest/raw/master/biome.jpg
 cover_meta: 
   Ecosystem (c) AD Photography

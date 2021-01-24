@@ -29,7 +29,7 @@ layout: default
   {% assign posts = site.posts %}
   {% endif %}
   {% for post in posts %}
-  {% if post.tags contains 'lc' or post.tags contains 'todo' %}
+  {% if post.tags contains 'dnl' or post.tags contains 'todo' %}
   {% else %}
   <li class="post-list-item" data-tags="{{ post.tags | join: " " }}">
     {% if post.cover_url %}

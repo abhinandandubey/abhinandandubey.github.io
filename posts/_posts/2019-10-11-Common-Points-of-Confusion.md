@@ -161,6 +161,22 @@ System.out.println(s.substring(1,2).equals("b")); //prints true
 The above code should tell you why people are advised to use `.equals()` instead of `==`. Because `.substring()` is invoked at runtime, hence it generates distinct objects.
 
 
+## Interfaces & Inner Class
+
+- **Multiple inheritance** - A class can only extend a single class, can implement multiple interfaces though. 
+- **Using Interfaces** - Create an interface when you think about behaviours - *A bird can walk and fly* - *IWalk* and *IFly* can be interfaces.
+- **Using Interface as Objects** - You can define a method as - 
+
+```java
+public void rescueAnimal(IWalk animalThatWalks) {
+    System.out.println("I just rescued an animal that walks");
+}
+```
+- **Using Inner Classes** - Use when existence of class B alone doesn't make sense if class A doesn't exist. 
+  - Bad Example, *Flock* and *Bird* (*Bird* can exist without a *Flock*)
+  - Good Example, *Planet* AND *Life* (*Life* cannot exist without a *Planet*)
+
+
 
 <blockquote class="yellownote">
 This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/09/Java-Memory-Model.html" target="_blank">here with the Java Memory Model</a> 

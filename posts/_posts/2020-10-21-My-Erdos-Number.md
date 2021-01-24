@@ -1,8 +1,8 @@
 ---
 layout: post
 title: My Erdős Number
-tags: Math
-cover_url: https://images.unsplash.com/photo-1603050814729-a56889cde9b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
+tags: Math sc
+cover_url: https://images.unsplash.com/photo-1492999104346-cabaa757be8f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80
 cover_meta: 
   (c) UNSPLASH
 color_scheme: tango

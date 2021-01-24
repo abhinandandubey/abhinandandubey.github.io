@@ -284,7 +284,7 @@ If you don't know how long your task is going to take, you'd rather use `schedul
 
 
 <blockquote class="yellownote">
-This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/10/The-Concurrency-API.html" target="_blank">here with the Concurrency API.</a> 
+This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2019/10/10/The-Concurrency-API.html" target="_blank">here with the Concurrency API.</a> 
 </blockquote>
 
 Feeling generous ? Help me write more blogs like this :)  

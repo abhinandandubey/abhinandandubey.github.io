@@ -179,7 +179,7 @@ public void rescueAnimal(IWalk animalThatWalks) {
 
 
 <blockquote class="yellownote">
-This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2020/10/09/Java-Memory-Model.html" target="_blank">here with the Java Memory Model</a> 
+This blog post is part of the <a href="https://abhinandandubey.github.io/posts/tags/Advanced-Java-Series">Advanced Java Series</a>. Continue <a href="https://abhinandandubey.github.io/posts/2019/10/09/Java-Memory-Model.html" target="_blank">here with the Java Memory Model</a> 
 </blockquote>
 
 <br/>

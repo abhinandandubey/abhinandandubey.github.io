@@ -28,7 +28,7 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-> A certain function calls all functions in the code which aren't recursive. Is the function recursive?
+> A certain function calls all and only those functions in the code which aren't recursive. Is the function recursive?
 
 If you happen to know the answer, comment below :)
 

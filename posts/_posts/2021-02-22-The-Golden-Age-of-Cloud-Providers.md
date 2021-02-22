@@ -56,7 +56,7 @@ After 30 minutes of downloading and installing Postgres for Mac, creating a data
 
 ![](https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/2021-02-22-18-31-50.png)
 
-I added sbt dependencies to my application which was using an ORM called Slick and HickariCP for connection pools 
+I added sbt dependencies to my application which was using an ORM called <a href="http://scala-slick.org/">Slick</a> and <a href="https://github.com/brettwooldridge/HikariCP">HickariCP</a> for connection pools 
 
 ```scala
 libraryDependencies ++= Seq(

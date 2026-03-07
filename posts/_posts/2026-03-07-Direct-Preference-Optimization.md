@@ -989,6 +989,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Sketch 1: RLHF vs DPO pipeline
+  function drawAllSketches() {
   (function(){
     var c = document.getElementById('sketch-pipeline');
     if(!c) return;
@@ -1206,5 +1207,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.font = skFontSm; ctx.fillStyle = skGray;
     ctx.fillText('* all relative to the frozen reference model. no separate reward model involved.', 40, 245);
   })();
+  } // end drawAllSketches
+  if(document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(drawAllSketches);
+  } else {
+    setTimeout(drawAllSketches, 500);
+  }
 });
 </script>

@@ -1,0 +1,199 @@
+/* Global blog styles — Cormorant Garamond + Inter, #4a6fa5 accent */
+
+.wrapper {
+  max-width: 860px !important;
+}
+
+.post-content {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #2d3142;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.post-content p {
+  margin-bottom: 0.6rem;
+  margin-top: 0;
+}
+
+.post-content h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #4a6fa5;
+  font-weight: 500;
+  border-bottom: 1.5px solid #ddd5cc;
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+.post-content h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #4a6fa5;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.post-content h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #4a6fa5;
+  font-weight: 500;
+  margin-top: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+}
+
+.post-content blockquote {
+  border-left: 2px solid #c0c0c0;
+  background: transparent;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #5a6178;
+  font-style: italic;
+}
+
+.post-content blockquote p {
+  margin-bottom: 0.3rem;
+}
+
+.post-content a {
+  color: #4a6fa5;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(74, 111, 165, 0.25);
+}
+
+.post-content a:hover {
+  border-bottom-color: #4a6fa5;
+}
+
+.post-content strong {
+  font-weight: 600;
+  color: #2d3142;
+}
+
+.post-content em {
+  color: #3a3f52;
+}
+
+.post-content ul, .post-content ol {
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-content li {
+  margin-bottom: 0.3rem;
+  line-height: 1.65;
+}
+
+.post-content img {
+  border-radius: 3px;
+}
+
+.post-content code {
+  font-size: 0.88em;
+}
+
+/* Fix theme's broken article pre negative margins */
+article pre {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  overflow: visible !important;
+  overflow-x: auto !important;
+  position: static !important;
+  background: #1e1e2e !important;
+  border: 1px solid #313244 !important;
+  border-radius: 4px;
+  padding: 1rem !important;
+  box-sizing: border-box;
+}
+
+article pre > code {
+  padding: 0 !important;
+  display: block;
+  overflow-x: auto;
+  font-family: Menlo, Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #cdd6f4 !important;
+  background: none !important;
+}
+
+/* Dark code block syntax overrides */
+article pre .highlight,
+.highlight pre {
+  background: #1e1e2e !important;
+}
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kt { color: #cba6f7 !important; font-weight: 600; }
+.highlight .nc, .highlight .nd, .highlight .ni, .highlight .ne,
+.highlight .nf, .highlight .nl { color: #89b4fa !important; }
+.highlight .n, .highlight .nb, .highlight .bp, .highlight .nx { color: #cdd6f4 !important; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+.highlight .sc, .highlight .sd, .highlight .sh, .highlight .se { color: #a6e3a1 !important; }
+.highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo,
+.highlight .il { color: #fab387 !important; }
+.highlight .o, .highlight .ow { color: #89dceb !important; font-weight: 600; }
+.highlight .p { color: #bac2de !important; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs,
+.highlight .cp { color: #6c7086 !important; font-style: italic; }
+.highlight .err { color: #f38ba8 !important; border: none !important; }
+.highlight .na { color: #f9e2af !important; }
+.highlight .nt { color: #89b4fa !important; }
+.highlight .nv, .highlight .vi, .highlight .vc, .highlight .vg { color: #f5c2e7 !important; }
+.highlight .nn { color: #89b4fa !important; }
+.highlight .ss { color: #a6e3a1 !important; }
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: bold; }
+.highlight .hll { background-color: #313244 !important; }
+
+@media screen and (min-width: 680px) {
+  article pre {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  article pre > code {
+    padding: 0 !important;
+  }
+}
+
+/* Post header */
+.post-header h1,
+.post-header .post-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #2d3142;
+  font-weight: 500;
+}
+
+/* Tag links */
+.post-tags .tag-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+}
+
+/* Footer */
+.post-footer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Nav */
+.page-link {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Post list on home */
+.post-item-link {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #2d3142;
+}
+
+.post-description {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #5a6178;
+}

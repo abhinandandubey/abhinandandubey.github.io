@@ -183,11 +183,38 @@ Direct Preference Optimization (DPO) is a technique for aligning language models
 
 Imagine you've built a chatbot that can write text, but it sometimes says unhelpful or weird things. You want to teach it to respond the way humans actually prefer. The question is: how do you do that efficiently?
 
+<div class="interactive-box" id="llm-demo">
+<div class="box-title">LLM Response Generation</div>
+<div class="box-desc">Pick a prompt and watch the model generate two candidate responses, token by token. A human then picks the preferred one. This is how preference data is collected.</div>
+<div style="margin-bottom:0.6rem;">
+  <button class="llm-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #4a6fa5;background:#4a6fa5;color:#fff;border-radius:3px;cursor:pointer;margin-right:4px;">Explain gravity</button>
+  <button class="llm-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:4px;">Write a poem</button>
+  <button class="llm-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;">Summarize ML</button>
+</div>
+<div style="background:#1e1e2e;border-radius:4px;padding:0.75rem 1rem;margin-bottom:0.5rem;font-family:Menlo,Consolas,monospace;font-size:12px;">
+  <div style="color:#6c7086;margin-bottom:0.4rem;">Prompt:</div>
+  <div id="llm-prompt" style="color:#cdd6f4;margin-bottom:0.7rem;min-height:1.2em;"></div>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="color:#a6e3a1;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">Response A</div>
+      <div id="llm-resp-a" style="color:#cdd6f4;min-height:3em;line-height:1.5;"></div>
+    </div>
+    <div style="flex:1;min-width:200px;">
+      <div style="color:#f38ba8;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">Response B</div>
+      <div id="llm-resp-b" style="color:#cdd6f4;min-height:3em;line-height:1.5;"></div>
+    </div>
+  </div>
+</div>
+<div id="llm-verdict" style="font-size:12px;color:#777;min-height:2.5em;margin-top:0.3rem;"></div>
+</div>
+
 The old way (RLHF) had three complicated steps. First, you show humans two responses to the same question and ask "which one is better?" to collect preference data. Second, you build a separate "judge" model (a reward model) that learns to score responses the way humans would. Third, you use reinforcement learning to nudge your chatbot toward getting higher scores from that judge. This whole pipeline is expensive, fragile, and hard to get right.
 
 The DPO breakthrough: the authors discovered a mathematical shortcut. They showed that you can collapse all three steps into one. Instead of building a separate judge and then doing the complicated RL dance, you can directly adjust the chatbot using the human preference data alone. Skip the middleman. The training becomes as simple as "make the preferred response more likely and the dispreferred response less likely," with some clever math to keep things stable.
 
 Before DPO, aligning a chatbot with human preferences required a complicated three-stage pipeline. DPO replaced it with a single, simple training step that works just as well or better. That's why it became so widely adopted so quickly.
+
+<canvas id="sketch-pipeline" width="780" height="340" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
 
 # The Cast of Characters
 
@@ -353,6 +380,8 @@ Bradley-Terry preference modeling only uses the *difference* in rewards. When yo
 
 No reward model. No intractable <span class="ke">Z(x)</span>. Just log-ratios of how the policy diverges from the reference.
 
+<canvas id="sketch-cancel" width="780" height="280" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
+
 # The DPO Loss
 
 <div class="kd">L_{DPO}(\pi_\theta;\, \pi_{ref}) = -\mathbb{E}_{(x,\, y_w,\, y_l)\, \sim\, D}\!\left[\, \log \sigma\!\left(\, \beta \log \frac{\pi_\theta(y_w \mid x)}{\pi_{ref}(y_w \mid x)} - \beta \log \frac{\pi_\theta(y_l \mid x)}{\pi_{ref}(y_l \mid x)} \,\right) \,\right]</div>
@@ -365,6 +394,8 @@ No reward model. No intractable <span class="ke">Z(x)</span>. Just log-ratios of
 <span class="step-line"><span class="step-num">6</span> <span class="ke">-\mathbb{E}</span>: negate and average.</span>
 
 Training pushes the model to increase the probability of winners and decrease the probability of losers, relative to the reference.
+
+<canvas id="sketch-dpo" width="780" height="260" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
 
 <div class="interactive-box" id="dpo-demo">
 <div class="box-title">DPO Loss Playground</div>
@@ -510,6 +541,52 @@ A few things to note for real implementations:
 
 DPO skips the reward model and the RL loop entirely. Simpler, more stable, easier to implement.
 
+<div class="interactive-box" id="beta-demo">
+<div class="box-title">β Effect on Model Output</div>
+<div class="box-desc">See how β (the KL leash) changes what the model generates. Low β lets the model aggressively chase the preferred style. High β keeps it close to the original (reference) behavior. The model has been trained on preference data that favors concise, direct answers.</div>
+<div style="margin-bottom:0.6rem;">
+  <button class="beta-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #4a6fa5;background:#4a6fa5;color:#fff;border-radius:3px;cursor:pointer;margin-right:4px;">Explain black holes</button>
+  <button class="beta-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:4px;">Recommend a book</button>
+  <button class="beta-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;">Healthy breakfast</button>
+</div>
+<div class="slider-row">
+  <label>β</label>
+  <input type="range" id="beta-eff-slider" min="0" max="100" step="1" value="50">
+  <span class="val" id="beta-eff-val">0.50</span>
+</div>
+<div style="display:flex;gap:0.5rem;font-family:Inter,sans-serif;font-size:10px;color:#999;margin-bottom:0.6rem;">
+  <span>← low β (chase reward)</span><span style="margin-left:auto;">high β (stay safe) →</span>
+</div>
+<div style="background:#1e1e2e;border-radius:4px;padding:0.75rem 1rem;font-family:Menlo,Consolas,monospace;font-size:12px;">
+  <div style="color:#6c7086;margin-bottom:0.3rem;">Prompt: <span id="beta-eff-prompt" style="color:#cdd6f4;"></span></div>
+  <div style="display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="color:#89b4fa;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">π_ref (reference model)</div>
+      <div id="beta-eff-ref" style="color:#6c7086;min-height:3em;line-height:1.5;font-size:11px;"></div>
+    </div>
+    <div style="flex:1;min-width:200px;">
+      <div style="color:#a6e3a1;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">π_θ (DPO-trained at this β)</div>
+      <div id="beta-eff-policy" style="color:#cdd6f4;min-height:3em;line-height:1.5;font-size:11px;"></div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:0.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">KL divergence</div>
+    <div id="beta-eff-kl" style="font-family:monospace;font-size:16px;font-weight:700;color:#4a6fa5;margin-top:0.2rem;"></div>
+  </div>
+  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">Reward gain</div>
+    <div id="beta-eff-reward" style="font-family:monospace;font-size:16px;font-weight:700;color:#a6e3a1;margin-top:0.2rem;"></div>
+  </div>
+  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">Objective (reward − β·KL)</div>
+    <div id="beta-eff-obj" style="font-family:monospace;font-size:16px;font-weight:700;color:#2d3142;margin-top:0.2rem;"></div>
+  </div>
+</div>
+<div id="beta-eff-note" style="font-size:11px;color:#999;margin-top:0.5rem;"></div>
+</div>
+
 # Caveats
 
 DPO and RLHF are equivalent in theory, if Bradley-Terry perfectly captures human preferences and you find the global optimum. In practice they can differ: Bradley-Terry is an approximation, the learned reward isn't the true optimal, and gradient descent on a non-convex landscape doesn't find the global optimum. There's also an overfitting risk: if one response *always* wins in the data, DPO pushes the reward gap toward infinity, driving the loser's probability to zero.
@@ -539,6 +616,198 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function sigmoid(z){return 1/(1+Math.exp(-z));}
+
+  // ── LLM Response Animation ──
+  var llmData = [
+    {
+      prompt: "Explain gravity to a 5-year-old.",
+      respA: "Gravity is like an invisible hug from the Earth. Everything wants to stay close to the ground, just like how you want to stay close to your mom. The bigger something is, the stronger it hugs. That's why when you jump, you always come back down. The Earth is really, really big, so it hugs everything on it.",
+      respB: "Gravity is a fundamental force of nature described by Einstein's general theory of relativity as the curvature of spacetime caused by mass-energy equivalence, whereby massive objects create geodesic paths that other objects follow, resulting in what we perceive as gravitational attraction proportional to mass.",
+      winner: "A",
+      reason: "Human prefers Response A: clear, age-appropriate, uses relatable analogies."
+    },
+    {
+      prompt: "Write a short poem about rain.",
+      respA: "Rain falls down,\nWater on ground.\nWet outside today.\nStay inside and play.",
+      respB: "The sky lets go of what it held too long,\neach drop a note in an unwritten song.\nThe pavement darkens, mirrors form in streets,\nand somewhere, someone listens to the beats.",
+      winner: "B",
+      reason: "Human prefers Response B: vivid imagery, emotional resonance, better craft."
+    },
+    {
+      prompt: "Summarize what machine learning is in two sentences.",
+      respA: "Machine learning is a branch of AI where computers learn patterns from data instead of being explicitly programmed. Given enough examples, the system figures out rules on its own and can make predictions on new, unseen inputs.",
+      respB: "Machine learning is when computers do stuff with data. It's used in a lot of things these days and is pretty cool technology that many companies are investing in heavily.",
+      winner: "A",
+      reason: "Human prefers Response A: precise, informative, actually explains the concept."
+    }
+  ];
+  var llmIdx = 0, llmTimer = null;
+  function llmAnimate(idx) {
+    if(llmTimer) { clearInterval(llmTimer); llmTimer = null; }
+    llmIdx = idx;
+    var d = llmData[idx];
+    document.getElementById('llm-prompt').textContent = d.prompt;
+    document.getElementById('llm-resp-a').textContent = '';
+    document.getElementById('llm-resp-b').textContent = '';
+    document.getElementById('llm-verdict').innerHTML = '';
+    document.querySelectorAll('.llm-prompt-btn').forEach(function(b,i){
+      b.style.background = i===idx ? '#4a6fa5' : '#fff';
+      b.style.color = i===idx ? '#fff' : '#4a6fa5';
+      b.style.borderColor = i===idx ? '#4a6fa5' : '#ddd5cc';
+    });
+    var tokA = d.respA.split(/(?<=\s)|(?=\n)/);
+    var tokB = d.respB.split(/(?<=\s)|(?=\n)/);
+    var maxLen = Math.max(tokA.length, tokB.length);
+    var pos = 0;
+    var elA = document.getElementById('llm-resp-a');
+    var elB = document.getElementById('llm-resp-b');
+    llmTimer = setInterval(function(){
+      if(pos < tokA.length) elA.textContent += tokA[pos];
+      if(pos < tokB.length) elB.textContent += tokB[pos];
+      pos++;
+      if(pos >= maxLen) {
+        clearInterval(llmTimer); llmTimer = null;
+        var wColor = d.winner === 'A' ? '#a6e3a1' : '#f38ba8';
+        var wLabel = d.winner === 'A' ? 'Response A' : 'Response B';
+        document.getElementById('llm-verdict').innerHTML =
+          '<span style="color:#4a6fa5;font-weight:600;">Human verdict:</span> ' +
+          '<span style="background:' + wColor + '22;color:' + wColor + ';padding:2px 8px;border-radius:3px;font-weight:600;font-size:11px;">' +
+          '✓ ' + wLabel + ' wins</span>' +
+          '<span style="display:block;margin-top:0.3rem;color:#999;font-size:11px;">' + d.reason + '</span>' +
+          '<span style="display:block;margin-top:0.3rem;color:#bbb;font-size:10px;">This (prompt, winner, loser) triple is one training example for DPO.</span>';
+      }
+    }, 35);
+  }
+  document.querySelectorAll('.llm-prompt-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ llmAnimate(parseInt(this.dataset.idx)); });
+  });
+  llmAnimate(0);
+
+  // ── β Effect on Model Output ──
+  var betaEffData = [
+    {
+      prompt: "Explain black holes",
+      ref: "A black hole is a region of spacetime where gravity is so strong that nothing, not even light or other electromagnetic waves, has enough energy to escape the event horizon. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of no escape is called the event horizon. A black hole has a great effect on the fate and circumstances of an object crossing it, but has no locally detectable features according to general relativity.",
+      responses: [
+        "A black hole is a place in space where gravity pulls so hard that even light cannot escape. Because no light gets out, they are invisible. They form when a massive star collapses at the end of its life. Despite their name, they are not empty. They pack enormous mass into a tiny space.",
+        "A black hole is where gravity is extremely strong. Light cannot escape from it. They form from collapsed stars. They are very dense.",
+        "Black hole = collapsed star, gravity so strong light can't escape. Invisible. Incredibly dense. That's it.",
+        "A black hole is a cosmic phenomenon arising from stellar gravitational collapse. When a massive star exhausts its nuclear fuel, the core implodes under its own gravity, compressing matter beyond the Chandrasekhar limit. The resulting singularity warps spacetime so severely that within the Schwarzschild radius, escape velocity exceeds the speed of light. This boundary, the event horizon, represents a causal disconnect from the observable universe. Hawking radiation, a quantum mechanical effect, suggests black holes slowly evaporate over cosmological timescales."
+      ],
+      rewards: [0.9, 0.5, 0.2, -0.3],
+      refIdx: 3
+    },
+    {
+      prompt: "Recommend a book",
+      ref: "I would recommend 'Thinking, Fast and Slow' by Daniel Kahneman. It is a comprehensive exploration of the two systems that drive the way we think. System 1 is fast, intuitive, and emotional; System 2 is slower, more deliberative, and more logical. The book draws on decades of research in psychology and behavioral economics to explain how these two systems shape our judgments and decisions. It covers topics including cognitive biases, prospect theory, and the distinction between the experiencing self and the remembering self.",
+      responses: [
+        "'Thinking, Fast and Slow' by Daniel Kahneman. It explains how we actually make decisions, through two mental systems: one fast and intuitive, one slow and deliberate. Changed how I think about my own thinking. Accessible but deep.",
+        "'Thinking, Fast and Slow' by Kahneman. About how the brain makes decisions. Two systems, biases, good read.",
+        "Kahneman. Fast/Slow. Read it.",
+        "I would suggest considering 'Thinking, Fast and Slow' by the Nobel laureate Daniel Kahneman, published in 2011 by Farrar, Straus and Giroux. This seminal work synthesizes decades of research conducted by Kahneman and his late colleague Amos Tversky. The book systematically examines cognitive biases including anchoring, availability heuristic, representativeness, loss aversion, the endowment effect, and framing effects, all within the theoretical framework of dual-process theory."
+      ],
+      rewards: [0.9, 0.4, 0.1, -0.2],
+      refIdx: 3
+    },
+    {
+      prompt: "Healthy breakfast",
+      ref: "For a healthy breakfast, you might consider several options. Oatmeal is an excellent choice as it provides complex carbohydrates and soluble fiber, which can help lower cholesterol levels. You could also consider Greek yogurt, which is high in protein and probiotics that support digestive health. Eggs are another nutritious option, providing high-quality protein and essential nutrients including choline, which is important for brain function. Fresh fruits and vegetables can complement any of these options. Whole grain toast with avocado provides healthy fats and fiber.",
+      responses: [
+        "Greek yogurt with berries and a handful of nuts. High protein, good fats, antioxidants, and it takes two minutes. Add a drizzle of honey if you want. Overnight oats are great too: oats, milk, chia seeds, fruit, mix the night before.",
+        "Greek yogurt with fruit. Oatmeal. Eggs. All healthy options.",
+        "Yogurt. Oats. Eggs. Done.",
+        "A nutritionally optimal breakfast should incorporate macronutrient balance across proteins, complex carbohydrates, and unsaturated fatty acids. Consider beginning with steel-cut oats (providing beta-glucan soluble fiber at approximately 4g per serving) topped with mixed berries (rich in anthocyanins and ellagic acid), accompanied by a serving of Greek yogurt (supplying approximately 15-20g of casein and whey protein along with Lactobacillus and Bifidobacterium probiotics), and a small portion of mixed nuts (providing monounsaturated and polyunsaturated fatty acids)."
+      ],
+      rewards: [0.9, 0.4, 0.1, -0.3],
+      refIdx: 3
+    }
+  ];
+  var betaEffIdx = 0;
+  var betaEffTimer = null;
+  function betaEffSelect(idx) {
+    betaEffIdx = idx;
+    document.querySelectorAll('.beta-prompt-btn').forEach(function(b,i){
+      b.style.background = i===idx ? '#4a6fa5' : '#fff';
+      b.style.color = i===idx ? '#fff' : '#4a6fa5';
+      b.style.borderColor = i===idx ? '#4a6fa5' : '#ddd5cc';
+    });
+    betaEffUpdate();
+  }
+  function betaEffUpdate() {
+    if(betaEffTimer) { clearInterval(betaEffTimer); betaEffTimer = null; }
+    var d = betaEffData[betaEffIdx];
+    var raw = parseInt(document.getElementById('beta-eff-slider').value);
+    var beta = raw / 100 * 2.0;
+    document.getElementById('beta-eff-val').textContent = beta.toFixed(2);
+    document.getElementById('beta-eff-prompt').textContent = d.prompt;
+    // pick response based on beta: low beta -> idx 2-3 (aggressive), high beta -> idx 3 (ref-like)
+    // compute softmax over (reward - beta * "distance") to pick
+    var weights = d.rewards.map(function(r, i) {
+      var dist = i === d.refIdx ? 0 : Math.abs(i - d.refIdx) * 0.5;
+      return Math.exp((r - beta * dist) / Math.max(0.1, 1 - beta * 0.4));
+    });
+    var sumW = weights.reduce(function(a,b){return a+b;},0);
+    var probs = weights.map(function(w){return w/sumW;});
+    // pick the response with highest probability
+    var bestIdx = 0, bestP = 0;
+    for(var i=0;i<probs.length;i++) { if(probs[i]>bestP){bestP=probs[i];bestIdx=i;} }
+    // at very high beta, blend toward reference
+    var policyText = d.responses[bestIdx];
+    if(beta > 1.5) policyText = d.responses[d.refIdx];
+    else if(beta > 1.0) {
+      // might show the more conservative response
+      var conservIdx = Math.min(bestIdx + 1, d.responses.length - 2);
+      policyText = d.responses[conservIdx];
+    }
+    // simple mapping: beta 0-0.3 -> response[2], 0.3-0.7 -> response[1], 0.7-1.2 -> response[0], 1.2+ -> response[3]
+    if(beta < 0.2) policyText = d.responses[2];
+    else if(beta < 0.5) policyText = d.responses[1];
+    else if(beta < 1.2) policyText = d.responses[0];
+    else policyText = d.responses[3];
+    // compute display metrics
+    var rewardVal = beta < 0.2 ? d.rewards[2] : beta < 0.5 ? d.rewards[1] : beta < 1.2 ? d.rewards[0] : d.rewards[3];
+    var klVal = beta < 0.2 ? 4.2 : beta < 0.5 ? 2.1 : beta < 1.2 ? 0.8 : 0.05;
+    // smooth interpolation
+    var t = beta / 2.0;
+    klVal = 4.5 * Math.exp(-2.5 * t) + 0.02;
+    rewardVal = 0.2 + 0.75 * (1 - t);
+    var objVal = rewardVal - beta * klVal;
+    document.getElementById('beta-eff-kl').textContent = klVal.toFixed(2);
+    document.getElementById('beta-eff-reward').textContent = '+' + rewardVal.toFixed(2);
+    document.getElementById('beta-eff-obj').textContent = objVal.toFixed(2);
+    // type out the responses
+    var refEl = document.getElementById('beta-eff-ref');
+    var polEl = document.getElementById('beta-eff-policy');
+    refEl.textContent = '';
+    polEl.textContent = '';
+    var refTok = d.ref.split(/(?<=\s)/);
+    var polTok = policyText.split(/(?<=\s)/);
+    var maxT = Math.max(refTok.length, polTok.length);
+    var pos = 0;
+    betaEffTimer = setInterval(function(){
+      if(pos < refTok.length) refEl.textContent += refTok[pos];
+      if(pos < polTok.length) polEl.textContent += polTok[pos];
+      pos++;
+      if(pos >= maxT) {
+        clearInterval(betaEffTimer); betaEffTimer = null;
+      }
+    }, 25);
+    // note
+    var note = '';
+    if(beta < 0.2) note = 'Very low β: the model aggressively optimizes for reward, producing terse responses far from the reference. High KL divergence.';
+    else if(beta < 0.5) note = 'Low β: the model favors concise answers but still drifts noticeably from the reference style.';
+    else if(beta < 1.2) note = 'Moderate β: good balance. The model improves on the reference (more concise, more helpful) without straying too far.';
+    else note = 'High β: the model barely changes from the reference. Safe but limited improvement. The KL leash is very tight.';
+    document.getElementById('beta-eff-note').textContent = note;
+  }
+  document.querySelectorAll('.beta-prompt-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ betaEffSelect(parseInt(this.dataset.idx)); });
+  });
+  var betaSlider = document.getElementById('beta-eff-slider');
+  if(betaSlider) {
+    betaSlider.addEventListener('input', betaEffUpdate);
+    betaEffSelect(0);
+  }
 
   // ── Training Simulator ──
   var responses = [
@@ -664,5 +933,278 @@ document.addEventListener('DOMContentLoaded', function() {
     else h.textContent='Prefers the loser. Loss is high.';
   }
   if(dB){dB.addEventListener('input',updateD);dW.addEventListener('input',updateD);dL.addEventListener('input',updateD);updateD();}
+
+  // ── Hand-drawn sketches ──
+  var skFont = '22px Caveat, cursive';
+  var skFontSm = '17px Caveat, cursive';
+  var skFontLg = '26px Caveat, cursive';
+  var skBlue = '#4a6fa5';
+  var skDark = '#2d3142';
+  var skGray = '#999';
+  var skRed = '#c0392b';
+  var skGreen = '#27ae60';
+
+  function wobbleLine(ctx, x1, y1, x2, y2) {
+    var dx = x2-x1, dy = y2-y1, len = Math.sqrt(dx*dx+dy*dy);
+    var steps = Math.max(3, Math.floor(len/20));
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    for(var i=1;i<=steps;i++){
+      var t=i/steps;
+      var jx = (Math.random()-0.5)*3;
+      var jy = (Math.random()-0.5)*3;
+      ctx.lineTo(x1+dx*t+jx, y1+dy*t+jy);
+    }
+    ctx.stroke();
+  }
+
+  function wobbleRect(ctx, x, y, w, h) {
+    wobbleLine(ctx, x, y, x+w, y);
+    wobbleLine(ctx, x+w, y, x+w, y+h);
+    wobbleLine(ctx, x+w, y+h, x, y+h);
+    wobbleLine(ctx, x, y+h, x, y);
+  }
+
+  function wobbleArrow(ctx, x1, y1, x2, y2) {
+    wobbleLine(ctx, x1, y1, x2, y2);
+    var angle = Math.atan2(y2-y1, x2-x1);
+    var hl = 10;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2-hl*Math.cos(angle-0.4), y2-hl*Math.sin(angle-0.4));
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2-hl*Math.cos(angle+0.4), y2-hl*Math.sin(angle+0.4));
+    ctx.stroke();
+  }
+
+  function wobbleCircle(ctx, cx, cy, r) {
+    ctx.beginPath();
+    for(var a=0;a<=Math.PI*2+0.1;a+=0.15){
+      var jr = r + (Math.random()-0.5)*2;
+      var px = cx + jr*Math.cos(a);
+      var py = cy + jr*Math.sin(a);
+      if(a===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+    }
+    ctx.stroke();
+  }
+
+  // Sketch 1: RLHF vs DPO pipeline
+  (function(){
+    var c = document.getElementById('sketch-pipeline');
+    if(!c) return;
+    var ctx = c.getContext('2d');
+    ctx.lineWidth = 1.5;
+    ctx.lineCap = 'round';
+
+    // title
+    ctx.font = skFontLg; ctx.fillStyle = skBlue;
+    ctx.fillText('The old way (RLHF):', 20, 35);
+
+    // RLHF boxes
+    var boxes = [
+      {x:20,y:50,w:130,h:42,t:'Human prefs',sub:'(A > B pairs)'},
+      {x:190,y:50,w:140,h:42,t:'Reward Model',sub:'train r_φ'},
+      {x:370,y:50,w:110,h:42,t:'PPO / RL',sub:'(expensive!)'},
+      {x:520,y:50,w:130,h:42,t:'Aligned LLM',sub:'π_θ'}
+    ];
+    ctx.strokeStyle = skDark;
+    boxes.forEach(function(b){
+      wobbleRect(ctx, b.x, b.y, b.w, b.h);
+      ctx.font = skFont; ctx.fillStyle = skDark;
+      ctx.fillText(b.t, b.x+10, b.y+22);
+      ctx.font = skFontSm; ctx.fillStyle = skGray;
+      ctx.fillText(b.sub, b.x+10, b.y+38);
+    });
+    // arrows
+    ctx.strokeStyle = skBlue;
+    for(var i=0;i<boxes.length-1;i++){
+      wobbleArrow(ctx, boxes[i].x+boxes[i].w+4, boxes[i].y+21, boxes[i+1].x-4, boxes[i+1].y+21);
+    }
+    // cross it out
+    ctx.strokeStyle = skRed; ctx.lineWidth = 2;
+    ctx.globalAlpha = 0.4;
+    wobbleLine(ctx, 15, 45, 660, 95);
+    wobbleLine(ctx, 15, 95, 660, 45);
+    ctx.globalAlpha = 1; ctx.lineWidth = 1.5;
+
+    // DPO
+    ctx.font = skFontLg; ctx.fillStyle = skGreen;
+    ctx.fillText('The DPO way:', 20, 145);
+
+    var dpoBoxes = [
+      {x:20,y:160,w:130,h:42,t:'Human prefs',sub:'(same data!)'},
+      {x:220,y:160,w:200,h:42,t:'DPO loss (supervised)',sub:'one step, no RL'},
+      {x:480,y:160,w:130,h:42,t:'Aligned LLM',sub:'π_θ'}
+    ];
+    ctx.strokeStyle = skDark;
+    dpoBoxes.forEach(function(b){
+      wobbleRect(ctx, b.x, b.y, b.w, b.h);
+      ctx.font = skFont; ctx.fillStyle = skDark;
+      ctx.fillText(b.t, b.x+10, b.y+22);
+      ctx.font = skFontSm; ctx.fillStyle = skGray;
+      ctx.fillText(b.sub, b.x+10, b.y+38);
+    });
+    ctx.strokeStyle = skGreen;
+    wobbleArrow(ctx, 154, 181, 216, 181);
+    wobbleArrow(ctx, 424, 181, 476, 181);
+
+    // annotation
+    ctx.font = skFont; ctx.fillStyle = skBlue;
+    ctx.save(); ctx.translate(680, 120); ctx.rotate(-0.15);
+    ctx.fillText('skip the', 0, 0);
+    ctx.fillText('middleman!', 0, 24);
+    ctx.restore();
+
+    // curly brace scribble pointing to removed parts
+    ctx.strokeStyle = skRed; ctx.lineWidth = 1;
+    ctx.font = skFontSm; ctx.fillStyle = skRed;
+    ctx.fillText('← no reward model needed', 190, 115);
+    ctx.fillText('← no RL needed', 370, 115);
+
+    // bottom note
+    ctx.font = skFontSm; ctx.fillStyle = skGray;
+    ctx.fillText('* same preference data in, aligned model out. just fewer steps.', 20, 230);
+
+    // small doodle: smiley
+    ctx.strokeStyle = skGreen; ctx.lineWidth = 1.5;
+    wobbleCircle(ctx, 700, 180, 16);
+    ctx.beginPath(); ctx.arc(694,176,2,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(706,176,2,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(700,184,7,0.1,Math.PI-0.1); ctx.stroke();
+  })();
+
+  // Sketch 2: The cancellation trick
+  (function(){
+    var c = document.getElementById('sketch-cancel');
+    if(!c) return;
+    var ctx = c.getContext('2d');
+    ctx.lineWidth = 1.5; ctx.lineCap = 'round';
+
+    ctx.font = skFontLg; ctx.fillStyle = skBlue;
+    ctx.fillText('The Z(x) cancellation:', 20, 30);
+
+    // reward expressions
+    ctx.font = skFont; ctx.fillStyle = skDark;
+    ctx.fillText('r(x, y₁) = β log(π*/π_ref) + β log Z(x)', 40, 70);
+    ctx.fillText('r(x, y₂) = β log(π*/π_ref) + β log Z(x)', 40, 100);
+
+    // minus sign
+    ctx.font = skFontLg; ctx.fillStyle = skBlue;
+    ctx.fillText('subtract:', 40, 135);
+
+    // strike through Z(x) parts
+    ctx.strokeStyle = skRed; ctx.lineWidth = 2.5;
+    // first line Z(x)
+    wobbleLine(ctx, 370, 62, 530, 62);
+    wobbleLine(ctx, 370, 75, 530, 75);
+    // second line Z(x)
+    wobbleLine(ctx, 370, 92, 530, 92);
+    wobbleLine(ctx, 370, 105, 530, 105);
+
+    ctx.lineWidth = 1.5;
+    ctx.font = skFont; ctx.fillStyle = skDark;
+    ctx.fillText('r(y₁) - r(y₂) = β log(π*(y₁)/π_ref(y₁)) - β log(π*(y₂)/π_ref(y₂))', 40, 170);
+
+    // annotation
+    ctx.font = skFont; ctx.fillStyle = skRed;
+    ctx.save(); ctx.translate(560, 70); ctx.rotate(-0.1);
+    ctx.fillText('these cancel!', 0, 0);
+    ctx.restore();
+
+    // arrow pointing to result
+    ctx.strokeStyle = skGreen; ctx.lineWidth = 1.5;
+    wobbleArrow(ctx, 30, 145, 30, 160);
+
+    ctx.font = skFont; ctx.fillStyle = skGreen;
+    ctx.save(); ctx.translate(560, 165); ctx.rotate(0.05);
+    ctx.fillText('no Z(x)!', 0, 0);
+    ctx.fillText('no reward model!', 0, 24);
+    ctx.restore();
+
+    // bottom note with lightbulb doodle
+    ctx.font = skFontSm; ctx.fillStyle = skGray;
+    ctx.fillText('* the intractable partition function disappears because Bradley-Terry only uses reward differences', 40, 230);
+
+    // lightbulb doodle
+    ctx.strokeStyle = '#f0c040'; ctx.lineWidth = 1.5;
+    wobbleCircle(ctx, 20, 225, 10);
+    wobbleLine(ctx, 16, 236, 24, 236);
+    wobbleLine(ctx, 17, 240, 23, 240);
+    // rays
+    wobbleLine(ctx, 20, 212, 20, 206);
+    wobbleLine(ctx, 10, 216, 6, 212);
+    wobbleLine(ctx, 30, 216, 34, 212);
+  })();
+
+  // Sketch 3: What DPO does
+  (function(){
+    var c = document.getElementById('sketch-dpo');
+    if(!c) return;
+    var ctx = c.getContext('2d');
+    ctx.lineWidth = 1.5; ctx.lineCap = 'round';
+
+    ctx.font = skFontLg; ctx.fillStyle = skBlue;
+    ctx.fillText('What DPO training does:', 20, 30);
+
+    // winner side
+    ctx.strokeStyle = skGreen;
+    wobbleRect(ctx, 40, 50, 300, 70);
+    ctx.font = skFont; ctx.fillStyle = skGreen;
+    ctx.fillText('y_w (winner)', 55, 75);
+    ctx.font = skFontSm; ctx.fillStyle = skDark;
+    ctx.fillText('"Gravity pulls objects toward each other"', 55, 100);
+
+    // arrow up
+    ctx.strokeStyle = skGreen; ctx.lineWidth = 2;
+    wobbleArrow(ctx, 190, 130, 190, 145);
+    ctx.font = skFont; ctx.fillStyle = skGreen;
+    ctx.fillText('↑ boost probability', 210, 148);
+    ctx.lineWidth = 1.5;
+
+    // loser side
+    ctx.strokeStyle = skRed;
+    wobbleRect(ctx, 420, 50, 300, 70);
+    ctx.font = skFont; ctx.fillStyle = skRed;
+    ctx.fillText('y_l (loser)', 435, 75);
+    ctx.font = skFontSm; ctx.fillStyle = skDark;
+    ctx.fillText('"Stuff falls down cuz earth is big"', 435, 100);
+
+    // arrow down
+    ctx.strokeStyle = skRed; ctx.lineWidth = 2;
+    wobbleArrow(ctx, 570, 130, 570, 145);
+    ctx.font = skFont; ctx.fillStyle = skRed;
+    ctx.fillText('↓ reduce probability', 590, 148);
+    ctx.lineWidth = 1.5;
+
+    // leash annotation
+    ctx.strokeStyle = skBlue; ctx.lineWidth = 1.5;
+    ctx.setLineDash([4,4]);
+    wobbleLine(ctx, 190, 170, 570, 170);
+    ctx.setLineDash([]);
+
+    // spring/coil in the middle of the leash
+    ctx.strokeStyle = skBlue; ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    var springX = 330, springW = 100, coils = 6;
+    ctx.moveTo(springX, 170);
+    for(var i=0;i<coils;i++){
+      var sx = springX + (i+0.5)*springW/coils;
+      var sy = 170 + (i%2===0 ? -8 : 8);
+      ctx.lineTo(sx, sy);
+    }
+    ctx.lineTo(springX+springW, 170);
+    ctx.stroke();
+
+    ctx.font = skFont; ctx.fillStyle = skBlue;
+    ctx.fillText('β controls how far π_θ can drift from π_ref', 220, 200);
+
+    // label the spring
+    ctx.font = skFontSm; ctx.fillStyle = skGray;
+    ctx.fillText('← KL leash (β) →', 340, 160);
+
+    // bottom
+    ctx.font = skFontSm; ctx.fillStyle = skGray;
+    ctx.fillText('* all relative to the frozen reference model. no separate reward model involved.', 40, 245);
+  })();
 });
 </script>

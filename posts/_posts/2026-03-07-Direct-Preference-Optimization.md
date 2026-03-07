@@ -1208,10 +1208,23 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.fillText('* all relative to the frozen reference model. no separate reward model involved.', 40, 245);
   })();
   } // end drawAllSketches
-  if(document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(drawAllSketches);
-  } else {
-    setTimeout(drawAllSketches, 500);
+  // Force font load before drawing: create a hidden span to trigger download, then wait
+  var fontProbe = document.createElement('span');
+  fontProbe.textContent = 'probe';
+  fontProbe.style.cssText = 'font-family:"Patrick Hand",sans-serif;position:absolute;left:-9999px;top:-9999px;font-size:20px;';
+  document.body.appendChild(fontProbe);
+  function waitForFont(cb, tries) {
+    if(!tries) tries = 0;
+    if(tries > 50) { cb(); return; }
+    var testCanvas = document.createElement('canvas');
+    var tctx = testCanvas.getContext('2d');
+    tctx.font = '20px sans-serif';
+    var fallbackW = tctx.measureText('The quick brown fox').width;
+    tctx.font = '20px Patrick Hand, sans-serif';
+    var fontW = tctx.measureText('The quick brown fox').width;
+    if(fontW !== fallbackW) { cb(); }
+    else { setTimeout(function(){ waitForFont(cb, tries+1); }, 100); }
   }
+  waitForFont(drawAllSketches);
 });
 </script>

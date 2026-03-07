@@ -935,9 +935,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if(dB){dB.addEventListener('input',updateD);dW.addEventListener('input',updateD);dL.addEventListener('input',updateD);updateD();}
 
   // ── Hand-drawn sketches ──
-  var skFont = '18px Architects Daughter, cursive';
-  var skFontSm = '14px Architects Daughter, cursive';
-  var skFontLg = '22px Architects Daughter, cursive';
+  var skFont = '19px Patrick Hand, sans-serif';
+  var skFontSm = '15px Patrick Hand, sans-serif';
+  var skFontLg = '23px Patrick Hand, sans-serif';
   var skBlue = '#4a6fa5';
   var skDark = '#2d3142';
   var skGray = '#999';

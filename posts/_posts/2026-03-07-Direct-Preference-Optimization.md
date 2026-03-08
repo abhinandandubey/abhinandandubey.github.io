@@ -2,9 +2,6 @@
 layout: post
 title: Direct Preference Optimization
 tags: AI Machine-Learning
-cover_url: https://source.unsplash.com/random?neural
-cover_meta: 
-  (c) UNSPLASH
 color_scheme: tango
 mathjax: true
 ---

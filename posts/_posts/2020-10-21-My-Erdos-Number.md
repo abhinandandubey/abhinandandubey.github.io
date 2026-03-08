@@ -2,8 +2,9 @@
 layout: post
 title: My Erdős Number
 tags: Math sc
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_3236.jpg
-cover_meta: (c) AD Photography
+cover_url: https://images.unsplash.com/photo-1492999104346-cabaa757be8f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80
+cover_meta: 
+  (c) UNSPLASH
 color_scheme: tango
 mathjax: true
 mathjax: True

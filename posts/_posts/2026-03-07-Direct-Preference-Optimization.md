@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Direct Preference Optimization
-tags: AI Machine-Learning
-cover_url: /posts/assets/images/dpo-cover.jpg
+tags: AI Machine-Learning sc
+cover_url: https://abhinandandubey.github.io/posts/assets/images/dpo-cover.jpg
+cover_meta: Paris (c) AD Photography
 color_scheme: tango
 mathjax: true
 ---

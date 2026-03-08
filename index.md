@@ -1,6 +1,5 @@
 ---
-redirect_to: /posts/
+layout: home
+title: Thoughts on Code, Math, and Life
 ---
 
-<meta http-equiv="refresh" content="0; url=/posts/">
-<script>window.location.href = "/posts/";</script>

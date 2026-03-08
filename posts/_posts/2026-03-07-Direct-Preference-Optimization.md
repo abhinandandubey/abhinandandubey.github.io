@@ -3,15 +3,15 @@ layout: post
 title: Direct Preference Optimization
 tags: AI Machine-Learning sc
 cover_url: https://abhinandandubey.github.io/posts/assets/images/dpo-cover.jpg
-cover_meta: Paris (c) AD Photography
+cover_meta: Volubilis (c) AD Photography
 color_scheme: tango
 mathjax: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
 <style>
-.katex { font-size: 1.05em; color: #3a3f52; }
-.ke .katex { font-size: 0.95em; color: #4a5068; }
-.kd .katex { font-size: 1.1em; color: #3a3f52; }
+.katex { font-size: 1.05em; color: #1a1a2e; }
+.ke .katex { font-size: 0.95em; color: #222233; }
+.kd .katex { font-size: 1.1em; color: #1a1a2e; }
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
@@ -175,6 +175,7 @@ article .post-content .highlighter-rouge,
 canvas.widget-canvas { display: block; margin: 0.5rem auto 0; border: 1px solid #ddd5cc; border-radius: 3px; background: #fff; }
 </style>
 
+<div style="margin-top: 2.5rem;"></div>
 
 Direct Preference Optimization (DPO) is a technique for aligning language models with human preferences, without needing reinforcement learning. It replaces the traditional RLHF pipeline with a single supervised fine-tuning step and a clever loss function.
 

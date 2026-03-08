@@ -6,7 +6,7 @@
 
 .post-content {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  color: #2d3142;
+  color: #1a1a2e;
   font-size: 1.15rem;
   line-height: 1.75;
 }
@@ -51,7 +51,7 @@
   padding: 0.3rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
-  color: #5a6178;
+  color: #3a3a4a;
   font-style: italic;
 }
 
@@ -71,11 +71,11 @@
 
 .post-content strong {
   font-weight: 600;
-  color: #2d3142;
+  color: #111122;
 }
 
 .post-content em {
-  color: #3a3f52;
+  color: #1a1a2e;
 }
 
 .post-content ul, .post-content ol {
@@ -165,7 +165,7 @@ article pre .highlight,
 .post-header h1,
 .post-header .post-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  color: #2d3142;
+  color: #111122;
   font-weight: 500;
 }
 
@@ -190,10 +190,10 @@ article pre .highlight,
 /* Post list on home */
 .post-item-link {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  color: #2d3142;
+  color: #1a1a2e;
 }
 
 .post-description {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  color: #5a6178;
+  color: #3a3a4a;
 }

@@ -1,6 +1,8 @@
 <header class="post-header">
   <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  {% unless page.title == site.title %}
+  {% assign title_lower = page.title | downcase | remove: " " %}
+  {% assign site_lower = site.title | downcase | remove: " " %}
+  {% unless title_lower == site_lower %}
   <h1 class="post-title baseline-fix" itemprop="name headline">{{ page.title | escape | replace: "​", "<wbr>" }}</h1>
   {% endunless %}
 </header>

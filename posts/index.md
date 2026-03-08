@@ -1,4 +1,4 @@
 ---
 layout: home
-title: Articles
+title: Thoughts on Code, Math, and Life
 ---

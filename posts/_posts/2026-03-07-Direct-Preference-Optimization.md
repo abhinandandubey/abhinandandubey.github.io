@@ -9,9 +9,9 @@ mathjax: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
 <style>
-.katex { font-size: 1.05em; color: #1a1a2e; }
-.ke .katex { font-size: 0.95em; color: #222233; }
-.kd .katex { font-size: 1.1em; color: #1a1a2e; }
+.katex { font-size: 1.05em; color: #1a1a1a; }
+.ke .katex { font-size: 0.95em; color: #1a1a1a; }
+.kd .katex { font-size: 1.1em; color: #1a1a1a; }
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@ mathjax: true
 <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
 .wrapper { max-width: 860px !important; }
@@ -50,51 +50,58 @@ article .post-content .highlighter-rouge,
     font-size: 0.85rem;
     line-height: 1.5;
 }
-.post-content {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #2d3142;
-    font-size: 1.15rem;
-    line-height: 1.75;
+body {
+    background-color: #f8f5f0 !important;
 }
-.post-content p { margin-bottom: 0.6rem; margin-top: 0; }
+.post-content {
+    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+}
+.post-content p { margin-bottom: 0.8rem; margin-top: 0; }
 .post-content h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #4a6fa5;
+    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    color: #1a1a1a;
     font-weight: 500;
-    border-bottom: 1.5px solid #ddd5cc;
-    padding-bottom: 0.25rem;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.6rem;
+    border-bottom: 1px solid #c4b8a8;
+    padding-bottom: 0.35rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.85rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.02em;
 }
 .post-content h2 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #4a6fa5;
+    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    color: #1a1a1a;
     font-weight: 500;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.015em;
 }
 </style>
 <style>
 .post-content blockquote {
-    border-left: 2px solid #c0c0c0;
+    border-left: 2px solid #8c7b6b;
     background: transparent;
     padding: 0.3rem 1rem;
     margin: 0.5rem 0;
-    font-size: 1rem;
-    color: #5a6178;
+    font-size: 1.05rem;
+    color: #4a4a4a;
     font-style: italic;
 }
 .post-content blockquote p { margin-bottom: 0.3rem; }
 .defs ul { list-style: none; padding-left: 0; margin: 0.5rem 0; }
 .defs li { margin-bottom: 0.6rem; padding-left: 1.2rem; text-indent: -1.2rem; }
-.defs li:before { content: "·"; font-weight: bold; color: #4a6fa5; margin-right: 0.5rem; }
+.defs li:before { content: "·"; font-weight: bold; color: #8c7b6b; margin-right: 0.5rem; }
 .cancel-box {
-    border: 1px dashed #999;
+    border: 1px dashed #8c7b6b;
     padding: 0.75rem 1rem;
     margin: 0.75rem 0;
     border-radius: 4px;
+    background: #f3efe9;
 }
 .cancel-box p { margin-bottom: 0.3rem !important; }
 .pipeline {
@@ -107,21 +114,22 @@ article .post-content .highlighter-rouge,
     font-size: 0.8rem;
 }
 .pipeline .box {
-    background: #f0eeeb;
-    border: 1px solid #ddd5cc;
+    background: #ece7df;
+    border: 1px solid #c4b8a8;
     padding: 0.35rem 0.65rem;
     border-radius: 4px;
     white-space: nowrap;
+    color: #1a1a1a;
 }
-.pipeline .arrow { color: #4a6fa5; font-weight: bold; }
+.pipeline .arrow { color: #8c7b6b; font-weight: bold; }
 .vs-label {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: #4a6fa5;
+    color: #1a1a1a;
     margin: 1rem 0 0.2rem;
     font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
 }
 </style>
 <style>
@@ -132,8 +140,8 @@ article .post-content .highlighter-rouge,
 }
 .step-num {
     display: inline-block;
-    background: #4a6fa5;
-    color: white;
+    background: #1a1a1a;
+    color: #f8f5f0;
     width: 20px; height: 20px;
     border-radius: 50%;
     text-align: center;
@@ -145,8 +153,8 @@ article .post-content .highlighter-rouge,
     vertical-align: middle;
 }
 .interactive-box {
-    background: #f7f6f4;
-    border: 1px solid #ddd5cc;
+    background: #f3efe9;
+    border: 1px solid #c4b8a8;
     border-radius: 6px;
     padding: 1.25rem;
     margin: 1.25rem 0;
@@ -156,23 +164,23 @@ article .post-content .highlighter-rouge,
 .interactive-box .box-title {
     margin: 0 0 0.6rem 0;
     font-weight: 600;
-    color: #4a6fa5;
+    color: #1a1a1a;
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
-.interactive-box .box-desc { margin: 0 0 0.6rem; color: #777; font-size: 12px; }
+.interactive-box .box-desc { margin: 0 0 0.6rem; color: #6b6b6b; font-size: 12px; }
 .slider-row { display: flex; align-items: center; gap: 10px; margin: 0.4rem 0; }
-.slider-row label { min-width: 100px; font-size: 12px; color: #555; }
-.slider-row input[type="range"] { flex: 1; accent-color: #4a6fa5; }
-.slider-row .val { min-width: 50px; text-align: right; font-family: monospace; font-size: 12px; color: #2d3142; font-weight: 600; }
-.result-row { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #ddd5cc; font-size: 13px; color: #2d3142; }
-.result-row .result-val { font-family: monospace; font-weight: 700; color: #4a6fa5; font-size: 14px; }
+.slider-row label { min-width: 100px; font-size: 12px; color: #4a4a4a; }
+.slider-row input[type="range"] { flex: 1; accent-color: #8c7b6b; }
+.slider-row .val { min-width: 50px; text-align: right; font-family: monospace; font-size: 12px; color: #1a1a1a; font-weight: 600; }
+.result-row { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #c4b8a8; font-size: 13px; color: #1a1a1a; }
+.result-row .result-val { font-family: monospace; font-weight: 700; color: #8c7b6b; font-size: 14px; }
 .boost-table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; font-size: 12px; }
-.boost-table th, .boost-table td { padding: 4px 8px; border: 1px solid #ddd5cc; text-align: right; }
-.boost-table th { background: #eeecea; font-weight: 600; text-align: center; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+.boost-table th, .boost-table td { padding: 4px 8px; border: 1px solid #c4b8a8; text-align: right; }
+.boost-table th { background: #ece7df; font-weight: 600; text-align: center; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: #1a1a1a; }
 .boost-table td:first-child { text-align: left; }
-canvas.widget-canvas { display: block; margin: 0.5rem auto 0; border: 1px solid #ddd5cc; border-radius: 3px; background: #fff; }
+canvas.widget-canvas { display: block; margin: 0.5rem auto 0; border: 1px solid #c4b8a8; border-radius: 3px; background: #faf8f4; }
 </style>
 
 <div style="margin-top: 2.5rem;"></div>
@@ -187,9 +195,9 @@ Imagine you've built a chatbot that can write text, but it sometimes says unhelp
 <div class="box-title">LLM Response Generation</div>
 <div class="box-desc">Pick a prompt and watch the model generate two candidate responses, token by token. A human then picks the preferred one. This is how preference data is collected.</div>
 <div style="margin-bottom:0.6rem;">
-  <button class="llm-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #4a6fa5;background:#4a6fa5;color:#fff;border-radius:3px;cursor:pointer;margin-right:4px;">Explain gravity</button>
-  <button class="llm-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:4px;">Write a poem</button>
-  <button class="llm-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;">Summarize ML</button>
+  <button class="llm-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #1a1a1a;background:#1a1a1a;color:#f8f5f0;border-radius:3px;cursor:pointer;margin-right:4px;">Explain gravity</button>
+  <button class="llm-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #c4b8a8;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;margin-right:4px;">Write a poem</button>
+  <button class="llm-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #c4b8a8;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;">Summarize ML</button>
 </div>
 <div style="background:#1e1e2e;border-radius:4px;padding:0.75rem 1rem;margin-bottom:0.5rem;font-family:Menlo,Consolas,monospace;font-size:12px;">
   <div style="color:#6c7086;margin-bottom:0.4rem;">Prompt:</div>
@@ -214,7 +222,7 @@ The DPO breakthrough: the authors discovered a mathematical shortcut. They showe
 
 Before DPO, aligning a chatbot with human preferences required a complicated three-stage pipeline. DPO replaced it with a single, simple training step that works just as well or better. That's why it became so widely adopted so quickly.
 
-<canvas id="sketch-pipeline" width="780" height="340" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
+<canvas id="sketch-pipeline" width="780" height="340" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#f3efe9;"></canvas>
 
 # The Cast of Characters
 
@@ -245,15 +253,15 @@ Before DPO, aligning a chatbot with human preferences required a complicated thr
   <span class="val" id="sim-lr-val">0.05</span>
 </div>
 <div style="margin:0.6rem 0 0.3rem;">
-  <button id="sim-step" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #4a6fa5;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:6px;">Step</button>
-  <button id="sim-run" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #4a6fa5;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:6px;">Run 50 steps</button>
-  <button id="sim-reset" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #ccc;background:#fff;color:#888;border-radius:3px;cursor:pointer;">Reset</button>
+  <button id="sim-step" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #8c7b6b;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;margin-right:6px;">Step</button>
+  <button id="sim-run" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #8c7b6b;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;margin-right:6px;">Run 50 steps</button>
+  <button id="sim-reset" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 12px;border:1px solid #c4b8a8;background:#f3efe9;color:#6b6b6b;border-radius:3px;cursor:pointer;">Reset</button>
   <span style="margin-left:10px;font-size:11px;color:#888;">Step: <span id="sim-step-num">0</span></span>
 </div>
-<canvas id="sim-canvas" width="560" height="200" style="display:block;margin:0.5rem auto 0;border:1px solid #ddd5cc;border-radius:3px;background:#fff;width:100%;"></canvas>
+<canvas id="sim-canvas" width="560" height="200" style="display:block;margin:0.5rem auto 0;border:1px solid #c4b8a8;border-radius:3px;background:#faf8f4;width:100%;"></canvas>
 <div style="margin-top:0.5rem;font-size:11px;color:#777;">
-  <span style="display:inline-block;width:10px;height:10px;background:#4a6fa5;border-radius:2px;vertical-align:middle;margin-right:3px;"></span> π_θ (current)
-  <span style="display:inline-block;width:10px;height:10px;background:#ddd5cc;border-radius:2px;vertical-align:middle;margin-left:12px;margin-right:3px;"></span> π_ref (frozen)
+  <span style="display:inline-block;width:10px;height:10px;background:#8c7b6b;border-radius:2px;vertical-align:middle;margin-right:3px;"></span> π_θ (current)
+  <span style="display:inline-block;width:10px;height:10px;background:#c4b8a8;border-radius:2px;vertical-align:middle;margin-left:12px;margin-right:3px;"></span> π_ref (frozen)
 </div>
 <div class="result-row">
   Loss = <span class="result-val" id="sim-loss"></span>
@@ -373,14 +381,14 @@ Bradley-Terry preference modeling only uses the *difference* in rewards. When yo
 <div class="cancel-box">
 <p>Reward for <span class="ke">y_1</span>: <span class="ke">\;\beta \log \frac{\pi^*(y_1 \mid x)}{\pi_{ref}(y_1 \mid x)} + \beta \log Z(x)</span></p>
 <p>Reward for <span class="ke">y_2</span>: <span class="ke">\;\beta \log \frac{\pi^*(y_2 \mid x)}{\pi_{ref}(y_2 \mid x)} + \beta \log Z(x)</span></p>
-<p style="font-weight:600; color:#4a6fa5; margin-top:0.3rem;">The <span class="ke">\beta \log Z(x)</span> is identical in both. It cancels.</p>
+<p style="font-weight:600; color:#8c7b6b; margin-top:0.3rem;">The <span class="ke">\beta \log Z(x)</span> is identical in both. It cancels.</p>
 </div>
 
 <div class="kd">p^*(y_1 \succ y_2 \mid x) = \sigma\!\left(\beta \log \frac{\pi^*(y_1 \mid x)}{\pi_{ref}(y_1 \mid x)} - \beta \log \frac{\pi^*(y_2 \mid x)}{\pi_{ref}(y_2 \mid x)}\right)</div>
 
 No reward model. No intractable <span class="ke">Z(x)</span>. Just log-ratios of how the policy diverges from the reference.
 
-<canvas id="sketch-cancel" width="780" height="280" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
+<canvas id="sketch-cancel" width="780" height="280" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#f3efe9;"></canvas>
 
 # The DPO Loss
 
@@ -395,7 +403,7 @@ No reward model. No intractable <span class="ke">Z(x)</span>. Just log-ratios of
 
 Training pushes the model to increase the probability of winners and decrease the probability of losers, relative to the reference.
 
-<canvas id="sketch-dpo" width="780" height="260" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#faf9f7;"></canvas>
+<canvas id="sketch-dpo" width="780" height="260" style="display:block;margin:1.5rem auto;max-width:100%;border-radius:6px;background:#f3efe9;"></canvas>
 
 <div class="interactive-box" id="dpo-demo">
 <div class="box-title">DPO Loss Playground</div>
@@ -439,7 +447,7 @@ Finally, the closed-form solution to the KL-constrained reward maximization was 
 
 The loss function is simple enough to implement from scratch. Here's a minimal version using PyTorch.
 
-<pre style="background:#f7f6f4;border:1px solid #ddd5cc;border-radius:4px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.55;margin:0.75rem 0;"><code style="font-family:Menlo,Consolas,monospace;color:#2d3142;">import torch
+<pre style="background:#f3efe9;border:1px solid #c4b8a8;border-radius:4px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.55;margin:0.75rem 0;"><code style="font-family:Menlo,Consolas,monospace;color:#1a1a1a;">import torch
 import torch.nn.functional as F
 
 def dpo_loss(pi_lp_w, pi_lp_l, ref_lp_w, ref_lp_l, beta=0.1):
@@ -545,9 +553,9 @@ DPO skips the reward model and the RL loop entirely. Simpler, more stable, easie
 <div class="box-title">β Effect on Model Output</div>
 <div class="box-desc">See how β (the KL leash) changes what the model generates. Low β lets the model aggressively chase the preferred style. High β keeps it close to the original (reference) behavior. The model has been trained on preference data that favors concise, direct answers.</div>
 <div style="margin-bottom:0.6rem;">
-  <button class="beta-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #4a6fa5;background:#4a6fa5;color:#fff;border-radius:3px;cursor:pointer;margin-right:4px;">Explain black holes</button>
-  <button class="beta-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;margin-right:4px;">Recommend a book</button>
-  <button class="beta-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #ddd5cc;background:#fff;color:#4a6fa5;border-radius:3px;cursor:pointer;">Healthy breakfast</button>
+  <button class="beta-prompt-btn" data-idx="0" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #1a1a1a;background:#1a1a1a;color:#f8f5f0;border-radius:3px;cursor:pointer;margin-right:4px;">Explain black holes</button>
+  <button class="beta-prompt-btn" data-idx="1" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #c4b8a8;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;margin-right:4px;">Recommend a book</button>
+  <button class="beta-prompt-btn" data-idx="2" style="font-family:Inter,sans-serif;font-size:11px;padding:4px 10px;border:1px solid #c4b8a8;background:#f3efe9;color:#1a1a1a;border-radius:3px;cursor:pointer;">Healthy breakfast</button>
 </div>
 <div class="slider-row">
   <label>β</label>
@@ -561,7 +569,7 @@ DPO skips the reward model and the RL loop entirely. Simpler, more stable, easie
   <div style="color:#6c7086;margin-bottom:0.3rem;">Prompt: <span id="beta-eff-prompt" style="color:#cdd6f4;"></span></div>
   <div style="display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap;">
     <div style="flex:1;min-width:200px;">
-      <div style="color:#89b4fa;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">π_ref (reference model)</div>
+      <div style="color:#c4b8a8;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">π_ref (reference model)</div>
       <div id="beta-eff-ref" style="color:#6c7086;min-height:3em;line-height:1.5;font-size:11px;"></div>
     </div>
     <div style="flex:1;min-width:200px;">
@@ -571,17 +579,17 @@ DPO skips the reward model and the RL loop entirely. Simpler, more stable, easie
   </div>
 </div>
 <div style="margin-top:0.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
-    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">KL divergence</div>
-    <div id="beta-eff-kl" style="font-family:monospace;font-size:16px;font-weight:700;color:#4a6fa5;margin-top:0.2rem;"></div>
+  <div style="flex:1;min-width:120px;background:#f3efe9;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#6b6b6b;text-transform:uppercase;letter-spacing:0.05em;">KL divergence</div>
+    <div id="beta-eff-kl" style="font-family:monospace;font-size:16px;font-weight:700;color:#8c7b6b;margin-top:0.2rem;"></div>
   </div>
-  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
-    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">Reward gain</div>
-    <div id="beta-eff-reward" style="font-family:monospace;font-size:16px;font-weight:700;color:#a6e3a1;margin-top:0.2rem;"></div>
+  <div style="flex:1;min-width:120px;background:#f3efe9;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#6b6b6b;text-transform:uppercase;letter-spacing:0.05em;">Reward gain</div>
+    <div id="beta-eff-reward" style="font-family:monospace;font-size:16px;font-weight:700;color:#5a7a5a;margin-top:0.2rem;"></div>
   </div>
-  <div style="flex:1;min-width:120px;background:#f7f6f4;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
-    <div style="font-size:10px;color:#999;text-transform:uppercase;letter-spacing:0.05em;">Objective (reward − β·KL)</div>
-    <div id="beta-eff-obj" style="font-family:monospace;font-size:16px;font-weight:700;color:#2d3142;margin-top:0.2rem;"></div>
+  <div style="flex:1;min-width:120px;background:#f3efe9;border-radius:4px;padding:0.5rem 0.75rem;text-align:center;">
+    <div style="font-size:10px;color:#6b6b6b;text-transform:uppercase;letter-spacing:0.05em;">Objective (reward − β·KL)</div>
+    <div id="beta-eff-obj" style="font-family:monospace;font-size:16px;font-weight:700;color:#1a1a1a;margin-top:0.2rem;"></div>
   </div>
 </div>
 <div id="beta-eff-note" style="font-size:11px;color:#999;margin-top:0.5rem;"></div>
@@ -651,9 +659,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('llm-resp-b').textContent = '';
     document.getElementById('llm-verdict').innerHTML = '';
     document.querySelectorAll('.llm-prompt-btn').forEach(function(b,i){
-      b.style.background = i===idx ? '#4a6fa5' : '#fff';
-      b.style.color = i===idx ? '#fff' : '#4a6fa5';
-      b.style.borderColor = i===idx ? '#4a6fa5' : '#ddd5cc';
+      b.style.background = i===idx ? '#1a1a1a' : '#f3efe9';
+      b.style.color = i===idx ? '#f8f5f0' : '#1a1a1a';
+      b.style.borderColor = i===idx ? '#1a1a1a' : '#c4b8a8';
     });
     var tokA = d.respA.split(/(?<=\s)|(?=\n)/);
     var tokB = d.respB.split(/(?<=\s)|(?=\n)/);
@@ -670,7 +678,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var wColor = d.winner === 'A' ? '#a6e3a1' : '#f38ba8';
         var wLabel = d.winner === 'A' ? 'Response A' : 'Response B';
         document.getElementById('llm-verdict').innerHTML =
-          '<span style="color:#4a6fa5;font-weight:600;">Human verdict:</span> ' +
+          '<span style="color:#1a1a1a;font-weight:600;">Human verdict:</span> ' +
           '<span style="background:' + wColor + '22;color:' + wColor + ';padding:2px 8px;border-radius:3px;font-weight:600;font-size:11px;">' +
           '✓ ' + wLabel + ' wins</span>' +
           '<span style="display:block;margin-top:0.3rem;color:#999;font-size:11px;">' + d.reason + '</span>' +
@@ -727,9 +735,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function betaEffSelect(idx) {
     betaEffIdx = idx;
     document.querySelectorAll('.beta-prompt-btn').forEach(function(b,i){
-      b.style.background = i===idx ? '#4a6fa5' : '#fff';
-      b.style.color = i===idx ? '#fff' : '#4a6fa5';
-      b.style.borderColor = i===idx ? '#4a6fa5' : '#ddd5cc';
+      b.style.background = i===idx ? '#1a1a1a' : '#f3efe9';
+      b.style.color = i===idx ? '#f8f5f0' : '#1a1a1a';
+      b.style.borderColor = i===idx ? '#1a1a1a' : '#c4b8a8';
     });
     betaEffUpdate();
   }
@@ -838,10 +846,10 @@ document.addEventListener('DOMContentLoaded', function() {
       var refH = responses[i].ref * maxH / 0.6;
       var curH = probs[i] * maxH / 0.6;
       // ref bar
-      ctx.fillStyle='#ddd5cc';
+      ctx.fillStyle='#c4b8a8';
       ctx.fillRect(x, H-20-refH, barW-2, refH);
       // current bar
-      var col = responses[i].isW ? '#4a6fa5' : responses[i].isL ? '#c0392b' : '#8e94a8';
+      var col = responses[i].isW ? '#8c7b6b' : responses[i].isL ? '#9e4a4a' : '#a0a0a0';
       ctx.fillStyle=col;
       ctx.fillRect(x+barW, H-20-curH, barW-2, curH);
       // label
@@ -938,11 +946,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var skFont = '19px Patrick Hand, sans-serif';
   var skFontSm = '15px Patrick Hand, sans-serif';
   var skFontLg = '23px Patrick Hand, sans-serif';
-  var skBlue = '#4a6fa5';
-  var skDark = '#2d3142';
-  var skGray = '#999';
-  var skRed = '#c0392b';
-  var skGreen = '#27ae60';
+  var skBlue = '#8c7b6b';
+  var skDark = '#1a1a1a';
+  var skGray = '#8a8a8a';
+  var skRed = '#9e4a4a';
+  var skGreen = '#5a7a5a';
 
   function wobbleLine(ctx, x1, y1, x2, y2) {
     var dx = x2-x1, dy = y2-y1, len = Math.sqrt(dx*dx+dy*dy);

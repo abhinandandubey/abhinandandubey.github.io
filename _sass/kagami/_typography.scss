@@ -6,7 +6,7 @@
 body {
   color: $content-color;
   font-size: font-size();
-  font-weight: 300;
+  font-weight: 400;
   font-kerning: normal;
   border-top: 2px solid currentColor;
 }
@@ -169,7 +169,7 @@ article {
 }
 
 .post-footer {
-  color: lighten($content-color, 50%);
+  color: lighten($content-color, 40%);
   font-size: 0.875em;
   @include scut-clearfix;
 

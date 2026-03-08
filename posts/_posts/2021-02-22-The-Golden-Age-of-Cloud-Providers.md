@@ -2,7 +2,7 @@
 layout: post
 title: The Golden Age of Cloud Providers
 tags: 
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_6211.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/volubilis-roman-ruins-morocco.jpg
 cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true

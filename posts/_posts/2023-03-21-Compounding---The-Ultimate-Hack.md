@@ -2,7 +2,7 @@
 layout: post
 title: Compounding - The Ultimate Hack
 tags: 
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_7922.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/sahara-desert-tent-ropes-sand-dunes.jpg
 cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true

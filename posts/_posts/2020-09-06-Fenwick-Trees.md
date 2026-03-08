@@ -2,7 +2,7 @@
 layout: post
 title: Fenwick Trees
 tags: Interview Programming
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_3822.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/carnegie-hall-orchestra-performance.jpg
 cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true

@@ -2,7 +2,7 @@
 layout: post
 title: Java Memory Model
 tags: Advanced-Java-Series Java Programming
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_4060.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/airplane-window-sunset-sky.jpg
 cover_meta: (c) AD Photography
 color_scheme: zenburn
 mathjax: true

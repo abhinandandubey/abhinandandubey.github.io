@@ -2,7 +2,7 @@
 layout: post
 title: The Concurrency API
 tags: Advanced-Java-Series Java Programming
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_0517.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/nyc-rooftop-cocktails-sunset-skyline.jpg
 cover_meta: (c) AD Photography
 color_scheme: zenburn
 mathjax: true

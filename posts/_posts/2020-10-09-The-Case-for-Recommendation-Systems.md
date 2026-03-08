@@ -2,7 +2,7 @@
 layout: post
 title: The Case for Recommendation Systems
 tags: Machine-Learning 
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_5762.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/vintage-white-car-misty-mountain-road.jpg
 cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true

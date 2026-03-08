@@ -2,7 +2,7 @@
 layout: post
 title: A Confusing Confused Function
 tags: Puzzle
-cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_7899.JPG
+cover_url: https://abhinandandubey.github.io/posts/assets/images/sahara-desert-tent-atlas-mountains-sunset.jpg
 cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true

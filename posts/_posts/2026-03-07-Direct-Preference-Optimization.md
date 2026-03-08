@@ -20,7 +20,6 @@ mathjax: true
 <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
 .wrapper { max-width: 860px !important; }
@@ -51,36 +50,16 @@ article .post-content .highlighter-rouge,
     font-size: 0.85rem;
     line-height: 1.5;
 }
-body {
-    background-color: #f8f5f0 !important;
-}
-.post-content {
-    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
-    color: #1a1a1a;
-    font-size: 1.2rem;
-    line-height: 1.85;
-    letter-spacing: 0.01em;
-}
 .post-content p { margin-bottom: 0.8rem; margin-top: 0; }
 .post-content h1 {
-    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
-    color: #1a1a1a;
-    font-weight: 500;
     border-bottom: 1px solid #c4b8a8;
     padding-bottom: 0.35rem;
     margin-top: 2.5rem;
     margin-bottom: 0.85rem;
-    font-size: 1.75rem;
-    letter-spacing: 0.02em;
 }
 .post-content h2 {
-    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
-    color: #1a1a1a;
-    font-weight: 500;
     margin-top: 1.8rem;
     margin-bottom: 0.6rem;
-    font-size: 1.4rem;
-    letter-spacing: 0.015em;
 }
 </style>
 <style>

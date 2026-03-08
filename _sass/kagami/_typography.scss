@@ -1,4 +1,4 @@
-[lang^="en"]      { line-height: 1.6; @include font-serif; }
+[lang^="en"]      { line-height: 1.85; @include font-serif; }
 [lang^="zh-Hans"] { line-height: 1.8; @include font-serif-zh-Hans; }
 [lang^="zh-Hant"] { line-height: 1.8; @include font-serif-zh-Hant; }
 [lang^="ja"]      { line-height: 1.8; @include font-serif-ja; }
@@ -9,6 +9,8 @@ body {
   font-weight: 400;
   font-kerning: normal;
   border-top: 2px solid currentColor;
+  background-color: $background-color;
+  letter-spacing: 0.01em;
 }
 
 a, a:hover, a:visited {
@@ -21,11 +23,11 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
 }
 
-h1 { font-size: 1.8em; }
-h2 { font-weight: bold; font-size: 1.4em; }
-h3 { font-weight: bold; font-size: 1.2em; }
-h4 { font-weight: bold; }
-h5 { font-weight: bold; }
+h1 { font-size: 1.75em; font-weight: 500; letter-spacing: 0.02em; }
+h2 { font-weight: 500; font-size: 1.4em; letter-spacing: 0.015em; }
+h3 { font-weight: 500; font-size: 1.2em; }
+h4 { font-weight: 500; }
+h5 { font-weight: 500; }
 
 article {
 
@@ -79,6 +81,8 @@ article {
 
   blockquote {
     font-style: italic;
+    border-left: 2px solid #8c7b6b;
+    color: #4a4a4a;
   }
 
   code {
@@ -111,7 +115,7 @@ article {
 
   hr {
     border: none;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid #c4b8a8;
     width: 30%;
   }
 }
@@ -145,6 +149,8 @@ article {
 .post-title {
   word-break: keep-all;
   margin-top: -0.5 * $font-size;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .post-cover {

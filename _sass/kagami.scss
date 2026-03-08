@@ -3,16 +3,16 @@
 $font-size: 20px;
 
 // Dimensions
-$content-width: 700px;
+$content-width: 860px;
 $spacing-unit: 32px;
 
 // Colors
 $content-color: #1a1a1a;
-$background-color: #fff;
-$border-color: #f0f0f0;
-$inline-code-color: #d32f2f;
-$inline-code-background: #fff6f6;
-$block-code-background: #f2f2fa;
+$background-color: #f8f5f0;
+$border-color: #c4b8a8;
+$inline-code-color: #8c4a4a;
+$inline-code-background: #f3efe9;
+$block-code-background: #f3efe9;
 $mark-background: rgba(yellow, 0.35);
 
 @import "kagami/scut";

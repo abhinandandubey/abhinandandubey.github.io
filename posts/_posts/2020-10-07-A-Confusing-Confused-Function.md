@@ -2,9 +2,8 @@
 layout: post
 title: A Confusing Confused Function
 tags: Puzzle
-cover_url: https://source.unsplash.com/random?abstract
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_7899.JPG
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

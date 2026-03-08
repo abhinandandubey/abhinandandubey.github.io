@@ -2,9 +2,8 @@
 layout: post
 title: The Golden Age of Cloud Providers
 tags: 
-cover_url: https://source.unsplash.com/random?cloud
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_6211.JPG
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

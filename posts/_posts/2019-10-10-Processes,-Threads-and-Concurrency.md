@@ -2,9 +2,8 @@
 layout: post
 title: Processes, Threads and Concurrency
 tags: Advanced-Java-Series Java Programming sc
-cover_url: https://images.unsplash.com/photo-1547581849-38ba650ad0de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_9076.JPG
+cover_meta: (c) AD Photography
 color_scheme: zenburn
 mathjax: true
 mathjax: True

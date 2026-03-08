@@ -2,9 +2,8 @@
 layout: post
 title: Java Memory Model
 tags: Advanced-Java-Series Java Programming
-cover_url: https://images.unsplash.com/photo-1580711508185-2ddd1d9d2e1b
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_4060.JPG
+cover_meta: (c) AD Photography
 color_scheme: zenburn
 mathjax: true
 mathjax: True

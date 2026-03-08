@@ -2,9 +2,8 @@
 layout: post
 title: Understanding Synchronize In Java
 tags: Java Programming Advanced-Java-Series
-cover_url: https://source.unsplash.com/random?threads
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_5660.JPG
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

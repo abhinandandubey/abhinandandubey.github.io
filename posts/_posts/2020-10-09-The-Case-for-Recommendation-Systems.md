@@ -2,9 +2,8 @@
 layout: post
 title: The Case for Recommendation Systems
 tags: Machine-Learning 
-cover_url: https://source.unsplash.com/random?movie
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_5762.JPG
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

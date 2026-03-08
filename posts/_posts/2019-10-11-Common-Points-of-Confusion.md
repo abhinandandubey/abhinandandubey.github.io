@@ -2,9 +2,8 @@
 layout: post
 title: Java - Common Points of Confusion
 tags: Java Programming Advanced-Java-Series
-cover_url: https://images.unsplash.com/photo-1515859005217-8a1f08870f59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1398&q=80
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_0445.jpg
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

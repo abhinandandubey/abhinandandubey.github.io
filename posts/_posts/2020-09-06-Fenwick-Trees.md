@@ -2,9 +2,8 @@
 layout: post
 title: Fenwick Trees
 tags: Interview Programming
-cover_url: https://source.unsplash.com/random?tree
-cover_meta: 
-  (c) UNSPLASH
+cover_url: https://abhinandandubey.github.io/posts/assets/images/IMG_3822.JPG
+cover_meta: (c) AD Photography
 color_scheme: tango
 mathjax: true
 mathjax: True

@@ -45,7 +45,11 @@ MathJax.Hub.Queue(function() {
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-> *If you can get 1 percent better each day for one year, you'll end up thirty-seven times better by the time you're done. Conversely, if you get 1 percent worse each day for one year, you'll decline nearly down to zero.*
+<div style="font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; font-style: italic;">Disclaimer — All views are mine and do not represent the views of my employer.</div>
+
+<blockquote style="border-left: 3px solid #c4b8a8; padding: 1rem 1.25rem; margin: 1.5rem 0; font-style: italic; color: #4a4a4a; line-height: 1.7;">
+If you can get 1 percent better each day for one year, you'll end up thirty-seven times better by the time you're done. Conversely, if you get 1 percent worse each day for one year, you'll decline nearly down to zero.
+</blockquote>
 
 I haven't blogged in a while, and trying to be better at this again. Lately, I've been trying to keep up with my health - eating healthy and trying to be a regular at the gym. There was one noticeable difference this time - I made it to the gym every day for 3 consecutive weeks. Looking back, I think a lot of improvements could be attributed to the way I've looked at habit formation after reading the famous book *"Atomic Habits"* by *James Clear*. A lot of it is also because of Amazon's Leadership Principles (which is where I work) which I also applied in my personal life. I find Amazon's Leadership Principles and "tools" very wildly useful. I think it has slowly slipped into my thinking process and has definitely improved not just my productivity but also who I am as a person. 
 

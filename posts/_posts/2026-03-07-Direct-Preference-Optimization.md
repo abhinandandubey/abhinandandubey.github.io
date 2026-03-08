@@ -17,6 +17,22 @@ mathjax: true
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+<script>
+// Prevent PyScript's py-editor from stealing scroll position on load
+(function(){
+  var _scrollSaved = null;
+  var _origFocus = HTMLElement.prototype.focus;
+  var _blockFocus = false;
+  HTMLElement.prototype.focus = function(opts) {
+    if (_blockFocus && this.closest && this.closest('py-editor, .py-editor, .cm-editor')) return;
+    return _origFocus.call(this, opts);
+  };
+  _blockFocus = true;
+  window.addEventListener('load', function() {
+    setTimeout(function(){ _blockFocus = false; }, 3000);
+  });
+})();
+</script>
 <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

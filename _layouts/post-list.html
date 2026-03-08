@@ -33,7 +33,7 @@ layout: default
   {% else %}
   <li class="post-list-item" data-tags="{{ post.tags | join: " " }}">
     {% if post.cover_url %}
-    <div class="post-item-cover" style="background-image: url('{{ post.cover_url }}')"></div> 
+    <div class="post-item-cover" data-bg="{{ post.cover_url }}"></div> 
     {% else %}
     <div class="post-item-cover"></div>
     {% endif %}
@@ -63,3 +63,18 @@ layout: default
   {% endif %}
   {% endfor %}
 </ul>
+
+<script>
+(function(){
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var bg = e.target.getAttribute('data-bg');
+        if(bg){ e.target.style.backgroundImage = "url('" + bg + "')"; }
+        observer.unobserve(e.target);
+      }
+    });
+  }, {rootMargin: '200px'});
+  document.querySelectorAll('.post-item-cover[data-bg]').forEach(function(el){ observer.observe(el); });
+})();
+</script>

@@ -5,13 +5,25 @@
     this.page.identifier = '{{ page.url | absolute_url }}';
   };
 
+  // Lazy-load Disqus when user scrolls near comments
   (function() {
-    var d = document, s = d.createElement('script');
-
-    s.src = 'https://abhinandandubey.disqus.com/embed.js';
-
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+    var loaded = false;
+    function loadDisqus() {
+      if (loaded) return;
+      loaded = true;
+      var d = document, s = d.createElement('script');
+      s.src = 'https://abhinandandubey.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+    var el = document.getElementById('disqus_thread');
+    if ('IntersectionObserver' in window && el) {
+      new IntersectionObserver(function(entries, obs) {
+        if (entries[0].isIntersecting) { loadDisqus(); obs.disconnect(); }
+      }, {rootMargin: '400px'}).observe(el);
+    } else {
+      loadDisqus();
+    }
   })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

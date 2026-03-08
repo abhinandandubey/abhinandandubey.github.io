@@ -8,6 +8,7 @@ color_scheme: tango
 mathjax: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script src="/mini-coi.js" scope="/"></script>
 <style>
 .katex { font-size: 1.05em; color: #1a1a1a; }
 .ke .katex { font-size: 0.95em; color: #1a1a1a; }
@@ -15,8 +16,8 @@ mathjax: true
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+<link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -460,7 +461,7 @@ That's the entire loss. Four lines of math. The rest is plumbing: computing log-
 
 Below is a runnable version using only NumPy (so it works in the browser). It trains a toy model on preference pairs and prints how the probability distribution shifts. Click the green play button to run it.
 
-<script type="py-editor">
+<script type="py-editor" config='{"packages": ["numpy"]}'>
 import numpy as np
 
 def softmax(x):

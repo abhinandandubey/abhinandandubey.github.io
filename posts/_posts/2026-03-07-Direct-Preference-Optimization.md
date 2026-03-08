@@ -2,6 +2,7 @@
 layout: post
 title: Direct Preference Optimization
 tags: AI Machine-Learning
+cover_url: /posts/assets/images/dpo-cover.jpg
 color_scheme: tango
 mathjax: true
 ---

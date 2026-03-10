@@ -106,16 +106,3 @@ These preferences are often hard to gauge and there are different ways of doing 
 This is one of the fundamental problem with recommender systems. If I am a new user on Apple Music, they don't know what to recommend me. How can they curate lists for me? This is generally solved by two ways - just go by the popular vote - you could just be like - Hey here's what most of our users are listening to - maybe you could try this? - the system could also probably take into account the *context* of the user - *A lot of people in New York City are listening to Lady Gaga today and since you happen to be listening from New York City - we think you might be interested in this*.
 
 Another way to approach this is by asking the user to provide his preferences. This could be a short survey which could be a part of new user onboarding. In the case of Apple Music, they could (and they do) ask me what Genres of music I like listening to.
-
-
-
-
-<br/>
-Feeling generous ? Help me write more blogs like this :)  
-
-<center>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
-</center>
-<br/>
-<br/>
-

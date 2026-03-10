@@ -141,15 +141,3 @@ This sounds depressing, but it's actually liberating. Most of what you do won't 
 The trick is to keep going long enough for the 1% to accumulate. James Clear calls this the "valley of disappointment," the gap between what you expect to happen and what actually happens in the early days. You expect linear progress. Reality gives you almost nothing for weeks, then a sudden jump. The science backs this up: visible physical changes from consistent exercise typically appear around the three-month mark. Not the three-week mark.
 
 So if you're in the valley right now, whether it's fitness, learning, career, or anything else, keep going. The compounding hasn't kicked in yet. But it will.
-
-
-
-<br/>
-Feeling generous ? Help me write more blogs like this :)  
-
-<center>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
-</center>
-<br/>
-<br/>
-

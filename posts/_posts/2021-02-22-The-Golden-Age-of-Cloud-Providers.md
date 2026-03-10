@@ -96,17 +96,3 @@ Caused by: java.lang.ClassNotFoundException: org.postgresql.shaded.com.ongres.sc
 After wasting an hour on setting it up, going through documentation, and then hitting a wall I realized how much time I'd have saved had I set up one on AWS. How effortless, easy and intuitive! No need to go through documentation, all that instrumentation done for you behind the scenes. 
 
 For a corporate - you have to move fast and time is everything. I can wonder why cloud providers such as AWS and GCP are having a 'Golden Age' of sorts.
-
-
-
-
-<br/>
-Feeling generous ? Help me write more blogs like this :)  
-
-<center>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="abhinandandubey" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000" data-font-color="#000" data-coffee-color="#fff" ></script>
-</center>
-<br/>
-<br/> 
-
-

@@ -88,6 +88,10 @@ width = i - stack[-1] - 1
 maxArea = max(maxArea, width*height)
 ```
 
+After you pop the index for height `h`, the stack's new top (`stack[-1]`) is the last bar that is strictly shorter than `h`. That's the key -- the monotonic stack guarantees everything between `stack[-1]` and `i` is `>= h`, so `h` can extend all the way across that gap.
+
+<img src="https://github.com/abhinandandubey/abhinandandubey.github.io/raw/master/assets/images/lc84_width_derivation.svg"/>
+
 We now append `1` to the stack and move onto position `2` with the bar of height `5`. We don't need to pop out any elements from the stack, because the bar with height `5` can form a rectangle of height `1` (which is on top of the stack), but the bar with height `1` cannot form a rectangle of height `5` - thus it is still a good candidate (in case `5` gets popped out later). We append `5` to the stack, and move forward without any eliminations.
 
 We observe the same thing when we arrive at `6` (at position `3`). 
